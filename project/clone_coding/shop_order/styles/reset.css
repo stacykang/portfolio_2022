@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+*{box-sizing:border-box;}
+html,body,h1,h2,h3,h4,h5,h6,
+p,div,span,em,strong,sub,sup,del,s,code,hr,q,blockquote,address,
+main,header,nav,footer,aside,article,section,figure,
+img,a,table,thead,tbody,tfoot,tr,th,td,
+ul,ol,li,dl,dt,dd,
+form,fieldset,legend,input,button,select,option,textarea{
+margin:0; padding:0; line-height:1.0; 
+font-size:1.0rem; font-style:normal; font-weight:normal;
+font-family: 'Noto Sans KR', sans-serif;
+color:#333;
+}
+ul,ol,li{list-style:none;}
+table,tr,th,td{border-collapse:collapse;}
+th{text-align: left;}
+a{color:#333; text-decoration:none;}
+textarea{resize:none; border:0;}
+fieldset{border:0;}
+input:focus{outline: none;}
+input,button{cursor:pointer;background:none;border:0;}
+.skip{display:none;}
+
+
+/* input number 숫자 조정 버튼 없애기 */
+/* 출처:https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}

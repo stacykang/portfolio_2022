@@ -1,0 +1,25 @@
+@media screen and (max-width:900px){
+    main .dep2_tab {flex-flow:row wrap; top:-54px;}
+    main .dep2_tab a {width:50%; max-width:300px; border:1px solid #aaa; padding:16px 0;}
+    main .dep2_tab a:nth-child(1) {border-bottom-left-radius: 0;}
+    main .dep2_tab a:nth-child(2) {border-top-right-radius:30px;}
+    main .dep2_tab a:nth-child(3) {border-bottom-left-radius:30px;}
+    main .dep2_tab a:nth-child(4) {border-top-right-radius: 0;}
+    main .dep2_tab a:nth-child(2n+1) {border-right:0;}
+    main .dep2_tab a:nth-child(4n+1),main .dep2_tab a:nth-child(4n+2) {border-bottom:0;}
+    main .news_event_wrap .contents .card {width:calc(33.33% - 10px); margin-bottom:24px;}
+    main .news_event_wrap .contents .card .txt h2 {font-size:1rem;}
+    main .news_event_wrap .contents .card .txt .date {font-size:0.831rem;}
+}
+@media screen and (max-width:750px){
+    main .news_event_wrap .contents .card {width:calc(50% - 10px);}
+}
+@media screen and (max-width:580px){
+    main .title_bg .title_wrap {height:300px;}
+    main .title_bg .title_wrap h1 {font-size:2.25rem;}
+    main .title_bg .title_wrap p {font-size:1.125rem;}
+    main .dep2_tab a {font-size:0.875rem; font-weight:500;}
+    main .contents_wrap {padding: 32px 14px;}
+    main .contents_wrap .title h2 {font-size:1.5rem;}
+    main .contents_wrap .contents .txt {font-size:0.813rem;}
+}

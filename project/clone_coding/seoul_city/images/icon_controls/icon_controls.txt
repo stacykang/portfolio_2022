@@ -1,0 +1,40 @@
+.bg-btn_top {
+    width: 34px; height: 34px;
+    background: url('css_sprites.png') -10px -253px;
+}
+
+x
+.bg-icon_link {
+    width: 6px; height: 11px;
+    background: url('css_sprites.png') -10px -10px;
+}
+
+x
+.bg-ico_next {
+    width: 24px; height: 24px;
+    background: url('css_sprites.png') -10px -77px;
+}
+
+x
+.bg-ico_play {
+    width: 24px; height: 24px;
+    background: url('css_sprites.png') -10px -121px;
+}
+
+x
+.bg-ico_prev {
+    width: 24px; height: 24px;
+    background: url('css_sprites.png') -10px -165px;
+}
+
+x
+.bg-ico_stop {
+    width: 24px; height: 24px;
+    background: url('css_sprites.png') -10px -209px;
+}
+
+x
+.bg-keyboard {
+    width: 29px; height: 16px;
+    background: url('css_sprites.png') -10px -41px;
+}

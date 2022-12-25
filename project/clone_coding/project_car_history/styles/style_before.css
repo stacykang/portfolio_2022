@@ -1,0 +1,303 @@
+/* 전체에 부드러운 애니메이션 적용 */
+/* 화면에 있는 모든 요소에 적용 */
+/* *{transition:all 0.5s;} */
+/* 큰 레이아웃에만 적용시에는 다음처럼 */
+main > * > * {transition:all 0.5s;}
+/* desktop 1224px 기준 공통 레이아웃 */
+#h_bg header,
+main > div > div {width:1224px; margin:0 auto;}  /* main > r1_bg,r2_bg,r3_bg,r4_bg  > r1,r2,r3,r4*/
+main > div > div {
+    padding:100px 16px;
+    display:flex; flex-flow:column nowrap;
+    align-items:center;
+}
+
+/* header */
+#h_bg { /* 배경 높이는 아이템에 따라서 자동으로 정해지게. 높이는 header에 준다. */
+    background: #fff; position:fixed; top:0; width:100%;    /* position 넣으면 원래 블록일 때의 너비대로 인식이 안되어서 width:100%입력해줘야 한다.. */
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+    z-index:999; /* z-index는 포지션이 들어있는 요소에 준다. */
+}
+#h_bg header { 
+    height:106px; margin:0 auto;
+    display:flex; flex-flow:row nowrap;
+    justify-content: space-between; align-items:center;
+}
+#h_bg header h1 {}
+#h_bg header h1 a {}
+#h_bg header h1 a img {}
+#h_bg header #h_right {display:flex; flex-flow:row nowrap; align-items: center;}
+#h_bg header #h_right a {margin-left:16px;}
+#h_bg header #h_right a:first-child {margin-left:0;} /* margin-right로 했다면, .all_menu에 margin:0; */
+#h_bg header #h_right a img {} 
+#h_bg header #h_right a.search {} 
+#h_bg header #h_right a.search img {} 
+#h_bg header #h_right a.all_menu { /* 정렬은 여백을 주기보단 flex 활용! */
+    background: #189BFA; color:#fff;
+    display:flex; flex-flow:row nowrap; align-items: center;
+    padding:10px;
+}
+#h_bg header #h_right a.all_menu img {}
+#h_bg header #h_right a.all_menu span {margin-left:10px;}
+/* main */
+main {margin-top:106px; height:3000px;} /* 헤더 높이만큼 내려주기 */
+/* main r1 */
+main #r1_bg {
+    background-image: url(../images/hero-bg-md-01.gif);
+    background-position: bottom;
+    background-size: cover;
+}
+main #r1_bg {}
+main #r1_bg #r1 {
+    padding:120px 0;
+    display:flex; flex-flow:column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+main #r1_bg #r1 h1,
+main #r1_bg #r1 h1 span {
+    font-size:1.875rem;/* 30px */ font-weight:700; /* bold */
+    text-align: center; line-height:1.3; letter-spacing: -0.02em;
+}
+main #r1_bg #r1 h1 {}
+main #r1_bg #r1 h1 span {color:#189BFA;}
+/* 부모에 px값 주고 자식은 % 처리? or 자식에 px값 주고 부모가 따라가게 할지? */
+/* 반응형 웹 편하게 구성하려면 부모에 값을 주어야 한다 */
+main #r1_bg #r1 .view_category {
+    margin:60px 0;   width:740px;
+    display:flex; flex-flow:row nowrap;
+    align-items:center; /* 축이 중앙이 되어서 transition을 넣을 때 중앙에서부터 커진다. */
+}
+main #r1_bg #r1 .view_category a {
+    background: #fff;
+    width:25%; margin-right:2px; /* nowrap으로 설정했기때문에 2px 빼고 나머지 4등분 */
+    text-align:center; padding:22px 0; /* 상하여백으로 높이주기 */
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+main #r1_bg #r1 .view_category a:first-child {border-top-left-radius:10px; border-bottom-left-radius: 10px;}
+main #r1_bg #r1 .view_category a:last-child {margin-right:0; border-top-right-radius:10px; border-bottom-right-radius: 10px;}
+main #r1_bg #r1 .view_category a.active {background: #ff5252; color:#fff;}
+main #r1_bg #r1 .view_group {}
+main #r1_bg #r1 .view_group .view_contents1 {
+    background: rgba(0,0,0,0.4);
+    width:800px; padding:30px;
+    display:flex; flex-flow:column nowrap;
+}
+main #r1_bg #r1 .view_group .view_contents1 #view_frm {margin-bottom: 24px;}
+main #r1_bg #r1 .view_group .view_contents1 #view_frm fieldset {display:flex; flex-flow:row nowrap; align-items: center;}
+main #r1_bg #r1 .view_group .view_contents1 #view_frm fieldset input,
+main #r1_bg #r1 .view_group .view_contents1 #view_frm fieldset #number,
+main #r1_bg #r1 .view_group .view_contents1 #view_frm fieldset #view_btn {height:60px} /* 버튼 높이 */
+main #r1_bg #r1 .view_group .view_contents1 #view_frm fieldset input,
+main #r1_bg #r1 .view_group .view_contents1 #view_frm fieldset #number {padding-left:16px;}
+main #r1_bg #r1 .view_group .view_contents1 #view_frm fieldset #number {width:130px; border:0;}
+main #r1_bg #r1 .view_group .view_contents1 #view_frm fieldset #number option {}
+main #r1_bg #r1 .view_group .view_contents1 #view_frm fieldset input {
+    background: #fff; margin:0 5px;
+    width:calc(100% - 270px); /* 전체 100% - 좌우버튼 130px*2 - 사이여백 5px*2 */
+}
+main #r1_bg #r1 .view_group .view_contents1 #view_frm fieldset #view_btn {
+    background: #189BFA;  width:130px;
+    color:#fff; text-align: center;
+}
+main #r1_bg #r1 .view_group .view_contents1 .btm_list {
+    display:flex; flex-flow:row nowrap; justify-content: space-between;
+    align-items:center;
+}
+main #r1_bg #r1 .view_group .view_contents1 .btm_list  a {color:#fff;} /* .btn.menu, .sample_view 같이 */
+main #r1_bg #r1 .view_group .view_contents1 .btm_list .btm_menu {display:flex; flex-flow:row nowrap;}
+main #r1_bg #r1 .view_group .view_contents1 .btm_list .btm_menu a {margin-right:16px;}
+/* main #r1_bg #r1 .view_group .view_contents1 .btm_list .btm_menu a:after {
+    content:'?'; display:inline-block; text-align: center; border-radius:50%;
+    font-size:0.813rem;
+    width:16px; height:16px; background: #189BFA; padding:3px;
+    transform:translate(4px, 0);
+} */
+main #r1_bg #r1 .view_group .view_contents1 .btm_list .btm_menu a:last-child {margin:0;}
+main #r1_bg #r1 .view_group .view_contents1 .btm_list .sample_view {
+    background:rgba(0,0,0,0); border:1px solid #fff;
+    padding:10px 25px; border-radius:10px;
+} /* 피그마에서 설정한 크기 옵션 1. hug > padding 2. fixed > width, height값  */
+main #r1_bg #r1 .view_group .view_contents2 {display:none;}
+main #r1_bg #r1 .view_group .view_contents3 {display:none;}
+main #r1_bg #r1 .view_group .view_contents4 {display:none;}
+/* main 제목 공통 영역 */
+main .title {text-align:center; margin-bottom:44px;}
+main .title .sub_title {font-size:0.875rem;}
+main .title .sub_title::after,
+main #r2_bg #r2 #r2_contents li h2::after {
+    content:''; display:block; /* 기본은 인라인이라 크기 인식 못한다. */
+    width:20px; height:1px; background:#ccc;
+    margin:16px auto;
+    /* .sub_title과 h2의 여백을 고정한 채로 사이에 선 추가하는 경우 아래의 두 경우 중 하나로 작성*/
+    /* position:relative; top:10px; */
+    /* transform:translateY(10px); */
+}
+main .title h1 {font-size:1.5rem;}
+main .title .con {color:#aaa; margin-top:16px;} /* con이 없는 경우도 있기 때문에 h1 상하 여백으로 주지 않는다. */
+/* r2 요약데이터 */
+main #r2_bg {background:#eeeeee;}
+main #r2_bg #r2 {}
+main #r2_bg #r2 .title {}
+main #r2_bg #r2 .title .sub_title {}
+main #r2_bg #r2 .title h1 {}
+main #r2_bg #r2 .title .con {}
+main #r2_bg #r2 #r2_contents {
+    /* background:tan; */
+    width:100%; display:flex; flex-flow:row nowrap;
+    justify-content: center;
+}
+main #r2_bg #r2 #r2_contents {
+    /* background: aquamarine; */
+    display:flex; flex-flow:row wrap;
+}
+main #r2_bg #r2 #r2_contents li {
+    /* background: darkcyan; */
+    width:176px;
+    display:flex; flex-flow:column nowrap;
+    align-items:center; 
+    margin-right:40px;  text-align:center;
+}
+main #r2_bg #r2 #r2_contents li:last-child {margin-right:0;}
+main #r2_bg #r2 #r2_contents li p {width:100%;}
+main #r2_bg #r2 #r2_contents li p:first-child {margin-bottom:16px;}
+main #r2_bg #r2 #r2_contents li p img {width:100%; max-width:130px;}
+main #r2_bg #r2 #r2_contents li h2 {}
+main #r2_bg #r2 #r2_contents li .number {color:#189BFA; line-height:1.5; word-break: break-all;}
+main #r2_bg #r2 #r2_contents li .number em {font-size:1.25rem; font-weight:700;}
+main #r2_bg #r2 #r2_contents li .number span {}
+/* r3 배너 바로가기 */
+main #r3_bg #r3 {border-bottom:2px solid #f5f5f5;}
+main #r3_bg #r3 .title {}
+main #r3_bg #r3 .title .sub_title {}
+main #r3_bg #r3 .title h1 {}
+main #r3_bg #r3 #r3_contents {display:flex; flex-flow:row nowrap;}
+main #r3_bg #r3 #r3_contents li {
+    /* background: sandybrown; */
+    width:100%; padding:20px;
+    border:1px solid #aaa;
+    border-radius:10px;
+    display:flex; flex-flow:row nowrap;
+}
+main #r3_bg #r3 #r3_contents li:nth-child(2) {margin:0 16px;} /* 홀수일 때 짝수번째 요소에 좌우 여백 */
+main #r3_bg #r3 #r3_contents li .left {
+    /* background: salmon; */
+    display:flex; flex-flow:column nowrap;
+    justify-content: space-between;
+    margin-right:24px;
+    position:relative;
+}
+main #r3_bg #r3 #r3_contents li .left::after {
+    content:''; display:block;
+    height:100%; width:1px;
+    background:#ccc;
+    position:absolute; left:104px; margin-right:10px;
+}
+main #r3_bg #r3 #r3_contents li .left span {width:93px; height:52px; margin-bottom:10px;
+} 
+main #r3_bg #r3 #r3_contents li .left span img {width:100%;}
+main #r3_bg #r3 #r3_contents li .left .link {
+    width:80px; height:32px;
+    text-align:center; line-height:32px;
+    border:1px solid #189BFA; border-radius:10px;
+    color:#189BFA; font-size:0.75rem;
+}
+main #r3_bg #r3 #r3_contents li p {
+    word-break:keep-all; line-height:1.3;
+    color:#555; letter-spacing: -0.03rem;
+}
+/* r4 */
+main #r4_bg {}
+main #r4_bg #r4 {}
+main #r4_bg #r4 .title {}
+main #r4_bg #r4 .title .sub_title {}
+main #r4_bg #r4 .title h1 {}
+main #r4_bg #r4 .title .con {}
+main #r4_bg #r4 .contents {}
+main #r4_bg #r4 .contents .tab_title {
+    display:flex; flex-flow:row nowrap; justify-content: center; /* 자식 a 태그 블록으로 인식 */
+    margin-bottom:24px; /* a에 줘도 똑같은 결과 나오지만, 의미적으로 생각하면? 제목과 컨텐츠를 여백을 주는 것임 */
+}
+main #r4_bg #r4 .contents .tab_title a {width:72px; text-align:center; padding:7px 0;}
+main #r4_bg #r4 .contents .tab_title .active {border-bottom:2px solid #189bfa;}
+main #r4_bg #r4 .contents .tab_contents {}
+main #r4_bg #r4 .contents .tab_contents .active {}
+main #r4_bg #r4 .contents .tab_contents .tab1_c {position:relative;}
+/* 비디오, 이미지처럼 px 단위로 크기가 고정되어 있는 경우는, 부모의 크기가 정해져있어도 크기를 따라가지 않는다. */
+main #r4_bg #r4 .contents .tab_contents .tab1_c video {width:100%;}
+/* p랑 img 중에 어떤 태그에 position:absolute 를 줘서 움직여야 할까? > 비디오와 형제 요소인 p ! 만약 이미지를 움직이면 p는 비디오 밑에 남은 채 이미지만 움직인 것 */
+/* absolute를 줬으면, top or bottom / left or right 가까운 방향 기준으로 하나씩 값을 준 후 개발자 도구 이용해서 움직이기 */
+main #r4_bg #r4 .contents .tab_contents .tab1_c p {position:absolute; right:-70px; bottom:-70px;}
+main #r4_bg #r4 .contents .tab_contents .tab1_c p img {width:100%;} 
+main #r4_bg #r4 .contents .tab_contents .tab2_c {}
+main #r4_bg #r4 .contents .tab_contents .tab2_c video {}
+main #r4_bg #r4 .contents .tab_contents .tab2_c p {}
+main #r4_bg #r4 .contents .tab_contents .tab2_c p img {}
+/* r5 */
+main #r5_bg {}
+main #r5_bg #r5 {}
+main #r5_bg #r5 .title {}
+main #r5_bg #r5 .title .sub_title {}
+main #r5_bg #r5 .title h1 {}
+main #r5_bg #r5 .title .con {}
+main #r5_bg #r5 .contents {
+    background: red;
+}
+main #r5_bg #r5 .contents .tab_title {
+    background: yellow;
+    display:flex; flex-flow:row nowrap;
+    justify-content:center;
+    margin-bottom:24px;
+}
+main #r5_bg #r5 .contents .tab_title a {
+    background: yellowgreen;
+    width:120px; padding:7px 0;
+    text-align:center; margin-right:12px;
+}
+main #r5_bg #r5 .contents .tab_title a:last-child {margin:0;}
+main #r5_bg #r5 .contents .tab_title .active {}
+main #r5_bg #r5 .contents .tab_contents {width:920px;}
+main #r5_bg #r5 .contents .tab_contents .active {}
+main #r5_bg #r5 .contents .tab_contents .tab1_c {
+    background: yellowgreen;
+    display:flex; flex-flow:row nowrap;
+    justify-content: space-between;
+}
+main #r5_bg #r5 .contents .tab_contents .tab1_c .info {
+    background: steelblue;
+    /* width:444px; */
+    width:444px; margin-right: 32px;
+}
+main #r5_bg #r5 .contents .tab_contents .tab1_c h2 {font-size:1.25rem;} /* info, essential 공통 */
+main #r5_bg #r5 .contents .tab_contents .tab1_c .info h2 {}
+main #r5_bg #r5 .contents .tab_contents .tab1_c .info p {margin:16px 0;} /* 홀수값에 상하마진 */
+main #r5_bg #r5 .contents .tab_contents .tab1_c .info p img {width:100%;}
+main #r5_bg #r5 .contents .tab_contents .tab1_c .info dl {}
+main #r5_bg #r5 .contents .tab_contents .tab1_c .info dl dt {}
+main #r5_bg #r5 .contents .tab_contents .tab1_c .essential {
+    background: steelblue;
+    width:calc(100% - 476px);
+}
+main #r5_bg #r5 .contents .tab_contents .tab1_c .essential h2 {margin-bottom:16px;}
+main #r5_bg #r5 .contents .tab_contents .tab1_c .essential ul {}
+main #r5_bg #r5 .contents .tab_contents .tab1_c .essential ul li {
+    height:120px;
+    background-position:left center;
+    background-repeat: no-repeat;
+    padding-left:90px;
+    display:flex; flex-flow: column nowrap; justify-content: center;
+}
+/* r5 li bg img */
+main #r5_bg #r5 .contents .tab_contents .tab1_c .essential ul li:nth-child(1) {
+    background-image: url(../images/menu-1-1.png);
+}
+main #r5_bg #r5 .contents .tab_contents .tab1_c .essential ul li:nth-child(2) {
+    background-image: url(../images/menu-1-2.png);
+    border:1px solid #aaa;
+    border-left:none; border-right:none;
+}
+main #r5_bg #r5 .contents .tab_contents .tab1_c .essential ul li:nth-child(3) {
+    background-image: url(../images/menu-1-3.png);
+}
+main #r5_bg #r5 .contents .tab_contents .tab1_c .essential ul li .number {margin-bottom:8px;}
+main #r5_bg #r5 .contents .tab_contents .tab1_c .essential ul li p em {}

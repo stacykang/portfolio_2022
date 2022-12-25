@@ -1,0 +1,383 @@
+/* style.css */
+#top_btn {position:fixed; bottom:30px; right:30px;}
+#top_btn img {}
+header {width:1152px; margin:0 auto;}
+header #h_top {
+    height:48px;
+    display:flex; flex-flow:row nowrap;
+    justify-content: space-between;
+    align-items: center;
+} 
+header #h_top #h_t_left {display:flex; flex-flow:row nowrap; align-items: center;}  /* 부모태그에 flex row 적용해서 인라인 요소인 a태그가 위쪽으로 붙게되는 걸 다시 정렬해줌 */
+header #h_top #h_t_left h1 {}
+header #h_top #h_t_left h1 a {}
+header #h_top #h_t_left h1 a img {position:relative; top:-2px;}
+header #h_top #h_t_left nav {} 
+header #h_top #h_t_left nav a {font-size:0.875rem; padding-left:16px; letter-spacing: -0.1rem;}
+header #h_top #h_t_right {}
+header #h_top #h_t_right a {font-size:0.875rem; padding-left:35px;} 
+header #h_top #h_t_right a:first-child {padding:0;}
+header #h_btm {
+    height:119px;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-between;
+    /* 교차축 :  두줄 이상 align-content 한줄은 align item */
+    align-items:center;
+}
+header #h_btm h1 {}
+header #h_btm h1 a {}
+header #h_btm h1 a img {}
+header #h_btm #search_frm {
+    width:370px; height:47px;
+    border:3px solid #1E6CB3;
+    background:#fff;
+}
+header #h_btm #search_frm fieldset {
+    width: 100%; height:100%;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding:0 10px;
+}
+header #h_btm #search_frm fieldset input[name$=txt] {width:90%; height:80%;}
+header #h_btm #search_frm fieldset input[name$=txt]::placeholder{font-size:1.0rem; color:#ccc;} 
+header #h_btm #search_frm fieldset #search_btn {height:80%;}
+header #h_btm #h_b_right {}
+header #h_btm #h_b_right .lang_g {text-align: right;  font-size:0.813rem;} /* div 태그 안의 자식 태그가 다 인라인이라 text-align */
+header #h_btm #h_b_right .lang_g select[name^=lang] {
+    width:98px; height:28px;
+    font-size:0.813rem;
+    border:1px solid #1E6CB3;
+}
+header #h_btm #h_b_right .lang_g select[name^=lang] option {font-size:0.813rem;}
+header #h_btm #h_b_right .lang_g #lang_btn {
+    width:28px; height:28px;
+    font-size:0.813rem;
+    font-weight:700;
+    background: #1E6CB3;
+    color:#fff;
+}
+header #h_btm #h_b_right .weather_g {margin-top:7px;}
+header #h_btm #h_b_right .weather_g p {}
+header #h_btm #h_b_right .weather_g .today {font-size:1.5rem; font-weight:700;}
+header #h_btm #h_b_right .weather_g .today::after {content:''; display:block; 
+    height:5px; /* background: blue; */} /* 가상 블록으로 여백주기 */
+header #h_btm #h_b_right .weather_g .dust {font-size: 0.813rem; letter-spacing: -0.02rem}
+/* main 1행 배너 */
+main {}
+main #r1_wrap {
+    width:1152px; margin:0 auto;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+}
+main #r1_wrap .left_bnr {
+    width:770px; height:350px;
+    /* 자식 요소가 위에 겹치게 하려면 부모태그에 포지션 값을 주어야 한다. */
+    /* 안그러면 body 전체를 기준으로 좌표값이 적용되기 때문 */
+    position:relative;
+}
+main #r1_wrap .left_bnr img {} /* 의미가 중요한 이미지라 html 태그 내 삽입 */
+main #r1_wrap .left_bnr a {
+    width:60px; height:28px;
+    background:#1E6CB3; color:#fff; border-radius: 8px;
+    font-size:0.813rem; line-height:28px; text-align: center;
+    position:absolute; right:10px; bottom:10px; /* 부모태그 기준 위치 */
+}
+main #r1_wrap .right_bnr {
+    width:360px;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:space-between;
+}
+main #r1_wrap .right_bnr a {}
+main #r1_wrap .right_bnr .bnr_corona {
+    margin-bottom: 10px;
+    height:230px; /* 원래는 인라인이라 크기 인식 안되는데, 부모태그에 flex 속성을 주면 크기 인식이 된다. */
+    background: url("../images/bg_corona.gif");
+    position:relative;
+} 
+main #r1_wrap .right_bnr .bnr_corona span {
+    color:#fff;
+    font-size:0.813rem;
+    text-align: center;
+    position:absolute;
+}
+main #r1_wrap .right_bnr .bnr_corona .date {width:160px;text-align: right;top:19px; right:20px; }
+main #r1_wrap .right_bnr .bnr_corona .data1 {width:148px;top:85px; left:29px; }
+main #r1_wrap .right_bnr .bnr_corona .data2 {width:148px;top:85px; right:29px; }
+main #r1_wrap .right_bnr .bnr_corona .data3 {width:96px;top:159px; left:29px;}
+main #r1_wrap .right_bnr .bnr_corona .data4 {width:96px;top:159px; left:144px; }
+main #r1_wrap .right_bnr .bnr_corona .data5 { width:60px; top:159px; right:29px;}
+main #r1_wrap .right_bnr .bnr_traffic {}
+main #r1_wrap .right_bnr .bnr_traffic img {}
+/* main 2행 주요서비스 */
+main #r2_service { width:1152px; margin: 54px auto 0;}
+main #r2_service .title {
+    border-bottom:1px solid #ccc;
+    display:flex; flex-flow:row nowrap; justify-content: space-between;
+    padding-bottom:24px; margin-bottom:24px;
+}
+main #r2_service .title h2 {font-size: 1.5rem; font-weight: 700; letter-spacing:-0.02rem;}
+main #r2_service .title .site {
+    font-size:0.813rem;
+    /* 안쪽여백을 주면 따로 박스를 만들 필요가 없어서 훨씬 편리하다. */
+    border:1px solid #aaa; padding:4px 11px;
+}
+main #r2_service .contents {
+    display:flex; flex-flow:row nowrap;
+}
+main #r2_service .contents a {
+    width:9.09%;/* 100/11 */
+    display:flex; flex-flow:column nowrap;
+    align-items: center;
+} 
+/* 인라인 태그인 span 정렬하기*/
+/* 1. display:inline-block; text-align:center;*/
+/* 2. display:block;  margin:0 auto; */
+/* 3. 부모태그에 display:flex; */
+main #r2_service .contents a:nth-child(2n+1) {/* background-color: aqua */}
+main #r2_service .contents a:nth-child(2n) {}
+main #r2_service .contents a span {}
+main #r2_service .contents a .img {
+    width:60px; height:60px;
+    background-image: url(../images/icon_service/icon_service.png);
+}
+main #r2_service .contents a .txt {font-size:0.813rem;}
+main #r2_service .contents a:nth-child(1) .img {background-position: -170px -170px;}
+main #r2_service .contents a:nth-child(2) .img {background-position: -250px -10px;}
+main #r2_service .contents a:nth-child(3) .img {background-position: -250px -90px;}
+main #r2_service .contents a:nth-child(4) .img {background-position: -250px -170px;}
+main #r2_service .contents a:nth-child(5) .img {background-position: -10px -250px;}
+main #r2_service .contents a:nth-child(6) .img {background-position: -90px -250px;}
+main #r2_service .contents a:nth-child(7) .img {background-position: -170px -250px;}
+main #r2_service .contents a:nth-child(8) .img {background-position: -250px -250px;}
+main #r2_service .contents a:nth-child(9) .img {background-position: -10px -10px;}
+main #r2_service .contents a:nth-child(10) .img {background-position: -90px -10px;}
+main #r2_service .contents a:nth-child(11) .img {background-position: -10px -90px;}
+/* r3 배너영역 */
+main #r3_bg {background:#eff4f8; margin-top:54px;}
+main #r3_bg #r3_bnr {
+    width:1152px; margin:0 auto; padding:54px 0;
+    display:flex; flex-flow:row nowrap;
+}
+main #r3_bg #r3_bnr a {}
+main #r3_bg #r3_bnr a img {}
+/* 선택자 길어지는 만큼 주석 꼼꼼하게 달기 */
+/* r4 게시판 영역 */
+main #r4_board {
+    width:1152px; margin:54px auto 0 ;
+    display:flex; flex-flow:row nowrap; justify-content: space-between;
+}
+/* r4 공통 클래스 영역 */
+main #r4_board > div {
+    width:367px;
+} /* 꺽쇠로 자식태그만 선택 */
+main #r4_board div .title {
+    padding-bottom:24px; margin-bottom:24px; border-bottom: 1px solid #ccc;
+    display:flex; flex-flow:row nowrap; justify-content: space-between;
+}
+main #r4_board div .title h2 {
+    font-size: 1.5rem; font-weight:700;
+}
+main #r4_board div .title a {}
+main #r4_board div .contents {
+    display:flex; flex-flow:column nowrap;
+}
+main #r4_board div .contents a {
+    margin-bottom:15px;
+    display:flex; flex-flow: row nowrap;
+    justify-content: space-between;
+}
+main #r4_board div .contents a:last-child {margin-bottom:0;}
+main #r4_board div .contents a span {}
+main #r4_board div .contents a span:last-child {
+    width:88%; white-space:nowrap;
+    overflow: hidden; text-overflow: ellipsis;
+} 
+main #r4_board div .contents .admin {color:#028AB6;}
+main #r4_board div .contents .environ {color:#599100;}
+main #r4_board div .contents .welfare {color:#D76000;}
+main #r4_board div .contents .house {color:#C35C3C;}
+main #r4_board div .contents .culture {color:#9B64D3;}
+main #r4_board div .contents .economy {color:#069363;}
+/* r4-1 이벤트 신청 */
+main #r4_board .event {}
+main #r4_board .event .title {}
+main #r4_board .event .title h2 {}
+main #r4_board .event .title a {}
+main #r4_board .event .title a img {}
+main #r4_board .event .contents {}
+main #r4_board .event .contents a {}
+main #r4_board .event .contents a span {}
+main #r4_board .event .contents a .admin {}
+main #r4_board .event .contents a .environ {}
+main #r4_board .event .contents a .welfare {}
+main #r4_board .event .contents a .house {}
+main #r4_board .event .contents a .culture {}
+/* r4-2 행사 및 축제 */
+main #r4_board .festival {}
+main #r4_board .festival .title {}
+main #r4_board .festival .title h2 {}
+main #r4_board .festival .title a {}
+main #r4_board .festival .title a img {}
+main #r4_board .festival .contents {}
+main #r4_board .festival .contents a {}
+main #r4_board .festival .contents a span {}
+main #r4_board .festival .contents a .environ {}
+main #r4_board .festival .contents a .economy {}
+main #r4_board .festival .contents a .culture {}
+/* r4-3 자주 찾은 서비스 */
+main #r4_board .service {}
+main #r4_board .service .title {border: 0; margin:0;}
+main #r4_board .service .title h2 {}
+main #r4_board .service .contents {
+    padding:15px;
+    flex-flow: row wrap; background: #EFF4F8;}
+main #r4_board .service .contents a {width:50%;}
+main #r4_board .service .contents a:nth-child(9) {margin-bottom: 0;}
+/* r5 분야별 정보 */
+/* CSS 작성시 순서 */
+/* 1. 선택자 작성 */
+/* 2. 2~3단계 배경색으로 영역 알아볼 수 있게 하기, 코드명 말고 영문명으로 작성 */
+/* 3.1~2, 2~3단계 레이아웃 정렬+크기(헤더, 네비 부분만! 나머지 요소는 부모의 요소에 따라가도록 %로 표기 */
+/* 4. 글자(크기, 행간, 자간, 글꼴 등) */
+main #r5_info {
+    width:1152px; margin:54px auto 0;
+}
+main #r5_info .title {
+    padding-bottom: 24px; margin-bottom: 24px;
+    border-bottom: 1px solid #ccc;
+}
+main #r5_info .title h2 {font-size:1.5rem; font-weight:700;}
+main #r5_info .contents {
+    display:flex; flex-flow:row nowrap;
+}
+main #r5_info .contents a:nth-child(2n+1) {}
+main #r5_info .contents a:nth-child(2n) {}
+main #r5_info .contents a {
+    width:12.5%; /* 100/8 */
+    /* flex는 자식한테만 적용된다! 자손까지 적용 안됨! */
+    display: flex; flex-flow:column nowrap;
+    align-items: center;
+}
+main #r5_info .contents a span {}
+main #r5_info .contents a .img {
+    width:84px; height:91px;
+    background-image: url(../images/icon_set/icon_set.png);
+}
+main #r5_info .contents a .txt {font-size: 0.813rem;}
+main #r5_info .contents a:nth-child(1) .img{background-position:-114px -121px;}
+main #r5_info .contents a:nth-child(2) .img{background-position:-218px -121px;}
+main #r5_info .contents a:nth-child(3) .img{background-position:-322px -10px;}
+main #r5_info .contents a:nth-child(4) .img{background-position:-322px -121px;}
+main #r5_info .contents a:nth-child(5) .img{background-position:-10px -10px;}
+main #r5_info .contents a:nth-child(6) .img{background-position: -114px -10px;}
+main #r5_info .contents a:nth-child(7) .img{background-position:-218px -10px;}
+main #r5_info .contents a:nth-child(8) .img{background-position:-10px -121px;}
+/* r6 새소식 */
+main #r6_news {
+    width:1152px; margin:54px auto 0;
+}
+main #r6_news .title {
+    padding-bottom: 24px; margin-bottom: 24px;
+    border-bottom: 1px solid #ccc;
+    display:flex; flex-flow:row nowrap;
+    justify-content: space-between;
+}
+main #r6_news .title h2 {
+    font-size:1.5rem; font-weight:700;
+}
+main #r6_news .title .site {
+    font-size:0.813rem;
+    border:1px solid #aaa; padding:4px 11px;
+}
+main #r6_news .contents {
+    display:flex; flex-flow:row wrap;
+    justify-content: space-between;
+}
+main #r6_news .contents a {
+    /* width:24%; */
+    /* calc 계산기 기능! 반드시 연산자 양쪽에 공백 있어야 함 */
+    width:calc(25% - 18px);
+    display: flex; flex-flow:column nowrap;
+}
+main #r6_news .contents a span {}
+main #r6_news .contents a .img {height:188px;}
+main #r6_news .contents a:nth-child(1) .img {background-image: url(../images/news_img01.jpg);}
+main #r6_news .contents a:nth-child(2) .img {background-image: url(../images/news_img02.jpg);}
+main #r6_news .contents a:nth-child(3) .img {background-image: url(../images/news_img05.jpg);}
+main #r6_news .contents a:nth-child(4) .img {background-image: url(../images/news_img07.jpg);}
+main #r6_news .contents a:nth-child(5) .img {background-image: url(../images/news_img03.jpg);}
+main #r6_news .contents a:nth-child(6) .img {background-image: url(../images/news_img08.jpg);}
+main #r6_news .contents a:nth-child(7) .img {background-image: url(../images/news_img04.jpg);}
+main #r6_news .contents a:nth-child(8) .img {background-image: url(../images/news_img06.jpg);}
+main #r6_news .contents a .txt {
+    margin:6px 0 28px;
+    line-height: 1.3; letter-spacing: -0.03rem;
+}
+/* footer */
+footer {width:1152px; margin:54px auto;}
+footer #f_top {
+    border: 1px solid #ccc;
+    border-left:0; border-right:0;
+    padding:22px 0;
+    display:flex; flex-flow:row nowrap;
+    justify-content: space-between;
+}
+footer #f_top #f_t_left {}
+footer #f_top #f_t_left a {
+    /* 글자 사이에 세로선 넣을 때 보더로 넣어도 되지만 패딩값 때문에 길이가 이상해짐 */
+    /* border-right:1px solid red; */
+    margin-right:7px;
+    padding-right:7px;
+    color:#888;
+}
+footer #f_top #f_t_left a::after {
+    content:'';/* 공간을 만들어주는 속성 */
+    display:inline-block;
+    width:1px; height:16px;
+    background: #ccc;
+    /* 위치를 자유롭게 움직일 때 position 속성 */
+    position: relative; top:2px; left:10px;
+}
+footer #f_top #f_t_left a:last-child {margin:0; padding:0;}
+footer #f_top #f_t_left a:last-child::after {display:none;}
+footer #f_top #f_t_left a span {color:#000;}
+footer #f_top #f_t_sns {display:flex; flex-flow:row nowrap;}
+footer #f_top #f_t_sns .img {
+    text-indent: -99999px;
+    width:25px; height:25px;
+    background-image: url(../images/icon_sns2/icon_sns2.png);
+    margin-left: 5px;
+}
+footer #f_top #f_t_sns .img:nth-child(1) {background-position: 0 0;}
+footer #f_top #f_t_sns .img:nth-child(1):hover {background-position: 0 -280px;}
+footer #f_top #f_t_sns .img:nth-child(2) {background-position: 0 -35px;}
+footer #f_top #f_t_sns .img:nth-child(2):hover {background-position: 0 -315px;}
+footer #f_top #f_t_sns .img:nth-child(3) {background-position: 0 -70px;}
+footer #f_top #f_t_sns .img:nth-child(3):hover {background-position: 0 -350px;}
+footer #f_top #f_t_sns .img:nth-child(4) {background-position: 0 -105px;}
+footer #f_top #f_t_sns .img:nth-child(4):hover {background-position: 0 -385px;}
+footer #f_top #f_t_sns .img:nth-child(5) {background-position: 0 -140px;}
+footer #f_top #f_t_sns .img:nth-child(5):hover {background-position: 0 -420px;}
+footer #f_top #f_t_sns .img:nth-child(6) {background-position: 0 -175px;}
+footer #f_top #f_t_sns .img:nth-child(6):hover {background-position: 0 -455px;}
+footer #f_bottom {
+    padding: 25px 0 25px;
+    display:flex; flex-flow:row nowrap; justify-content:space-between;
+}
+footer #f_bottom #f_b_left {display:flex; flex-flow: row nowrap;}
+footer #f_bottom #f_b_left > p {}
+footer #f_bottom #f_b_left > p img {margin-right:10px;}
+footer #f_bottom #f_b_left .txt {font-size:0.813rem; position:relative; top:-5px;}
+footer #f_bottom #f_b_left .txt address,
+footer #f_bottom #f_b_left .txt p {color:#333;line-height:24px;}
+footer #f_bottom #f_b_left .txt address {}
+footer #f_bottom #f_b_left .txt p {}
+footer #f_bottom #f_b_right {}
+footer #f_bottom #f_b_right a {}
+footer #f_bottom #f_b_right a img {}
+footer #f_bottom #f_b_right a:last-child img {margin-left:10px;}

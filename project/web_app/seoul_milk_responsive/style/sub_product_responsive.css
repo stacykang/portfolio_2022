@@ -1,0 +1,30 @@
+/*mobile */
+@media screen and (max-width:900px){
+    main .product_wrap .container .card {width:calc(50% - 20px);}
+}
+@media screen and (max-width:580px){
+    main .title_bg .title_wrap {height:300px;}
+    main .title_bg .title_wrap h1 {font-size:2.25rem;}
+    main .title_bg .title_wrap p {font-size:1.125rem;}
+    main .title_bg_food .title_wrap h1,
+    main .title_bg_food .title_wrap p {text-shadow:0 0 5px #fff; color:#313131;}
+    main .dep2_tab a {width:150px; padding:12px 0; font-size:1rem; font-weight:500;}
+    main .dep3_tab {margin-top:20px; padding-bottom:40px;}
+    main .dep3_tab .tab .img:hover, main .dep3_tab .active .img {transform:scale(1);} 
+    main .dep3_tab .tab .tab_t {font-size:0.813rem;}
+    main .product_wrap {padding:80px 16px 40px;}
+    main .product_wrap .title {flex-flow:column nowrap; align-items: center; margin-bottom:10px;}
+    main .product_wrap .title .symbol {left:50%; transform:translateX(-36%); top:-80%;}
+    main .product_wrap .title h2 {font-size:1.5rem;}
+    main .product_wrap .title .num {margin:0; margin-top:12px; font-size:0.813rem;}
+    main .product_wrap .title .num .category_num {font-size:0.813rem;}
+    main .product_wrap .container {flex-flow:column nowrap;}
+    main .product_wrap .container .card {width:100%; max-width:400px;}
+    main .product_wrap .container .card .txt .t {font-size:1.125rem;}
+    main .product_wrap .container .card .txt .c {font-size:0.813rem;}
+    main .product_wrap .more_btn {
+        font-family: "SEOULMILK_500ml"; font-size:1.125rem;
+        height:32px; line-height:32px; margin:6px auto 0;
+        width:100%; max-width:400px;
+    }
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>왓챠피디아 스타일가이드</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styleguide.css">
+</head>
+<body>
+    <main>
+        <div class="contents_wrap" id="overview">
+            <h1>Overview</h1>
+            <div class="contents">
+                <p class="paragraph">
+                    왓챠피디아는 영화 추천 및 평가 서비스를 제공하는 웹사이트입니다.
+                    영화, TV프로그램, 도서, 웹툰 네 개의 카테고리로 콘텐츠를 제공하고 있습니다. <br><br>
+                    기존의 왓챠피디아 웹사이트는 서브 메뉴가 없이 1단계로 구성되어 있어 소비자가 원하는 콘텐츠를 탐색하기가 쉽지 않습니다.<br> 따라서 개인에 맞춘 콘텐츠 탐색이 가능하도록 3단계로 서브 메뉴를 구성했습니다.<br><br>
+                    또한, 영화 콘텐츠에 대한 정보가 포스터 이미지, 순위, 별점으로 한정적으로 제공되고 있다는 문제점이 있습니다.<br>
+                    해당 문제점을 보완하여 장르별 랭킹, 좋아요가 많은 코멘트, 줄거리 등 다양한 정보를 보여줄 수 있는 레이아웃으로 구성하였습니다.<br><br>
+                    왓챠피디아의 메인 컬러인 분홍색을 포인트 컬러로 사용하여 버튼 활성화시, 현재 페이지 경로 등에 활용하였고
+                    글자색상과 배경색은 콘텐츠의 색상을 부각하기 위해서 무채색으로 적용했습니다.
+                </p>
+            </div>
+        </div>
+        <div class="contents_wrap" id="styleguide">
+            <h1>Style Guide</h1>
+            <div class="contents">
+                <div class="style" id="colors">
+                    <h2>Colors</h2>
+                    <div class="category" id="color_point">
+                        <h3>Point</h3>
+                        <div class="pallete">
+                            <div class="color_chip">
+                                <h4>Pink</h4>
+                                <ul>
+                                    <li class="rgb">
+                                        <em>RGB</em>
+                                        <span>255</span>
+                                        <span>5</span>
+                                        <span>88</span>
+                                    </li>
+                                    <li class="hex">
+                                        <em>HEX</em>
+                                        <span>FF0558</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!-- e:pallete -->
+                    </div><!-- e:category color_primary -->
+                    <div class="category" id="color_border">
+                        <h3>Border</h3>
+                        <div class="pallete">
+                            <div class="color_chip">
+                                <ul>
+                                    <li class="hex">
+                                        <em>HEX</em>
+                                        <span>BBBBBB</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="color_chip">
+                                <ul>
+                                    <li class="hex">
+                                        <em>HEX</em>
+                                        <span>DDDDDD</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!-- e:pallete -->
+                    </div><!-- e:category color_border -->
+                    <div class="category" id="color_text">
+                        <h3>Text</h3>
+                        <div class="pallete">
+                            <div class="color_chip">
+                                <ul>
+                                    <li class="hex">
+                                        <em>HEX</em>
+                                        <span>222222</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="color_chip">
+                                <ul>
+                                    <li class="hex">
+                                        <em>HEX</em>
+                                        <span>737373</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="color_chip">
+                                <ul>
+                                    <li class="hex">
+                                        <em>HEX</em>
+                                        <span>848485</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="color_chip">
+                                <ul>
+                                    <li class="hex">
+                                        <em>HEX</em>
+                                        <span>D1D1CC</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="color_chip light">
+                                <ul>
+                                    <li class="hex">
+                                        <em>HEX</em>
+                                        <span>FFFFFF</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!-- e:pallete -->
+                    </div><!-- e:category color_text -->
+                    <div class="category" id="color_background">
+                        <h3>Background</h3>
+                        <div class="pallete">
+                            <div class="color_chip">
+                                <ul>
+                                    <li class="hex">
+                                        <em>HEX</em>
+                                        <span>151515</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="color_chip">
+                                <ul>
+                                    <li class="hex">
+                                        <em>HEX</em>
+                                        <span>1C1D1F</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="color_chip light">
+                                <ul>
+                                    <li class="hex">
+                                        <em>HEX</em>
+                                        <span>F2F2F2</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!-- e:pallete -->
+                    </div><!-- e:category color_background -->
+                </div><!-- e:#colors -->
+                <div class="style" id="typography">
+                    <h2>Typography</h2>
+                    <div class="category" id="fontfamily_noto_sans_kr">
+                        <h3>Noto Sans KR</h3>
+                        <div class="font">
+                            <div class="style bold">
+                                <div class="aa">Aa</div>
+                                <div class="txt">
+                                    <p class="name">
+                                        Noto Sans KR Bold
+                                    </p>
+                                    <p class="abcd">
+                                        ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                                        abcdefghijklmnopqrstuvwxyz<br>
+                                        0123456789<br>
+                                    </p>
+                                </div>
+                            </div><!-- e:style -->
+                            <div class="style medium">
+                                <div class="aa">Aa</div>
+                                <div class="txt">
+                                    <p class="name">
+                                        Noto Sans KR Medium
+                                    </p>
+                                    <p class="abcd">
+                                        ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                                        abcdefghijklmnopqrstuvwxyz<br>
+                                        0123456789<br>
+                                    </p>
+                                </div>
+                            </div><!-- e:style -->
+                            <div class="style regular">
+                                <div class="aa">Aa</div>
+                                <div class="txt">
+                                    <p class="name">
+                                        Noto Sans KR Regular
+                                    </p>
+                                    <p class="abcd">
+                                        ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                                        abcdefghijklmnopqrstuvwxyz<br>
+                                        0123456789<br>
+                                    </p>
+                                </div>
+                            </div><!-- e:style -->
+                        </div><!-- e:font -->
+                    </div><!-- e:category -->
+                </div><!-- e:#typography -->
+                <div class="style" id="components">
+                    <h2>Components</h2>
+                    <div class="category" id="iconography">
+                        <h3>Iconography</h3>
+                        <div class="list">
+                            <img src="images/styleguide/components01.svg" alt="">
+                            <img src="images/styleguide/components02.svg" alt="">
+                            <img src="images/styleguide/components03.svg" alt="">
+                            <img src="images/styleguide/components04.svg" alt="">
+                            <img src="images/styleguide/components05.svg" alt="">
+                            <img src="images/styleguide/components06.svg" alt="">
+                            <img src="images/styleguide/components07.svg" alt="">
+                            <img src="images/styleguide/components08.svg" alt="">
+                            <img src="images/styleguide/components09.svg" alt="">
+                            <img src="images/styleguide/components10.svg" alt="">
+                            <img src="images/styleguide/components11.svg" alt="">
+                            <img src="images/styleguide/components12.svg" alt="">
+                        </div><!-- e:list -->
+                    </div><!-- e:category -->
+                    <div class="category" id="badge">
+                        <h3>Badge</h3>
+                        <div class="list">
+                            <img src="images/styleguide/badge01.svg" alt="">
+                            <img src="images/styleguide/badge02.svg" alt="">
+                            <img src="images/styleguide/badge03.svg" alt="">
+                            <img src="images/styleguide/badge04.svg" alt="">
+                            <img src="images/styleguide/badge05.svg" alt="">
+                            <img src="images/styleguide/badge06.svg" alt="">
+                            <img src="images/styleguide/badge07.svg" alt="">
+                            <img src="images/styleguide/badge08.svg" alt="">
+                            <img src="images/styleguide/badge09.svg" alt="">
+                        </div><!-- e:list -->
+                    </div><!-- e:category -->
+                    <div class="category" id="btn">
+                        <h3>Button</h3>
+                        <div class="list">
+                            <img src="images/styleguide/btn01.svg" alt="">
+                            <img src="images/styleguide/btn02.svg" alt="">
+                            <img src="images/styleguide/btn03.svg" alt="">
+                            <img src="images/styleguide/btn04.svg" alt="">
+                            <img src="images/styleguide/btn05.svg" alt="">
+                        </div><!-- e:list -->
+                    </div><!-- e:category -->
+                </div><!-- e:#components -->
+            </div><!-- e:contents -->
+        </div><!-- e:style guide -->
+        <div class="contents_wrap" id="guideline">
+            <h1>Guideline</h1>
+            <div class="contents">
+                <ul class="info">
+                    <li>
+                        <em>Type</em>
+                        <span>Responsive web</span>
+                    </li>
+                    <li>
+                        <em>Total Width</em>
+                        <span>1320px</span>
+                    </li>
+                    <li>
+                        <em>Columns</em>
+                        <span>12</span>
+                    </li>
+                    <li>
+                        <em>Gutter</em>
+                        <span>20px</span>
+                    </li>
+                </ul>
+                <div class="img_container">
+                    <img src="images/styleguide/guideline.jpg" alt="가이드라인">
+                </div>
+            </div>
+        </div><!-- e:guideline -->
+        <div class="contents_wrap" id="responsive">
+            <h1>Responsive</h1>
+            <div class="contents">
+                <p class="paragraph">반응형 웹페이지를 기준으로 매체별 사이즈에 적합하도록 그리드라인을 활용하여 제작하였습니다.</p>
+                <ul class="info">
+                    <li>
+                        <em>Desktop</em>
+                        <span>width 1920px</span>
+                    </li>
+                    <li>
+                        <em>Laptop</em>
+                        <span>width 1512px</span>
+                    </li>
+                    <li>
+                        <em>Tablet</em>
+                        <span>width 1024px</span>
+                    </li>
+                    <li>
+                        <em>Mobile</em>
+                        <span>width 390px</span>
+                    </li>
+                </ul>
+                <div class="img_container">
+                    <img src="images/styleguide/responsive.png" alt="반응형 디자인 목업">
+                </div>
+            </div>
+        </div><!-- e:responsive -->
+    </main>
+</body>
+</html>

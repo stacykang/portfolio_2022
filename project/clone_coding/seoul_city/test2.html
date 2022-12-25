@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test2</title>
+    <style>
+        .all {background: aqua; height:100px; width:1000px; margin:30px auto;}
+        .all .box {width:50px; height:30px;}
+        .all .a {background: pink;}
+        .all .b {background:yellow;}
+        /* position 속성은 겹쳐지는 대상 및 고정 대상에 주로 사용 */
+        /* 개별1 */
+        .all:nth-child(1) {}
+        .all:nth-child(1) .box {position:relative;}
+        .all:nth-child(1) .a {left:100px; top:20px;}
+        .all:nth-child(1) .b{top:-20px;}
+        /* 개별2 */
+        .all:nth-child(2) {position:relative;/* 이 속성 제거시 .box는 body 기준으로 위치된다. */} 
+        .all:nth-child(2) .box {position:absolute;} 
+        .all:nth-child(2) .a {top:20px;}
+        .all:nth-child(2) .b{right:0px;}
+        /* 개별3 */
+        html,body{height:300vh; position:relative;}
+        .all:nth-child(3) {position:fixed;}
+        .all:nth-child(3) .box {}
+        .all:nth-child(3) .a {position:fixed; right:10px; top:10px;}
+        .all:nth-child(3) .b{position:fixed; right:20px; bottom:20px;}
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+    </div>
+    <div class="all">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+    </div>
+    <div class="all">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+    </div>
+</body>
+</html>

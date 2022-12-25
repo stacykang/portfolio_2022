@@ -1,0 +1,115 @@
+/* desktop & tablet */
+@media screen and (max-width:1200px) {
+    main #new_wrap_bg #new_wrap {gap:40px;}
+    main #promo_wrap #slide_container .slide .contents .img {flex: 2;}
+    main #explore_wrap_bg #explore_wrap {flex-direction:column; gap:32px;}
+    main #explore_wrap_bg #explore_wrap .wrap_title {align-items: center;}
+}
+
+/* tablet & mobile */
+@media screen and (max-width:900px) {
+    /* 공통 */
+    #new_wrap, #online_wrap, #look_wrap, #powder_wrap, #whats_wrap, #review_wrap, #explore_wrap{
+        padding:60px 16px;
+    }
+    .wrap_title h1 {font-size:2rem;}
+    .wrap_title p {font-size:1rem;}
+    .link_btn {font-size:0.875rem;}
+    /* new_wrap */
+    main #new_wrap_bg #new_wrap {padding-top:60px;}
+    main #new_wrap_bg #new_wrap .txt .img {width:58px; height:39px; top:-10px; left:-18px;}
+    main #new_wrap_bg #new_wrap .txt h1,
+    main #new_wrap_bg #new_wrap .txt h1 span {font-size:1.5rem;}
+    main #new_wrap_bg #new_wrap .txt .c {font-size:0.875rem;}
+    /* online_wraap */
+    main #online_wrap_bg #online_wrap .contents .service {width:33%;}
+    main #online_wrap_bg #online_wrap .contents .service .img {width:120px; height:120px;}
+    main #online_wrap_bg #online_wrap .contents .service .txt h2 {font-size:1.125rem;}
+    main #online_wrap_bg #online_wrap .contents .service .txt p {font-size:0.875rem;}
+    /* promo_wrap */
+    main #promo_wrap #slide_container .slide {height:350px;}
+    main #promo_wrap #slide_container .slide .contents .txt p:nth-child(1) {font-size:0.875rem;}
+    main #promo_wrap #slide_container .slide .contents .txt p:nth-child(2) {font-size:1.125rem;}
+    main #promo_wrap #slide_container .slide1 .contents .txt p:nth-child(2) span {font-size:2rem;}
+    main #promo_wrap .prev_next_btn a {height:350px;}
+    /* powder_wrap */
+    main #powder_wrap_bg #powder_wrap .contents .product .name_eng {height:30px;}
+    main #powder_wrap_bg #powder_wrap .contents .product .name_kor {font-size:1rem; height:40px;}
+    /* whats_wrap */
+    main #whats_wrap_bg #whats_wrap .wrap_title h1 {
+        -webkit-text-stroke: 1px #292828;
+        text-stroke: 1px #292828;
+    }
+    main #whats_wrap_bg #whats_wrap .contents .card h2 {font-size:1.125rem;}
+    main #whats_wrap_bg #whats_wrap .contents .card .c {font-size:0.875rem;}
+    /* review_wrap */
+    main #review_wrap_bg #review_wrap .contents p {font-size:0.875rem;}
+    /* explore_wrap */
+    main #explore_wrap_bg #explore_wrap .contents {gap:16px;}
+    main #explore_wrap_bg #explore_wrap .contents .card {width:45%;}
+    main #explore_wrap_bg #explore_wrap .contents .card .img {width:100%;}
+    main #explore_wrap_bg #explore_wrap .contents .card .name_eng ,
+    main #explore_wrap_bg #explore_wrap .contents .card .name_kor {text-align:center;}
+    main #explore_wrap_bg #explore_wrap .contents .card .name_eng {font-size:1.125rem;}
+}
+
+/* mobile */
+@media screen and (max-width:700px) {
+    body{overflow-x:hidden;}
+    #new_wrap, #online_wrap, #look_wrap, #powder_wrap, #whats_wrap, #review_wrap, #explore_wrap {padding:40px 16px;}
+    main #new_wrap_bg #new_wrap {
+        display:flex; flex-flow:column nowrap;
+        padding:60px 0;
+    }
+    main #new_wrap_bg #new_wrap .video img {display:none;}
+    /* online_wrap */
+    main #online_wrap_bg #online_wrap .contents {
+        flex-flow:column nowrap; gap:32px;
+        width:max-content; margin:60px auto 0;
+    }
+    main #online_wrap_bg #online_wrap .contents .service {flex-flow:row nowrap; width:100%; gap:20px;}
+    main #online_wrap_bg #online_wrap .contents .service .img {width:100px; height:100px;}
+    main #online_wrap_bg #online_wrap .contents .service .txt {width:auto; align-items: flex-start;}
+    main #online_wrap_bg #online_wrap .contents .service .txt h2 {margin-top:0;}
+    main #online_wrap_bg #online_wrap .contents .service .txt p {width:auto;}
+    main #online_wrap_bg #online_wrap .contents .service .txt h2,
+    main #online_wrap_bg #online_wrap .contents .service .txt p {text-align:left;}
+    /* promo_wrap */
+    main #promo_wrap #slide_container .slide {height:80vh; max-height:500px;}
+    main #promo_wrap #slide_container .slide .contents {
+        flex-flow: column-reverse; padding-right:0;
+    }
+    main #promo_wrap #slide_container .slide .contents .txt {margin:0 60px 40px;}
+    main #promo_wrap #slide_container .slide .contents .txt p:nth-child(2){
+        margin:12px 0 32px;
+    }
+    main #promo_wrap .prev_next_btn a {height:80vh; max-height:500px; width:32px;}
+    /* look_wrap */
+    main #look_wrap_bg #look_wrap .tab_t {
+        display:flex; flex-flow:row nowrap; justify-content: space-between;
+        width:100%; margin:24px 0 12px; gap:12px;
+    }
+    main #look_wrap_bg #look_wrap .tab_t a {
+        flex:1; text-align: center; padding:8px 0px;
+        border-bottom:1px solid #B1ACAC; color:#B1ACAC;
+        font-family: 'Kanit'; font-weight: 500; font-size:1.125rem;
+        transition:.5s /* js */
+    }
+    main #look_wrap_bg #look_wrap .tab_t a.active {border-bottom:1px solid #941B00; color:#941B00;}
+    main #look_wrap_bg #look_wrap .contents {
+        margin:0; position: relative;
+    }
+    main #look_wrap_bg #look_wrap .contents .look {
+        position:absolute; width:100%; height:100%;
+        top:0; margin:0; opacity:0; transition:.5s /* js */
+    }
+    main #look_wrap_bg #look_wrap .contents .look:nth-child(1) {position:relative; opacity:1;}
+    main #look_wrap_bg #look_wrap .contents .look .name {text-align:center;}
+    /* powder_wrap */
+    main #powder_wrap_bg #powder_wrap .contents {flex-flow:column nowrap;}
+    main #powder_wrap_bg #powder_wrap .contents .product .name_eng {height:auto;}
+    main #powder_wrap_bg #powder_wrap .contents .product .name_kor {height:auto; margin:12px 0 16px;}
+    /* whats_wrap */
+    main #whats_wrap_bg #whats_wrap .contents {margin-top:24px;}
+    main #whats_wrap_bg #whats_wrap .contents .card {padding:0;}
+}

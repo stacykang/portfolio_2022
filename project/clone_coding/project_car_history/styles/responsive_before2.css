@@ -1,0 +1,100 @@
+/* tablet */
+@media screen and (max-width:1224px) {
+    #h_bg header {width:calc(100% - 32px);}
+    main > div > div {width:100%; overflow:hidden;}  /* padding은 남아있는 상태 */
+    /* r4 */
+    main #r4_bg #r4 .contents .tab_contents .tab1_c p {width:23%; right:-16px; bottom:-12%;} /* 모바일 우측 16px에 딱 맞게. width,bottom 퍼센트로 주어서 화면 작아져도 따라가게 */
+}/* media tablet 1224 */
+/* ------------------------------------------------------------- */
+@media screen and (max-width:1024px){
+    /* r3 */
+    main #r3_bg #r3 #r3_contents {flex-flow:column nowrap;}
+    main #r3_bg #r3 #r3_contents li {max-width:500px;}
+    main #r3_bg #r3 #r3_contents li:nth-child(2) {margin:16px 0;}
+    /* r5 */
+    main #r5_bg #r5 .contents {width:100%;}
+    main #r5_bg #r5 .contents .tab_contents {width:100%;}
+    main #r5_bg #r5 .contents .tab_contents .tab1_c .info {
+        width:45%; margin-right: 32px;
+    }
+    main #r5_bg #r5 .contents .tab_contents .tab1_c .essential {
+        width:calc(55% - 32px)
+    }
+}/* media tablet 1024 */
+/* ------------------------------------------------------------- */
+@media screen and (max-width:856px){
+    /* r2 */
+    main #r2_bg #r2 #r2_contents li {width:calc(40%);}
+    main #r2_bg #r2 #r2_contents li:nth-child(1),
+    main #r2_bg #r2 #r2_contents li:nth-child(2) {margin-bottom:32px;}
+    main #r2_bg #r2 #r2_contents li:nth-child(2n) {margin-right:0;}
+
+}/* media tablet 856 */
+/* ------------------------------------------------------------- */
+@media screen and (max-width:800px){
+    /* 큰 레이아웃 상하패딩 */
+    main > div > div {padding:60px 16px}
+    /* header */
+    #h_bg header #h_right a:nth-child(1),
+    #h_bg header #h_right a:nth-child(2),
+    #h_bg header #h_right a:nth-child(3) {display:none;}
+    #h_bg header #h_right a:nth-child(4) {margin:0;}
+    /* main */
+    /* r1 */
+    main #r1_bg #r1{padding:60px 0;} 
+    main #r1_bg #r1 .view_category {width:calc(100% - 32px); flex-flow:column nowrap;}
+    main #r1_bg #r1 .view_category a{width:100%; padding:25px 0; border-radius: 10px; margin:0 0 10px 0;}
+    main #r1_bg #r1 .view_category a:last-child{margin:0;}
+    main #r1_bg #r1 .view_group,
+    main #r1_bg #r1 .view_group .view_contents1 {width:100%} 
+    main #r1_bg #r1 .view_group .view_contents1 {padding:16px;}
+    main #r1_bg #r1 .view_group .view_contents1 #view_frm fieldset {flex-flow:column nowrap;}
+    main #r1_bg #r1 .view_group .view_contents1 #view_frm fieldset #number,
+    main #r1_bg #r1 .view_group .view_contents1 #view_frm fieldset input,
+    main #r1_bg #r1 .view_group .view_contents1 #view_frm fieldset #view_btn{width:100%;}
+    main #r1_bg #r1 .view_group .view_contents1 #view_frm fieldset input{margin:5px 0;}
+    main #r1_bg #r1 .view_group .view_contents1 .btm_list {flex-flow:column nowrap;}
+    main #r1_bg #r1 .view_group .view_contents1 .btm_list .btm_menu{
+        width:100%; margin-bottom:24px;
+        justify-content:space-between;
+    }
+    main #r1_bg #r1 .view_group .view_contents1 .btm_list .sample_view {
+        width:100%; text-align: center; padding:15px 0;
+    }
+    /* r2 */
+    /* r3 */
+    /* r5 */
+    main #r5_bg #r5 .contents .tab_contents .tab_c {flex-flow:column nowrap; align-items: center;}
+    main #r5_bg #r5 .contents .tab_contents .tab_c .info {width:100%; margin-right:0;}
+    main #r5_bg #r5 .contents .tab_contents .tab_c .essential {width:100%;}
+    main #r5_bg #r5 .contents .tab_contents .tab_c .essential h2 {
+        text-align: center;
+        margin-top:32px; padding-top:32px;
+        border-top:1px solid #eeeeee;
+        text-decoration: underline; text-underline-offset: -8px; text-underline-position: below;
+        text-decoration-thickness:6px; text-decoration-color: #eeeeee;
+    }
+    /* main #r5_bg #r5 .contents .tab_contents .tab1_c .essential ul li {height:80px;} */
+}/* media tablet 800 */
+/* ------------------------------------------------------------- */
+/* mobile */
+@media screen and (max-width:600px){
+    /* header */
+    #h_bg #menu_list {width:100%;}
+    /* r5 */
+    main #r5_bg #r5 .contents .tab_title a {width:25%; margin:0;}
+}/* media mobile 600 */
+/* mobile */
+@media screen and (max-width:500px){
+    /* h1 폰트 크기 30px > 20px */
+    main #r1_bg #r1 h1,
+    main #r1_bg #r1 h1 span,
+    main .title h1 {font-size:1.25rem; font-weight:700;}
+    /* 내용 폰트 크기 16px > 12px */
+    body * {font-size:0.75rem;}
+    #h_bg header #h_right a.all_menu span{font-size:1rem;}
+    /* r5 */
+    main #r5_bg #r5 .contents .tab_contents .tab_c .info h2,
+    main #r5_bg #r5 .contents .tab_contents .tab_c .essential h2 {font-size: 1.125rem;}
+    main #r5_bg #r5 .contents .tab_contents .tab_c .essential ul li p em{font-size:0.875rem;}
+}/* media mobile 500 */

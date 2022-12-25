@@ -1,0 +1,187 @@
+html,body {min-width:370px;}
+/* #header */
+#h_bg {
+    width:100%; border-bottom:1px solid #ccc;
+    position:fixed; background-color: #fff; top:0; z-index:990; 
+}
+#h_bg header {
+    width:100%; max-width:1024px; height:108px; margin:0 auto;
+    padding:0 16px;
+    display:flex; flex-flow:row nowrap; justify-content: space-between;
+    align-items:center;
+}
+#h_bg header h1 {}
+#h_bg header h1 a {}
+#h_bg header h1 a img {width:180px;}
+/* 
+nav
+*/
+#h_bg header nav {height:100%;}
+/* a태그 공통 */
+#h_bg header nav a {display:block; padding:12px 28px; text-align: center; letter-spacing: -0.03em;}
+#h_bg header nav a.active, /* dep1 js */
+#h_bg header nav a:hover,
+#h_bg header nav .dep1 > li .dep2 > li .dep3 li a:hover {color:#E60012;}
+/* dep1 */
+#h_bg header nav .dep1 {display:flex; flex-flow:row nowrap; height:100%;}
+#h_bg header nav .dep1 > li {position:relative; display:flex; align-items: center;}
+#h_bg header nav .dep1 > li > a {font-family: "SEOULMILK_1000ml"; font-size:1.125rem;}
+/* dep2 */
+#h_bg header nav .dep1 > li .dep2 {
+    position:absolute; top:100%; width:100%; z-index:1;
+    overflow:hidden; height:0; /* js 250px */ 
+} 
+#h_bg header nav .dep1 > li .dep2::after {
+    display:block; content:''; transition:.5s;
+    width:0%; height:2px; background:#E60012;
+    position:absolute; top:0; left:50%; transform:translateX(-50%); /* 너비 기준 좌우 중앙으로 설정 */
+}
+#h_bg header nav .dep1 > li.active .dep2::after {width:100%;} /* js addClass */
+#h_bg header nav .dep1 > li .dep2 > li {}
+#h_bg header nav .dep1 > li .dep2 > li > a {
+    font-weight:500; padding:12px 0;
+}
+/* dep3 (dep1 첫번째 li 제품소개만 dep3 가진다) */
+#h_bg header nav .dep1 > li:first-child .dep2 {display:flex; width:200%;}
+#h_bg header nav .dep1 > li:first-child .dep2 > li {flex:1;}
+#h_bg header nav .dep1 > li:first-child .dep2 > li > a {position:relative;}
+#h_bg header nav .dep1 > li:first-child .dep2 > li > a::after {
+    content:''; display:block; height:1px; width:50%;
+    background:#ddd; position:absolute; bottom:0; left:50%; transform:translateX(-50%);
+}
+/* #h_bg header nav .dep1 > li:first-child .dep2 > li > a {border-bottom:1px solid #ccc;} */
+#h_bg header nav .dep1 > li .dep2 > li .dep3 {}
+#h_bg header nav .dep1 > li .dep2 > li .dep3 li {}
+#h_bg header nav .dep1 > li .dep2 > li .dep3 li a {
+    padding:12px 0;  font-size:0.875rem; color:#777;
+}
+#h_bg header nav div.sub_bg {
+    position:absolute; top:100%; left:0;  /* h_bg 기준 정렬 */ z-index:0;
+    background:#fff; border:1px solid #ddd; border-left:0; border-right:0;
+    width:100vw; height:0; transition:.5s; /* js 250px */ border-width:0; /* js 1px */
+}
+/* h_right */
+#h_bg header #h_right {display:flex; align-items: center;}
+#h_bg header #h_right .h_r_menu {display:flex;}
+#h_bg header #h_right .h_r_menu a {
+    margin-right:20px;
+    font-size:0.813rem; font-weight:700; color:#aaa; position:relative;
+}
+#h_bg header #h_right .h_r_menu a::after {
+    content:''; display:block;
+    width:1px; height:100%; background:#ddd;
+    position:absolute; right:-10px; top:0;
+}
+#h_bg header #h_right #search_open_btn {width:16px; height:16px;}
+#h_bg header #h_right #search_open_btn img {width:100%; filter:brightness(3);}
+#h_bg header #h_right #menu_btn {width:36px; height:36px; display:none;}
+#h_bg header #h_right #menu_btn img {}
+#h_bg header #m_menu_top {display:none;}
+#h_bg header #m_menu_top a {}
+#h_bg header #m_menu_top a img {}
+#h_bg header #m_menu_top #close_btn {}
+/* search_bg */
+#h_bg #search_bg {
+    background:#00573ddd;
+    position:absolute; width:100%; height:250px;
+    top:100%; left:0; z-index:-1; display:none; /* js */
+}
+#h_bg #search_bg #search_wrap {
+    width:100%; height:100%; max-width:1024px; padding:0 16px 20px; margin:0 auto;
+    display:flex; flex-flow:column nowrap; align-items: center;
+    justify-content: center;
+}
+#h_bg #search_bg #search_wrap .close {
+    display:flex; align-items: center;
+    align-self:flex-end; /* 부모 search_wrap 기준 개별 정렬 */
+}
+#h_bg #search_bg #search_wrap .icon {
+    background-position:center; background-size:cover;
+}
+#h_bg #search_bg #search_wrap #search_btn,
+#h_bg #search_bg #search_wrap .close .icon {
+    width:24px; height:24px;
+    background-image: url(../images/icon/close_icon_24x24.svg);
+    background-repeat: no-repeat;
+}
+#h_bg #search_bg #search_wrap .close .t {
+    color:#fff; font-weight:500; letter-spacing:-0.04em;
+    position:relative; top:-1px;
+}
+#h_bg #search_bg #search_wrap #search_frm {margin:24px 0;}
+#h_bg #search_bg #search_wrap #search_frm fieldset {
+    display:flex;  position:relative;
+}
+#h_bg #search_bg #search_wrap #search_frm fieldset input[type=text] {
+    background: #fff;
+    height:50px; width:440px; padding-left:26px; border-radius: 30px; 
+    font-family: "SEOULMILK_500ml";  color:#00573D; font-size:1.125rem;
+}
+#h_bg #search_bg #search_wrap #search_frm fieldset input[type=text]:focus {
+    outline:0; box-shadow:0 0 16px #032c20;
+}
+#h_bg #search_bg #search_wrap #search_frm fieldset input[type=text]::placeholder {color:#00573D;}
+#h_bg #search_bg #search_wrap #search_frm fieldset #search_btn {
+    position:absolute; right:20px; top:50%; transform:translateY(-50%); text-indent:-9999px;
+    width:20px; height:20px; background-image: url(../images/icon/search_green.svg);
+}
+#h_bg #search_bg #search_wrap .tag {display:flex;}
+#h_bg #search_bg #search_wrap .tag a {
+    display:flex; align-items: center; border-radius: 20px;
+    border:1px solid #ffffff79; padding:4px 12px; margin-right:12px;
+}
+#h_bg #search_bg #search_wrap .tag a:hover {background: #ffffff33; box-shadow:0 0 5px #032c2079;}
+#h_bg #search_bg #search_wrap .tag a:last-child {margin:0;}
+#h_bg #search_bg #search_wrap .tag a .icon {
+    width:16px; height:16px; background-image: url(../images/icon/tag_icon.svg);
+}
+#h_bg #search_bg #search_wrap .tag a .t {font-size:0.813rem; font-weight:700; color:#fff; margin-left:5px;}
+/* footer */
+#f_bg {background:#00573D;}
+#f_bg span, #f_bg p, #f_bg a, #f_bg address {color:#F6F8F7;}
+#f_bg footer {
+    width:100%; max-width:1024px; margin:0 auto; padding:60px 16px;
+    display:flex; flex-flow:row nowrap; /* 반응형 초기값 */
+
+}
+#f_bg footer #f_left {margin-right:40px;}
+#f_bg footer #f_left p {}
+#f_bg footer #f_left p img {width:180px;}
+#f_bg footer #f_left #f_l_menu {display:flex; flex-flow:row wrap; margin:16px 0;}
+#f_bg footer #f_left #f_l_menu a {padding:4px 0; margin-right:12px; font-size:0.813rem; font-weight:500;}
+#f_bg footer #f_left #f_l_btm {
+    display:flex; flex-flow:row wrap;
+}
+#f_bg footer #f_left #f_l_btm * {font-size:0.813rem; padding:4px 0; opacity:.7; margin-right:16px;}
+#f_bg footer #f_left #f_l_btm p {}
+#f_bg footer #f_left #f_l_btm address {line-height:1.3;}
+#f_bg footer #f_right {display:flex; flex-flow:column nowrap; justify-content: space-between; align-items: flex-end;}
+#f_bg footer #f_right .phone {}
+#f_bg footer #f_right .phone .title {
+    margin-bottom:6px; padding-bottom:6px; border-bottom:1px solid #F6F8F7;
+    display:flex; align-items: center;
+}
+#f_bg footer #f_right .phone .title img {margin-right:6px;}
+#f_bg footer #f_right .phone .title span {}
+#f_bg footer #f_right .phone .num {font-family: "SEOULMILK_500ml"; letter-spacing:-0.02em;}
+#f_bg footer #f_right .family {width:136px; position:relative;}
+#f_bg footer #f_right .family a {
+    font-size:0.875rem; padding:16px 0;
+    display:block; text-align:center;
+    background:0; transition:.3s;
+}
+#f_bg footer #f_right .family .family_btn {
+    font-family: "SEOULMILK_500ml"; text-transform: uppercase;
+    border:1px solid #F6F8F7;
+}
+#f_bg footer #f_right .family .family_btn:hover {background:#ffffff33;}
+#f_bg footer #f_right .family .active {background:#F6F8F7; color:#00573D;}
+#f_bg footer #f_right .family .family_list {
+    border:1px solid #F6F8F7; border-bottom:0; position:absolute; width:100%;
+    bottom:100%; background: #F6F8F7; display:none;
+}
+#f_bg footer #f_right .family .family_list li {}
+#f_bg footer #f_right .family .family_list li a {color:#00573D; font-weight:700;}
+#f_bg footer #f_right .family .family_list li a:hover {background: #00573D33;}
+#f_bg footer #f_right .coop {}
+#f_bg footer #f_right .coop p {font-size:0.813rem; white-space:nowrap;}

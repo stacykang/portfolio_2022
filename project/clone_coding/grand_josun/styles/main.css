@@ -1,0 +1,288 @@
+main {}
+/*
+slide_check_wrap
+*/
+main #slide_check_wrap {position:relative;}
+/*
+slide_wrap
+*/
+main #slide_check_wrap #slide_wrap {height:900px; overflow:hidden;}
+main #slide_check_wrap #slide_wrap .slide_container {}
+main #slide_check_wrap #slide_wrap .slide_container .slide {
+    position:absolute; width:100%; height:900px; /* height:100%; */
+    background-size:cover; background-position:center;
+    text-indent:-9999px; transition:.5s; opacity:0;
+}
+main #slide_check_wrap #slide_wrap .slide_container .slide1 {background-image:url(../images/bg_main01.jpg); opacity:1;}
+main #slide_check_wrap #slide_wrap .slide_container .slide2 {background-image:url(../images/bg_main02.jpg);}
+main #slide_check_wrap #slide_wrap .slide_container .slide3 {background-image:url(../images/bg_main03.jpg);}
+/*
+check_wrap
+*/
+main #slide_check_wrap #check_wrap {
+    position:absolute; bottom:92px; left:50%; transform:translateX(-50%);
+    width:100%; max-width:1400px; /* absolute 적용시 크기값 사라진다! */ padding:0 16px;
+}
+main #slide_check_wrap #check_wrap .check_close  {}
+main #slide_check_wrap #check_wrap .check_close h1,
+main #slide_check_wrap #check_wrap .check_close h1+p {color:#fff;/*  text-shadow:0 0 8px #342c29; */}
+main #slide_check_wrap #check_wrap .check_close h1  {
+    font-family:'Noto Serif KR',serif; font-size:4rem; font-weight:500; letter-spacing: -0.04em;
+}
+main #slide_check_wrap #check_wrap .check_close h1+p { /* h1의 형제 p에 적용한다 */
+    font-size:2.5rem; letter-spacing: -0.02em; margin:20px 0;
+}
+main #slide_check_wrap #check_wrap .check_close .bar  {
+    background-color: #fff;
+    height:60px; display:flex; flex-flow:row nowrap;
+    justify-content: space-between; align-items: center;
+    padding-left:100px; transition:.5s;
+}
+main #slide_check_wrap #check_wrap .check_close .bar .date  {
+    display:flex; align-items: center;
+}
+main #slide_check_wrap #check_wrap .check_close .bar .date dt  {font-weight:700;}
+main #slide_check_wrap #check_wrap .check_close .bar .date dd  {font-weight:700; font-size:1.25rem;}
+main #slide_check_wrap #check_wrap .check_close .bar .date dd:nth-child(2) {margin:0 28px;}
+main #slide_check_wrap #check_wrap .check_close .bar .date dd:last-child {}
+main #slide_check_wrap #check_wrap .check_close .bar .number  {
+    display:flex; cursor:pointer; height:100%;
+    align-items: center; padding:0 16px; transition:color 0.5s;
+}
+main #slide_check_wrap #check_wrap .check_close .bar .number dd  {font-weight:700;}
+main #slide_check_wrap #check_wrap .check_close .bar .number dd:nth-child(3)  {margin:0 28px;}
+main #slide_check_wrap #check_wrap .check_close .bar .number dd .num {font-weight:700; font-size:1.25rem; margin-left:8px;}
+main #slide_check_wrap #check_wrap .check_close .bar .number dd,
+main #slide_check_wrap #check_wrap .check_close .bar .number dd .num {transition:color 0.3s;}
+main #slide_check_wrap #check_wrap .check_close .bar .number:hover dd,
+main #slide_check_wrap #check_wrap .check_close .bar .number:hover dd .num {color:#B29D95;}
+main #slide_check_wrap #check_wrap .check_close .bar .check_search  {
+    color:#fff; background: #222; width:160px; height:60px;
+    line-height:60px; text-align:center;
+    font-weight:700; font-size:1.25rem;
+} 
+/*
+check_wrap_open
+*/
+main #slide_check_wrap #check_wrap .check_open  {
+    background: #fff;
+    position:absolute; bottom:60px; /* bar height */
+    width:calc(100% - 32px); height:0; overflow: hidden; transition:0.5s;
+    display: flex; flex-flow:row nowrap; justify-content: center; align-items:center;
+    border-bottom:1px solid #ccc; border-width:0;
+}
+main #slide_check_wrap #check_wrap .check_open .contents  {
+    margin:0 auto; width:100%; max-width:930px;
+    display:flex; flex-flow:row nowrap; justify-content: space-between;
+    padding:0 32px;
+}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select  {}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room  {
+    display:flex; flex-flow:row nowrap; align-items:center;
+}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room1  {}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room2  {margin:32px 0;}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room3  {}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room dt  {font-size:1.25rem; font-weight:700;}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room dd  {padding:12px; border-bottom:1px solid #222;}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room .adult  {margin:0 40px;}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room .child  {}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room dd button {
+    width:24px; height:24px; font-size:1.5rem;
+}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room dd button:hover {color:#B29D95;}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room dd .minus_btn  {}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room dd .plus_btn  {}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room dd > span {margin:0 32px;}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room dd > span,
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room dd > span span {font-size:1.25rem;}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room dd > span span {margin-left:6px;}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room dd > span .adult_num  {}
+main #slide_check_wrap #check_wrap .check_open .contents .room_select .room dd > span .child_num  {}
+main #slide_check_wrap #check_wrap .check_open .contents .right  {width:190px;}
+main #slide_check_wrap #check_wrap .check_open .contents .right p  {
+    margin-bottom:16px; letter-spacing:-0.02rem;
+}
+main #slide_check_wrap #check_wrap .check_open .contents .right a  {
+    width:100%; height:48px; display:block; text-align: center; line-height:48px;
+    font-weight:700; border:1px solid #222;
+}
+main #slide_check_wrap #check_wrap .check_open .close {
+    display:block; width:24px; height:24px;
+    text-align:center;
+    position:absolute; top:30px; right:30px;
+} 
+main #slide_check_wrap #check_wrap .check_open .close::after { /* 폰트어썸 이용! */
+    content:'\f00d'; font-weight:600;
+    font-size:1.5rem; transition:0.3s;
+}
+main #slide_check_wrap #check_wrap .check_open .close:hover::after {color:#B29D95;}
+/*
+grand_info
+*/
+main #grand_info {padding:120px 16px 80px; text-align:center;}
+main #grand_info h1 {
+    font-family:'Noto Serif KR',serif; font-size:6.25rem; font-weight:300; /* light */
+    letter-spacing:-0.02em;
+}
+main #grand_info h2 {margin:40px auto 30px; font-size:1.5rem; letter-spacing:-0.02em;}
+main #grand_info p {
+    max-width:570px; margin:0 auto;
+    line-height:1.875; letter-spacing: -0.02em; word-break:keep-all;
+}
+/*
+offers_wrap
+*/
+main #offers_wrap {padding:80px 16px;max-width:1400px; margin:0 auto;}
+main #offers_wrap h1 {font-family:'Noto Serif KR',serif; font-size:2.5rem; letter-spacing: -0.04em; margin-bottom:32px;}
+main #offers_wrap .contents {display:flex; flex-flow:row nowrap; justify-content: space-between;}
+/* offers_wrap bg img 영역 */
+main #offers_wrap .o_l_top,
+main #offers_wrap .bnr,
+main #offers_wrap .offers_right {
+    position:relative;
+    background-position:center; background-size:cover;
+}
+/* offers_wrap active 공통 */
+main #offers_wrap a.active {
+    position:absolute; width:100%; height:100%;
+    background:rgba(22, 68, 56, 0.8);
+    display:flex; justify-content: center; align-items: center;
+    opacity:0; /* 동적 기능 전 준비과정 (투명도0)*/ transition: 0.5s;
+}
+main #offers_wrap a.active:hover {opacity:1;}
+main #offers_wrap a.active span {
+    color:#B29D95; border:1px solid #B29D95;
+    padding:16px 32px;
+}
+/* offers_wrap spacial text 공통 */
+main #offers_wrap .special_text .sub_title {color:#006633; font-size:0.75rem; font-weight:500;}
+main #offers_wrap .special_text h2 {font-size:1.25rem; font-weight:700; letter-spacing:-0.02em; margin:8px 0;}
+main #offers_wrap .special_text .content {
+    font-size:0.875rem; font-weight:500; letter-spacing: -0.02em;
+    white-space: nowrap; overflow:hidden; text-overflow: ellipsis;
+}
+/* offers_wrap 개별영역 */
+main #offers_wrap .contents .offers_left {
+    width:calc((100% - 20px) / 1.5);
+}
+main #offers_wrap .contents .offers_left .o_l_top {
+    background-image:url(../images/img_gallery03_05.jpg);
+    height:calc(50% - 10px); margin-bottom:20px; transition:.5s;
+}
+main #offers_wrap .contents .offers_left .o_l_top .active {}
+main #offers_wrap .contents .offers_left .o_l_top .active span {}
+main #offers_wrap .contents .offers_left .o_l_btm {
+    display:flex; flex-flow:row nowrap; justify-content: space-between;
+    height:calc(50% - 10px);
+}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_left {
+    width:calc(50% - 10px);
+    display:flex; flex-flow:column nowrap; transition:.5s;
+}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_left .special_text {}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_left .special_text .sub_title {}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_left .special_text h2 {}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_left .special_text .content {}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_left .bnr {
+    background-image: url(../images/img_offer02.jpg);
+    height:100%; margin:16px 0;
+}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_left .bnr .active {}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_left .bnr .active span {}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_right {
+    width:calc(50% - 10px);
+    display:flex; flex-flow:column nowrap;
+}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_right .bnr {
+    background-image: url(../images/img_offer03.jpg);
+    height:100%; margin-bottom:16px;
+}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_right .bnr .active {}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_right .bnr .active span {}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_right .special_text {}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_right .special_text .sub_title {}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_right .special_text h2 {}
+main #offers_wrap .contents .offers_left .o_l_btm .o_l_b_right .special_text .content {}
+main #offers_wrap .contents .offers_right {
+    width:calc((100% - 20px) / 3);
+    /* height:750px; */
+    padding-bottom:55%; /* 너비 기준 세로 비율 고정 */
+    background-image: url(../images/img_wedding.jpg);
+    background-size: cover;
+}
+main #offers_wrap .contents .offers_right .text {
+    position:absolute; width:100%; height:100%;
+    display:flex; flex-flow:column nowrap; align-items: center; justify-content: center;
+}
+main #offers_wrap .contents .offers_right .text p {color:#ffffff; margin:2px 0;}
+main #offers_wrap .contents .offers_right .text p:nth-child(1) {font-size:0.75rem; font-weight:500; letter-spacing:0.1em; opacity:.9;}
+main #offers_wrap .contents .offers_right .text p:nth-child(2) {font-size:1.25rem; font-weight:700; letter-spacing:-0.02em; margin:8px 0;}
+main #offers_wrap .contents .offers_right .text p:nth-child(3) {font-size:0.875rem; letter-spacing: -0.02em; opacity:.9;}
+main #offers_wrap .contents .offers_right .active {}
+main #offers_wrap .contents .offers_right .active span {}
+/* discovery_wrap */
+main #discovery_wrap {
+    max-width:1400px; margin:0 auto;
+    padding:80px 16px;
+    overflow: hidden; 
+}
+main #discovery_wrap > * {margin-left:calc((100% - 40px)/3 + 20px);} /* offers_wrap 의 3열 레이아웃에 맞추기 */
+main #discovery_wrap h1 {font-family:'Noto Serif KR',serif; font-size:2.5rem; letter-spacing: -0.04em; margin-bottom:32px;}
+main #discovery_wrap .pagenation {margin-bottom:20px;}
+main #discovery_wrap .pagenation a {
+    font-size:1.25rem; font-weight:700;
+    letter-spacing: -0.02em;
+    color:#ccc; transition:.3s;
+}
+main #discovery_wrap .pagenation a:nth-child(2){margin:0 36px;}
+main #discovery_wrap .pagenation a.active {color:#222;}
+main #discovery_wrap #discovery_slide_wrap {width:100%; overflow: hidden;}
+main #discovery_wrap #discovery_slide_wrap .slide_container {
+    width:max-content;
+    display:flex; flex-flow:row nowrap;
+    position:relative; left:0; transition:.5s;
+}
+main #discovery_wrap #discovery_slide_wrap .slide_container .slide {width:520px;}
+main #discovery_wrap #discovery_slide_wrap .slide_container .slide:nth-child(2) {margin:0 72px;}
+main #discovery_wrap #discovery_slide_wrap .slide_container .slide .img {
+    width:100%; height:312px; background-size:cover; background-position: center;
+}
+main #discovery_wrap #discovery_slide_wrap .slide_container .slide1 .img {background-image: url(../images/img_gallery01_05.jpg);}
+main #discovery_wrap #discovery_slide_wrap .slide_container .slide2 .img {background-image: url(../images/img_gallery02_02.jpg);}
+main #discovery_wrap #discovery_slide_wrap .slide_container .slide3 .img {background-image: url(../images/img_gallery02_03.jpg);}
+main #discovery_wrap #discovery_slide_wrap .slide_container .slide h2,
+main #discovery_wrap #discovery_slide_wrap .slide_container .slide p {
+    margin-top:16px; font-size:0.875rem; letter-spacing:-0.02em;
+}
+main #discovery_wrap #discovery_slide_wrap .slide_container .slide h2 {color:#006633; font-weight:500;}
+main #discovery_wrap #discovery_slide_wrap .slide_container .slide p {}
+main #discovery_wrap #discovery_slide_wrap .slide_container .slide p:nth-last-child(2) {
+    line-height:1.5; color:#555;
+}
+main #discovery_wrap #discovery_slide_wrap .slide_container .slide p:last-child {color:#ccc;}
+/* moments_wrap */
+main #moments_wrap {
+        background: #B29D9522;
+    text-align:center; padding:80px 16px;
+}
+main #moments_wrap h1::before {
+    content:''; display:block;
+    background:#222; width:1px; height:40px;
+    margin:0 auto 12px;
+}
+main #moments_wrap h1 {font-family:'Noto Serif KR',serif; font-size:2.5rem; letter-spacing: -0.04em;}
+main #moments_wrap p {margin:30px 0 50px; letter-spacing: -0.02em;}
+main #moments_wrap .contents {display:flex; justify-content: center;}
+main #moments_wrap .contents a {padding:16px 40px; font-weight:700; transition:.3s;}
+main #moments_wrap .contents .reservation {background: #222; color:#fff;}
+main #moments_wrap .contents .reservation:hover {background: #B29D95;}
+main #moments_wrap .contents .e_download {border:1px solid #222; margin-left:30px;}
+main #moments_wrap .contents .e_download:hover {background: #B29D95aa; border-color:#B29D95aa;}
+/* contact_wrap */
+main #contact_wrap {
+    max-width:1400px; margin:0 auto; padding:80px 16px;
+}
+main #contact_wrap h1 {font-family:'Noto Serif KR',serif; font-size:2.5rem; letter-spacing: -0.04em; margin-bottom:20px;}
+main #contact_wrap p {margin:3px 0; line-height: 1.25; font-size:0.875rem; font-weight:500;}
+main #contact_wrap #map {background:#eee; margin-top:20px; width:100%; height:500px;}

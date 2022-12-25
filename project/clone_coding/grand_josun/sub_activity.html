@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객실 | 그랜드조선부산</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/sub_header.css">
+    <link rel="stylesheet" href="styles/sub_activity.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"/>
+</head>
+<body>
+    <?php include("header.php");?>
+    <main>
+        <div class="page_title">
+            <h1>ACTIVITY</h1>
+            <p>다양한 액티비티 프로그램을 통해 여행의 추억을 더해 보세요.<br>
+                액티비티 프로그램 전담팀이 부산에서 즐길 수 있는 다채로운 프로그램을 운영합니다.</p>
+        </div><!-- e:page_title -->
+        <div id="tab_t">
+            <a href="#!" class="active">ALL</a>
+            <a href="#!">INDOOR</a>
+            <a href="#!">OUTDOOR</a>
+        </div><!-- e:tab_t -->
+        <div id="tab_c">
+            <div class="room rm_wrap kids_wrap alert_wrap">
+                <p class="icon_alert"></p>
+                <p class="alert">등록된 액티비티 상품이 없습니다.</p>
+                <p class="board">
+                    <iframe src="http://stacy.dothome.co.kr/gnuboard/bbs/board.php?bo_table=test" frameborder="0" style="width:80%; height:400px; border:1px solid #ddd; margin-top:50px; padding:20px;"></iframe>
+                </p>
+            </div>
+        </div><!-- e:tab_c -->
+    </main>
+    <?php include("footer.php");?>
+    <!-- script -->
+    <script src="script/sub.js"></script>
+</body>
+</html>

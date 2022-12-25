@@ -1,0 +1,113 @@
+/* 공통 레이아웃  */
+header,main,footer {
+    min-width:350px; max-width:450px; margin:0 auto;
+    padding:0 16px;
+}
+/* header */
+header {padding:40px 0 20px;}
+header h1 {text-align: center;}
+header h1 a {}
+header h1 a img {width:200px;}
+/* main */
+main {}
+main form {}
+main form fieldset {
+    margin-bottom:15px; padding-bottom:15px;
+    border-bottom:1px solid #ddd;
+}
+main form fieldset ul {}
+main form fieldset ul li {display:flex; position: relative;}
+main form fieldset ul li:nth-child(3) {margin-top:16px;}
+main form fieldset ul li span {}
+main form fieldset ul li .icon {
+    width:48px; height:48px;
+    background:#fafafa;
+    border:1px solid #ccc; border-right:0;
+    position:relative;
+    box-sizing: content-box;
+}
+main form fieldset ul li .icon::after {
+    content:''; display:block;
+    width:22px; height:20px;
+    position:absolute; top:50%; left:50%;
+    transform:translate(-50%,-50%);
+}
+main form fieldset ul li .id_icon::after {background-image: url(../images/icon.svg);}
+main form fieldset ul li .pw_icon::after {
+    background-position: 127px -1px;
+    background-image: url(../images/icon.svg);
+}
+main form fieldset ul li span:nth-child(2) {width:100%;}
+main form fieldset ul li span input {
+    height:48px; text-indent:12px;
+    border:1px solid #ccc; width:100%;
+    box-sizing: content-box; border-radius: 0;
+}
+main form fieldset ul li span input:focus {outline:none;}
+main form fieldset ul li span input::placeholder {
+    font-size:0.875rem; color:#aaa; font-weight:500;
+}
+main form fieldset ul li span input[type=text] {}
+main form fieldset ul li span input[type=password] {}
+main form fieldset ul li .pw_show_hide {
+    cursor:pointer;
+    position: absolute;right: 16px; top: 50%;
+    transform: translateY(-50%);
+    width: 20px; height: 23px;
+    background-image: url(../images/icon.svg);
+    background-position: -106px 0;  /* 클릭시 -127px */
+}
+main form fieldset ul .error {
+    font-size:0.813rem; color:#e52528;
+    padding:12px; padding-bottom:0;
+    display:none;
+}
+main form fieldset .btm {
+    display:flex; justify-content: space-between;
+    margin:16px 0 12px; align-items:center;
+}
+main form fieldset .btm label {display:flex; align-items: center;}
+main form fieldset .btm label input[type=checkbox] {
+    appearance: none; /* 웹브라우저 자체 디자인 숨기기 */
+    width:24px; height:24px;
+    background-color: #fff; border:1px solid #ccc; border-radius: 2px;
+    margin-right:5px;
+    position:relative; overflow:hidden;
+}
+main form fieldset .btm label input[type=checkbox]::after { /* 체크표시 */
+    content:''; display:block;
+    width: 18px; height: 13px;
+    background-image: url(../images/icon.svg);
+    background-position: -84px -21px;
+    position:absolute; top:150%;/* 체크 전 밑에 숨겨놓기 */ left:50%;
+    transform:translate(-50%,-50%);
+    transition:0.2s;
+}
+main form fieldset .btm label input[type=checkbox]:checked::after {top:50%;}
+main form fieldset .btm label span { /* 자동로그인 글자 */
+    cursor:pointer;
+    color:#555; font-size:0.938rem; letter-spacing: -0.05rem;
+}
+main form fieldset .btm a {color:#0074e9; font-size:0.938rem; }
+main form fieldset .btm a::after { /* 화살표 */
+    content:''; display:inline-block;
+    background-image:url(../images/icon.svg);
+    width:9px; height:15px;
+    background-position:-102px -21px;
+    margin-left:5px; position:relative; top:2px;
+}
+main .btn {
+    width:100%; padding:15px 0;
+    border-radius:3px; border-bottom:2px solid rgba(0,0,0,.2);
+    font-weight:500;
+}
+main form fieldset #login_btn {
+    background:#0074e9; color:#fff;
+}
+main #join_btn {
+    display:block; text-align:center; border:1px solid #ccc;
+    background:#fff; color:#0074e9;
+}
+/* footer */
+footer {padding:20px 0;}
+footer p {text-align:center; font-size:0.75rem; color:#333;}

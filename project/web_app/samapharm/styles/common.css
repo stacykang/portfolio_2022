@@ -1,0 +1,119 @@
+body,html {min-width:1400px;}
+/* header */
+#h_bg {width:100%; position:fixed; top:0; z-index:950; border-bottom:1px solid rgba(255,255,255,0.2); transition:.3s;}
+#h_bg header {
+    width:min(100%,1400px); height:88px; margin:0 auto; padding:0 16px;
+    display:flex; flex-flow:row nowrap; justify-content: space-between; gap:40px;
+    align-items: center;
+}
+#h_bg header a {color:#fff;} /* 헤더 자손 a 태그 공통 */
+#h_bg header a:hover {}
+#h_bg header h1 {}
+#h_bg header h1 a {
+    width:220px; height:35px; display:block; text-indent: -9999px;
+    background-image:url(../images/logo_svg_sprite.svg);
+    background-position:0% 0%; /* top */
+}
+#h_bg header nav {}
+#h_bg header nav .gnb {
+    /* background:red; */
+    display:flex; flex-flow:row nowrap;
+}
+#h_bg header nav .gnb li {width:120px; padding:0 12px; display:flex;} /* 자식, 자손 li 공통 */
+#h_bg header nav .gnb > li {
+    /* background:yellow; */
+    position:relative;
+}
+#h_bg header nav .gnb > li > a {
+    /* background:yellowgreen; */
+    font-size:1.125rem; font-weight:700;
+    padding:8px 0; width:100%; z-index:1;
+}
+#h_bg header nav .gnb > li .lnb {
+    /* background:seagreen; */
+    position:absolute; top:0; left:0; z-index:0;
+    padding-top:48px; height:0; overflow: hidden; opacity:0;  transition:.4s;
+}
+#h_bg header nav .gnb > li .lnb li {
+    /* background:steelblue; */
+}
+#h_bg header nav .gnb > li .lnb li a {
+    /* background:plum; */
+    font-size:0.875rem; font-weight:500; color:#777;
+    padding:10px 0; width:100%;
+}
+#h_bg header nav .sub_bg {
+    /* h_bg 기준 정렬 */
+    position:absolute; width:100%; height:0; transition:.4s;
+    top:0; left:0; z-index:-1;
+    background: rgba(255,255,255,0.8); 
+}
+
+/* lang_btn */
+#h_bg header .lang_btn {position:relative;}
+#h_bg header .lang_btn > a:hover {opacity:.6;}
+#h_bg header .lang_btn > a {
+    font-family: 'Nunito Sans'; font-weight:500;
+    display:flex; gap:12px; padding:8px 0;
+}
+#h_bg header .lang_btn > a::after {
+    content:'\f107'; /* font-awesome */ transition:.4s;
+}
+#h_bg header .lang_btn.active > a::after {transform:rotate(180deg);}
+#h_bg header .lang_btn .option {
+    position:absolute; width:100%;
+    padding:8px; background:rgba(0,0,0,.8);
+    display:none; 
+;}
+#h_bg header .lang_btn.active .option {display:block;}
+#h_bg header .lang_btn .option li {display:flex;}
+#h_bg header .lang_btn .option li a {
+    font-family: 'Nunito Sans'; font-weight:700; font-size:0.875rem;
+    width:100%; padding:8px 0; text-align: center;
+}
+#h_bg header .lang_btn .option li a:hover {color:#AED7EE;}
+/* h_bg active class */
+#h_bg.active {border-bottom:none;}
+#h_bg.active header a {color:#333;}
+#h_bg.active header a:hover {color:#0080C8;}
+#h_bg header nav .gnb > li .lnb li a:hover {color:#0080C8;}
+#h_bg.active header h1 a {background-position:0% 100%; /* bottom */}
+#h_bg.active header nav {}
+#h_bg.active header nav .gnb > li .lnb {opacity:1; height:300px;}
+#h_bg.active header nav .sub_bg {height:330px; border-bottom:1px solid #fff;}
+#h_bg.active header .lang_btn .option li a {color:#fff;}
+#h_bg header .lang_btn .option li a:hover {color:#AED7EE;}
+/* footer */
+#f_bg {
+    background:#1D3666; color:#fff;
+}
+#f_bg footer {
+    display:flex; padding:80px 16px;
+    justify-content: center; align-items: center; gap:120px;
+    font-weight:500;
+}
+#f_bg footer .logo {
+    width:220px; height:35px;
+    background-image:url(../images/logo_svg_sprite.svg); background-position:0% 0%; /* top */
+}
+#f_bg footer .f_right {}
+#f_bg footer .f_r_top {display:flex; gap:8px; margin-bottom:32px;}
+#f_bg footer .f_r_top a {color:#fff; padding:8px 0;}
+#f_bg footer .f_r_top a::after {
+    content:''; display:inline-block; height:14px; width:1px;
+    background:#fff; margin-left:8px;
+}
+#f_bg footer .f_r_btm {
+    max-width:640px;
+    opacity:.7; display:flex; flex-flow:row wrap; gap:16px;
+}
+#f_bg footer .f_r_btm p {}
+
+/* 
+awesome icon 공통
+*/
+.awesome_icon {}
+.awesome_icon::after {
+    font-family: 'Font Awesome 5 Free','Font Awesome 5 Brands';
+    font-weight:600; 
+}

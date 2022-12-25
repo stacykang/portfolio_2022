@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>앵무새 인테리어 포스터 | 아가새농장</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles/reset.css"> <!-- 1.reset -->
+    <link rel="stylesheet" href="styles/design.css"> <!-- 2.design -->
+    <link rel="stylesheet" href="styles/responsive.css"> <!-- 3.responsive -->
+    <script>
+        window.onload = function(){
+            // DOM 객체 변수 선언 
+            const plus_btn = document.querySelector('#plus') //버튼 태그
+            const minus_btn = document.querySelector('#minus') //버튼 태그
+            const order = document.querySelector('#num') //인풋 태그
+            const result_price = document.querySelector('.result_price') //p태그
+            // 초기값
+            let order_num = 1
+            const price = 3000
+            let total = 3000 * order_num
+            result_price.innerHTML = total.toLocaleString('ko-kr')+'원'
+            //콘솔 출력 확인
+            console.log(plus_btn, minus_btn, order,result_price)
+            console.log(order_num, price, total)
+
+            plus_btn.addEventListener('click',function(){
+                // order_num += 1
+                // order.value = order_num
+                order.value = ++order_num //위의 두 행과 같은 값. order_num에 1을 추가하고, order.value에 대입
+                total = price * order_num
+                result_price.innerHTML = total.toLocaleString('ko-kr')+'원'
+            })
+            minus_btn.addEventListener('click',function(){
+                if (order_num>0) { //현재 수량이 양수일 때만 동작하게 하기
+                    order.value = --order_num
+                    total = price * order_num
+                    result_price.innerHTML = total.toLocaleString('ko-kr')+'원'
+                } 
+            })
+        }
+    </script>
+</head>
+<body>
+    <main id="order_wrap">
+        <div class="left">
+            <img src="images/poster.jpg" alt="">
+        </div>
+        <div class="right">
+            <div class="top">
+                <h1>앵무새 인테리어 포스터 (1번/썬코밭)</h1>
+                <p>금전운 UP! 돈들어오는 해바라기 그림</p>
+                <dl>
+                    <dt>판매가격</dt>
+                    <dd class="price">3,000원</dd>
+                    <dt>적립금</dt>
+                    <dd>1%</dd>
+                    <dt>원산지</dt>
+                    <dd>대한민국</dd>
+                </dl>
+                <div class="number">
+                    <p class="order_name">앵무새 인테리어 포스터 (1번/썬코밭)</p>
+                    <div class="order_number">
+                        <button type="button" id="minus">-</button>
+                        <input type="number" name="num" id="num" value="1">
+                        <button type="button" id="plus">+</button>
+                    </div>
+                </div>
+                <div class="total_price">
+                    <p>총 상품 금액</p>
+                    <p class="result_price"></p>
+                </div>
+            </div>
+            <div class="bottom">
+                <button type="button" id="order_btn">주문하기</button>
+                <button type="button" id="cart_btn">장바구니</button>
+                <button type="button" id="like_btn">찜하기</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

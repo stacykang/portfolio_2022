@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" contents="카히스토리,Car History,홈페이지,중고차,사고이력조회,침수차량조회, 폐차사고조회, 무료조회, 차대번호, 차량번호">
+    <meta name="description" contents="중고차 매장가서 보기 전에 카히스토리에서 무료로 사고이력조회, 침수차량조회, 폐차사고조회하세요!">
+    <title>Car History</title>
+    <!-- css style -->
+    <link rel="stylesheet" href="styles/reset.css"> <!-- 1.reset -->
+    <link rel="stylesheet" href="styles/style.css"> <!-- 2.design -->
+    <link rel="stylesheet" href="styles/responsive.css"> <!-- 3.tablet -->
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <div id="h_bg">
+        <header>
+            <!-- h1>a>img emmet 자동완성 후 tab키 이용해서 사이 값들 빠르게 입력 -->
+            <h1><a href="#!"><img src="images/logo.png" alt="카히스토리"></a></h1>
+            <div id="h_right">
+                <a href="#!">충전회원</a>
+                <a href="#!">보험개발원</a>
+                <a href="#!">LANG</a>
+                <a href="#!" class="search"><img src="images/search.svg" alt="검색"></a>
+                <a href="#!" id="all_menu"> <!-- 동적 기능(메뉴가 펼쳐지는)이 들어간 태그는 id를 주는 것이 좋다. -->
+                    <img src="images/allMenu.png" alt=""> <!-- alt를 쓰게되면 전체메뉴를 두번 읽게 되는 것! -->
+                    <span>전체메뉴</span>
+                </a>
+                <a href="#!" id="close_menu">
+                    <img src="images/allMenu-close.png" alt="">
+                    <span>닫기</span>
+                </a>
+            </div><!-- h_right -->
+        </header>
+        <div id="menu_list"><!-- desktop,tablet hidden -->
+            <a href="#!">홈으로</a>
+            <a href="#!">카히스토리란?</a>
+            <a href="#!">용어 설명</a>
+            <a href="#!">중고차 구입 요령</a>
+            <a href="#!">무료 서비스</a>
+            <a href="#!">고객센터</a>
+        </div>
+    </div><!-- h_bg -->
+    <main>
+        <div id="r1_bg"> <!-- 배경 -->
+            <div id="r1"> <!-- 컨텐츠 -->
+                <h1>
+                    중고차 매장가서 보기 전에<br> <!-- 모바일, 태블릿 모두 2줄 구성 -->
+                    <span>카히스토리 확인하세요.</span><!-- 디자인 적용 위해서 묶기 -->
+                </h1>
+                <div class="view_category">
+                    <a href="#!" class="active">사고이력조회</a> <!-- 활성화 버튼 -->
+                    <a href="#!">무료침수차량조회</a>
+                    <a href="#!">무료폐차사고조회</a>
+                    <a href="#!">자동차보험료조회</a>
+                </div><!-- view_category -->
+                <div class="view_group">
+                    <div class="view_contents1">
+                        <form action="#" method="post" id="view_frm">
+                            <fieldset>
+                                <legend class="skip">차량 조회</legend>
+                                <select name="number" id="number">
+                                    <option value="car_num1">차량번호</option>
+                                    <option value="car_num2">차대번호</option>
+                                </select>
+                                <input type="text" name="car_num" placeholder="띄어쓰기 없이 차량번호를 입력하세요(12가1234)">
+                                <button type="button" id="view_btn">조회하기</button>
+                            </fieldset>
+                        </form><!-- view_frm -->
+                        <div class="btm_list">
+                            <div class="btm_menu"> <!-- 모바일과 데스크탑 정렬이 다르기때문에 위, 아래 등으로 이름을 나누면 좋지 않다. -->
+                                <a href="#!">차대번호란?</a>
+                                <a href="#!">무료침수사고조회</a>
+                                <a href="#!">무료폐차사고조회</a>
+                                <a href="#!">카히스토리</a>
+                            </div><!-- btm_menu -->
+                            <a href="#!" class="sample_view">샘플 보고서 보기</a>
+                        </div><!-- btm_list -->
+                    </div><!-- view_contents1 -->
+                    <div class="view_contents2"></div>
+                    <div class="view_contents3"></div>
+                    <div class="view_contents4"></div>
+                </div><!-- view_group -->
+            </div><!-- r1 -->
+        </div><!-- r1_bg -->
+        <div id="r2_bg">
+            <div id="r2">
+                <div class="title">
+                    <p class="sub_title">DATA</p>
+                    <h1>이번달 카히스토리 요약 데이터</h1>
+                    <p class="con">카히스토리는 국내 최고의 차량 정보 조회서비스이며, 신뢰할 수 있는 중고차 데이터를 제공합니다.</p>
+                </div>
+                <ul id="r2_contents">
+                    <li>
+                        <p><img src="images/info-search.png" alt=""></p>
+                        <h2>보험 사고 정보 보유 건수</h2>
+                        <p class="number"><em>93,491,840</em>건</p>
+                    </li>
+                    <li>
+                        <p><img src="images/crash-price.png" alt=""></p>
+                        <h2>특수 사고 정보 집적 건수</h2>
+                        <p class="number"><em>1,439,446</em>건</p>
+                    </li>
+                    <li>
+                        <p><img src="images/crash-count.png" alt=""></p>
+                        <h2>이달의 방문자 수</h2>
+                        <p class="number"><em>92,886</em>원</p>
+                    </li>
+                    <li>
+                        <p><img src="images/water-damage.png" alt=""></p>
+                        <h2>어제 조회된 최대피해 차량</h2>
+                        <p class="number"><em>208,867,460</em>원<br><span>(12거14**)</span></p>
+                    </li>
+                </ul><!-- r2_contents -->
+            </div><!-- r2 -->
+        </div><!-- r2_bg -->
+        <div id="r3_bg">
+            <div id="r3">
+                <div class="title">
+                    <p class="sub_title">BANNER</p>
+                    <h1>바로가기</h1>
+                </div>
+                <ul id="r3_contents">
+                    <li>
+                        <div class="left">
+                            <span><img src="images/banner1.png" alt="보험다모아"></span>
+                            <a href="#!" class="link">바로가기</a>
+                        </div>
+                        <p>온라인 보험상품을 한눈에 비교하여 현명한 보험상품을 선택하세요.</p>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <span><img src="images/banner2.png" alt="Norton"></span>
+                            <a href="#!" class="link">바로가기</a>
+                        </div>
+                        <p>11년 보험회사를 대상으로 가입 가능한 자동차 보험회사를 연결해드립니다.</p>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <span><img src="images/banner3.png" alt="MY CAR"></span>
+                            <a href="#!" class="link">바로가기</a>
+                        </div>
+                        <p>보험개발원은 보험소비자 보호와 보험산업 발전을 위한 다양한 서비스를 제공하고 있습니다.</p>
+                    </li>
+                </ul><!-- r3_contents -->
+            </div><!-- r3 -->
+        </div><!-- r3_bg -->
+        <div id="r4_bg">
+            <div id="r4">
+                <div class="title">
+                    <p class="sub_title">VIDEO</p>
+                    <h1>카히스토리 영상</h1>
+                    <p class="con">영상을 통해 카히스토리 사용방법 등 자세한 정보를 확인해보세요.</p>
+                </div>
+                <div class="contents">
+                    <!-- 탭 제목 (안내/사용방법) -->
+                    <div class="tab_title">
+                        <a href="#!" class="active">안내</a>
+                        <a href="#!">사용방법</a>
+                    </div>
+                    <!-- 탭 클릭 시 출력 내용 (안내/사용방법) -->
+                    <div class="tab_contents">
+                        <div class="tab1_c active">
+                            <video src="video/carhistory.mp4" autoplay muted loop></video>
+                            <p><img src="images/video.png" alt=""></p>
+                        </div>
+                        <div class="tab2_c">
+                            <video src="video/howto.mp4" autoplay muted loop></video>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- r4 -->
+        </div><!-- r4_bg -->
+        <div id="r5_bg">
+            <div id="r5">
+                <div class="title">
+                    <p class="sub_title">MENU</p>
+                    <h1>자주 사용하는 메뉴</h1>
+                    <p class="con">자주 사용하는 메뉴로 카히스토리를 보다 편리하게 이용하세요.</p>
+                </div><!-- title -->
+                <div class="contents">
+                    <!-- 탭 제목 -->
+                    <div class="tab_title">
+                        <a href="#!" class="active">사고이력조회</a>
+                        <a href="#!">정보이용료</a>
+                        <a href="#!">조회방법</a>
+                        <a href="#!">용어설명</a>
+                    </div>
+                    <!-- 탭 클릭 시 출력 내용 -->
+                    <div class="tab_contents">
+                        <div class="tab1_c tab_c active">
+                            <div class="info">
+                                <h2>사고이력조회 &gt;</h2>
+                                <div class="card">
+                                    <p class="card_inner">
+                                        <img class="front" src="images/car-old.png" alt="">
+                                        <img class="back" src="images/car-new.png" alt="">
+                                    </p>
+                                </div>
+                                <dl>
+                                    <dt>관련메뉴</dt>
+                                    <dd>조회가 원활하게 안되시나요? <a href="#!">고객문의 바로가기 &gt;</a></dd>
+                                </dl>
+                            </div>
+                            <div class="essential">
+                                <h2>왜 사고 이력 조회가 필수인가?</h2>
+                                <ul>
+                                    <li><!-- bg img -->
+                                        <p class="number">01</p>
+                                        <p><em>평균 사고 건수 2.93건</em><br>(2016년 카히스토리 조회 차량 기준)</p>
+                                    </li>
+                                    <li><!-- bg img -->
+                                        <p class="number">02</p>
+                                        <p><em>운전자의 안전을 위협하는 침수, 전손 확인</em></p>
+                                    </li>
+                                    <li><!-- bg img -->
+                                        <p class="number">03</p>
+                                        <p><em>허위 매물 방지</em></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!-- tab1_c  -->
+                        <div class="tab2_c tab_c ">
+                            <div class="info">
+                                <h2>정보이용료 &gt;</h2>
+                                <p><img src="images/pic1.png" alt=""></p>
+                                <dl>
+                                    <dt>관련메뉴</dt>
+                                    <dd>정보이용료가 궁금하신가요? <a href="#!">고객문의 바로가기 &gt;</a></dd>
+                                </dl>    
+                            </div>
+                            <div class="essential">
+                                <h2>정보이용료 안내 <span>부가세 포함</span></h2>
+                                <ul>
+                                    <li>
+                                        <p class="number">01</p>
+                                        <p><em>일반조회 건당 2,200원</em></p>
+                                    </li>
+                                    <li>
+                                        <p class="number">02</p>
+                                        <p><em>할인조회 건당 770원</em><br>(1년 내 5건까지, 본인확인 필요)</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!-- tab2_c  -->
+                        <div class="tab3_c tab_c">
+                            <div class="info">
+                                <h2>조회방법 &gt;</h2>
+                                <p><img src="images/pic2.png" alt=""></p>
+                                <dl>
+                                    <dt>관련메뉴</dt>
+                                    <dd>조회방법이 궁금하신가요? <a href="#!">고객문의 바로가기 &gt;</a></dd>
+                                </dl>    
+                            </div>
+                            <div class="essential">
+                                <h2>카히스토리 조회방법</h2>
+                                <ul>
+                                    <li>
+                                        <p class="number">01</p>
+                                        <p><em>차량번호 또는 차대번호 입력</em></p>
+                                    </li>
+                                    <li>
+                                        <p class="number">02</p>
+                                        <p><em>조회수수료 결제</em></p>
+                                    </li>
+                                    <li>
+                                        <p class="number">03</p>
+                                        <p><em>카히스토리 정보보고서 출력</em></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!-- tab3_c  -->
+                        <div class="tab4_c tab_c">
+                            <div class="info">
+                                <h2>용어 설명 &gt;</h2>
+                                <p><img src="images/pic3.png" alt=""></p>
+                                <dl>
+                                    <dt>관련메뉴</dt>
+                                    <dd>- 용어설명 <a href="#!">용어설명 바로가기 &gt;</a></dd>
+                                    <dd>- 궁금하신 용어가 있으신가요? <a href="#!">고객문의 바로가기 &gt;</a></dd>
+                                </dl>    
+                            </div>
+                            <div class="essential">
+                                <h2>차박사가 알려주는 알기쉬운 용어설명</h2>
+                                <ul>
+                                    <li>
+                                        <p class="number">01</p>
+                                        <p><em>전손사고</em><br>손상된 자동차의 수리비용이 보험회사에서 적정하다고 인정한 자동차가치를 초과한 경우(추정전손) 및 손상된 자동차의 수리가 불가능하거나 수리를 하더라도 자동차로서 기능을 다할 수 없는 경우(절대전손)로 자동차보험에서 보상처리 받은 사고입니다.</p>
+                                    </li>
+                                    <li>
+                                        <p class="number">02</p>
+                                        <p><em>미확정 사고</em><br>자동차보험사고로 보험회사에 접수된 후 사고처리가 끝나지 않아 지급할 보험금액이 아직 확정되지 않았거나 확정되었는데 아직 보험개발원에 관련 자료가 넘어오지 않아(월 1회 전송, 2~3개월 소요) 확정처리 되지 않은 사고를 말합니다.</p>
+                                    </li>
+                                    <li>
+                                        <p class="number">03</p>
+                                        <p><em>타인 재물 가해 사고</em><br>소유주의 자동차가 타인의 재물(자동차, 건물, 가로등, 자전거 등)을 가해하여 소유자의 자동차보험 대물배상으로 보험처리한 사고기록입니다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!-- tab4_c  -->
+                    </div>
+                </div> <!-- contents -->
+            </div><!-- r5 -->
+        </div><!-- r5_bg -->
+        <div id="r6_bg">
+            <div id="r6"><!-- 배경이미지 -->
+                <div class="title">
+                    <p class="sub_title">REVIEW</p>
+                    <h1>사용 후기</h1>
+                    <p class="con">카히스토리 사용 후기를 통해 먼저 사용한 사람들의 팁을 얻어보세요.</p>
+                </div><!-- title -->
+                <div id="r6_contents">
+                    <ul class="list">
+                        <li>
+                            <h2>보험 처리할 때 카히스토리에서 부품이름 참고해서 다행이었어요. </h2>
+                            <div class="info">
+                                <span class="name"><strong>이경현</strong>님</span>
+                                <span class="date">2019년 09월 01일</span>
+                            </div>
+                            <p class="contents">
+                                최근에 사고가 났었는데,  보험 처리할 때 카히스토리 참고해서 다행이었어요.
+                                보험처리시 부품 이름을 조회할 수 있어서 편리합니다.
+                            </p>
+                            <div class="btm">
+                                <p class="star">
+                                    <img src="images/star_icon.svg" alt="">
+                                    <span>평점<em>4</em>/5</span>
+                                </p>
+                                <a href="#!">더보기 &gt;</a>
+                            </div>
+                        </li>
+                        <li>
+                            <h2>카히스토리 아니면 깜빡 속을 뻔 했습니다..</h2>
+                            <div class="info">
+                                <span class="name"><strong>안은정</strong>님</span>
+                                <span class="date">2021년 12월 15일</span>
+                            </div>
+                            <p class="contents">
+                                중고차 구매하려고 매매상사에 가서 소개 차량을 보고왔는데, 확인차 카히스토리 홈페이지에서 차량 번호로 사고 내역, 수리 내역을 조회해보고 깜짝 놀랐습니다..
+                            </p>
+                            <div class="btm">
+                                <p class="star">
+                                    <img src="images/star_icon.svg" alt="">
+                                    <span>평점<em>5</em>/5</span>
+                                </p>
+                                <a href="#!">더보기 &gt;</a>
+                            </div>
+                        </li>
+                        <li>
+                            <h2>완전 유용하게 잘 쓰고있어요!!</h2>
+                            <div class="info">
+                                <span class="name"><strong>강지훈</strong>님</span>
+                                <span class="date">2022년 04월 01일</span>
+                            </div>
+                            <p class="contents">
+                                여기만큼 편한 사이트가 없어요. 가족들이랑 주변인들한테도 링크 보내줬습니다.
+                            </p>
+                            <div class="btm">
+                                <p class="star">
+                                    <img src="images/star_icon.svg" alt="">
+                                    <span>평점<em>4.5</em>/5</span>
+                                </p>
+                                <a href="#!">더보기 &gt;</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <p><button type="button" id="review_btn">모두 보기</button></p>
+                </div><!-- r6_contents -->
+            </div><!-- r6 -->
+        </div><!-- r6_bg -->
+    </main>
+    <div id="f_bg">
+        <footer>
+            <div id="f_top">
+                <div id="f_t_left">
+                    <a href="#!">카히스토리</a>
+                    <a href="#!">사고이력조회</a>
+                    <a href="#!">고객센터</a>
+                    <a href="#!">사이트맵</a>
+                    <a href="#!">이용약관</a>
+                    <a href="#!">정보책임의 한계</a>
+                    <a href="#!">개인정보취급방침</a>
+                </div>
+                <div id="f_t_right">
+                    <img src="images/language.png" alt="">
+                    <select id="lang_select">
+                        <option value="korean">한국어</option>
+                        <option value="english">영어</option>
+                        <option value="chinese">중국어</option>
+                        <option value="japanese">일본어</option>
+                        <option value="spanish">스페인어</option>
+                    </select>
+                </div>
+            </div><!-- f_top -->
+            <div id="f_btm">
+                <div id="f_b_left">
+                    <p class="logo"><img src="images/logo.png" alt="카히스토리"></p>
+                    <div class="info">
+                        <p>사업자등록번호 116-82-03536</p>
+                        <p>통신판매업 제19-930호</p>
+                        <p>보험개발원 대표: 강호</p>
+                        <address>(150-606) 서울특별시 영등포구 국제금융로6길 38</address>
+                        <p>민원처리시간(월~금) 09:30~17:30까지입니다. </p>
+                        <p>시간외 문의는 고객문의를 이용바랍니다.</p>
+                        <p>T: 02)368-4300 / F : 02)368-4095</p>
+                        <p>COPYRIGHT &copy; BY CARHISTORY. ALL RIGHTS RESERVED.</p>
+                    </div>
+                </div>
+                <div id="f_b_right">
+                    <a href="#!"><img src="images/banner4.png" alt="보험개발원"></a>
+                    <a href="#!"><img src="images/banner2.png" alt="Norton Secured"></a>
+                </div>
+            </div><!-- f_btm -->
+        </footer>
+    </div><!-- f_bg -->
+</body>
+</html>

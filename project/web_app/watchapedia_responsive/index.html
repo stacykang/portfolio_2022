@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="왓챠 넷플릭스 영화 장르 로맨스 랭킹 사랑 명작 추천 평점">
+    <meta name="desctiprion" content="로맨스 영화 랭킹 TOP10, 베스트 코멘트, 유저들의 컬렉션까지! 인생 영화를 찾기는 왓챠피디아에서">
+    <title>로맨스 | 장르 | 영화 | 왓챠피디아</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/watchapedia_favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/watchapedia_favicon.ico" type="image/x-icon">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles/reset.css"><!-- 1 reset -->
+    <link rel="stylesheet" href="styles/style.css"><!-- 2 desktop css -->
+    <link rel="stylesheet" href="styles/responsive.css"><!-- 3 table, mobile css -->
+</head>
+<body>
+    <header>
+        <div id="h_t_bg">
+            <div id="h_top">
+                <div id="h_t_left">
+                    <h1><a href="#"><img src="images/watchpedia_logo.png" alt="왓챠피디아"></a></h1>
+                    <nav>
+                        <ul id="dep1">
+                            <li>
+                                <a href="#!" class="nowPage">영화</a>
+                                <ul class="dep2">
+                                    <li>
+                                        <a href="#!" class="nowPage">장르</a>
+                                        <ul class="dep3">
+                                            <li><a href="#">느와르</a></li>
+                                            <li><a href="#">슈퍼 히어로</a></li>
+                                            <li><a href="#">범죄</a></li>
+                                            <li><a href="#">드라마</a></li>
+                                            <li><a href="#">코미디</a></li>
+                                            <li><a href="#!" class="nowPage">로맨스/멜로</a></li>
+                                            <li><a href="#">스릴러</a></li>
+                                            <li><a href="#">로맨틱코미디</a></li>
+                                            <li><a href="#">전쟁</a></li>
+                                            <li><a href="#">가족</a></li>
+                                            <li><a href="#">판타지</a></li>
+                                            <li><a href="#">액션</a></li>
+                                            <li><a href="#">SF</a></li>
+                                            <li><a href="#">애니메이션</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">랭킹</a>
+                                        <ul class="dep3">
+                                            <li><a href="#">왓챠 평균별점 TOP</a></li>
+                                            <li><a href="#">전문가 고평점 영화</a></li>
+                                            <li><a href="#">예상 별점 높은 영화</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">큐레이션</a>
+                                        <ul class="dep3">
+                                            <li><a href="#">박스오피스 순위</a></li>
+                                            <li><a href="#">왓챠 TOP 10</a></li>
+                                            <li><a href="#">넷플릭스 순위</a></li>
+                                            <li><a href="#">이동진 평론가</a></li>
+                                            <li><a href="#">화제의 감독</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">커뮤니티</a>
+                                        <ul class="dep3">
+                                            <li><a href="#">코멘트</a></li>
+                                            <li><a href="#">컬렉션</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">TV 프로그램</a>
+                                <ul class="dep2">
+                                    <li>
+                                        <a href="#">장르</a>
+                                        <ul class="dep3">
+                                            <li><a href="#">드라마</a></li>
+                                            <li><a href="#">판타지</a></li>
+                                            <li><a href="#">호러</a></li>
+                                            <li><a href="#">미스테리</a></li>
+                                            <li><a href="#">로맨스/로맨틱코미디</a></li>
+                                            <li><a href="#">하이틴</a></li>
+                                            <li><a href="#">시대극</a></li>
+                                            <li><a href="#">메디컬</a></li>
+                                            <li><a href="#">범죄/수사물</a></li>
+                                            <li><a href="#">코미디/시트콤</a></li>
+                                            <li><a href="#">정치/사회</a></li>
+                                            <li><a href="#">학원물</a></li>
+                                            <li><a href="#">가족</a></li>
+                                            <li><a href="#">애니메이션</a></li>
+                                            <li><a href="#">음식</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">국가</a>
+                                        <ul class="dep3">
+                                            <li><a href="#">한국</a></li>
+                                            <li><a href="#">미국</a></li>
+                                            <li><a href="#">영국</a></li>
+                                            <li><a href="#">일본</a></li>
+                                            <li><a href="#">중국</a></li>
+                                            <li><a href="#">대만</a></li>
+                                            <li><a href="#">유럽</a></li>
+                                            <li><a href="#">아시아</a></li>
+                                            <li><a href="#">기타 국가</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">큐레이션</a>
+                                        <ul class="dep3">
+                                            <li><a href="#">왓챠 평균별점 TOP</a></li>
+                                            <li><a href="#">평균 별점 TOP</a></li>
+                                            <li><a href="#">예상 별점 높은 작품</a></li>
+                                            <li><a href="#">화제의 배우</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">커뮤니티</a>
+                                        <ul class="dep3">
+                                            <li><a href="#">코멘트</a></li>
+                                            <li><a href="#">컬렉션</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">도서</a>
+                                <ul class="dep2">
+                                    <li>
+                                        <a href="#">장르</a>
+                                        <ul class="dep3">
+                                            <li><a href="#">에세이</a></li>
+                                            <li><a href="#">경제경영</a></li>
+                                            <li><a href="#">인문학</a></li>
+                                            <li><a href="#">자기계발</a></li>
+                                            <li><a href="#">사회과학</a></li>
+                                            <li><a href="#">한국 소설</a></li>
+                                            <li><a href="#">일본 소설</a></li>
+                                            <li><a href="#">해외 소설</a></li>
+                                            <li><a href="#">예술/대중문화</a></li>
+                                            <li><a href="#">과학</a></li>
+                                            <li><a href="#">역사</a></li>
+                                            <li><a href="#">여행</a></li>
+                                            <li><a href="#">가정/요리/뷰티</a></li>
+                                            <li><a href="#">건강/취미/레저</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">큐레이션</a>
+                                        <ul class="dep3">
+                                            <li><a href="#">신간 베스트셀러</a></li>
+                                            <li><a href="#">이동진 평론가</a></li>
+                                            <li><a href="#">평균 별점 높은 작품</a></li>
+                                            <li><a href="#">예상 별점 높은 작품</a></li>
+                                            <li><a href="#">화제의 작가</a></li>
+                                            <li><a href="#">#한국 #소설</a></li>
+                                            <li><a href="#">#일본 #문학</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">커뮤니티</a>
+                                        <ul class="dep3">
+                                            <li><a href="#">코멘트</a></li>
+                                            <li><a href="#">컬렉션</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">웹툰</a>
+                                <ul class="dep2">
+                                    <li>
+                                        <a href="#">장르</a>
+                                        <ul class="dep3">
+                                            <li><a href="#">드라마</a></li>
+                                            <li><a href="#">무협</a></li>
+                                            <li><a href="#">스릴러</a></li>
+                                            <li><a href="#">스포츠</a></li>
+                                            <li><a href="#">액션</a></li>
+                                            <li><a href="#">판타지</a></li>
+                                            <li><a href="#">학원물</a></li>
+                                            <li><a href="#">코미디</a></li>
+                                            <li><a href="#">로맨스</a></li>
+                                            <li><a href="#">BL</a></li>
+                                            <li><a href="#">일상</a></li>
+                                            <li><a href="#">GL</a></li>
+                                            <li><a href="#">공포</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">플랫폼</a>
+                                        <ul class="dep3">
+                                            <li><a href="#">네이버 웹툰</a></li>
+                                            <li><a href="#">카카오 웹툰</a></li>
+                                            <li><a href="#">레진 코믹스</a></li>
+                                            <li><a href="#">카카오 페이지</a></li>
+                                            <li><a href="#">봄툰</a></li>
+                                            <li><a href="#">리디북스</a></li>
+                                            <li><a href="#">만화경</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">큐레이션</a>
+                                        <ul class="dep3">
+                                            <li><a href="#">최근 연재 시작한 작품</a></li>
+                                            <li><a href="#">완결 웹툰</a></li>
+                                            <li><a href="#">평균 별점 높은 작품</a></li>
+                                            <li><a href="#">공모전 수상작</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">커뮤니티</a>
+                                        <ul class="dep3">
+                                            <li><a href="#">코멘트</a></li>
+                                            <li><a href="#">컬렉션</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="sub_bg dep2_bg"></div>
+                        <div class="sub_bg dep3_bg"></div>
+                    </nav>
+                    <div class="mobile_nav_bg"></div>
+                </div><!-- e:h_t_left -->
+                <div id="h_t_right">
+                    <form action="#" method="get" id="search_frm">
+                        <fieldset>
+                            <legend class="skip">검색양식</legend>
+                            <p id="search_icon"></p>
+                            <!-- <p><img src="images/icon/icon_search.svg" alt="검색"></p> -->
+                            <input type="text" name="search" placeholder="콘텐츠, 인물, 컬렉션, 유저를 검색해보세요.">
+                        </fieldset>
+                        <button type="button" class="close_btn">닫기</button><!-- mobile -->
+                    </form>
+                    <a href="#!" id="search_btn"><img src="images/icon/icon_search.svg" alt="검색"></a><!-- mobile search -->
+                    <a href="#!" id="menu_btn">
+                        <img src="images/icon/icon_menu.svg" alt="메뉴" class="active">
+                        <img src="images/icon/icon_close.svg" alt="닫기">
+                    </a><!-- mobile menu -->
+                    <a href="#!" id="login_btn">로그인</a>
+                    <a href="#!" id="join_btn">회원가입</a>
+                </div><!-- e:h_t_right -->
+            </div><!-- e:h_top -->
+        </div><!-- e:h_t_bg -->
+        <div id="h_bottom">
+            <div id="h_b_left">
+                <button type="button" id="filter_btn">플랫폼 필터</button>
+                <div class="filter">
+                    <div class="ott_list">
+                        <span><img src="images/ott_logo/watcha.png" alt="왓챠" title="왓챠"></span>
+                        <span><img src="images/ott_logo/netflix.png" alt="넷플릭스" title="넷플릭스"></span>
+                        <span><img src="images/ott_logo/tving.png" alt="티빙" title="티빙"></span>
+                        <span><img src="images/ott_logo/disneyplus.png" alt="디즈니플러스" title="디즈니플러스"></span>
+                        <span><img src="images/ott_logo/coupangplay.png" alt="쿠팡플레이" title="쿠팡플레이"></span>
+                        <span><img src="images/ott_logo/googleplay.png" alt="구글플레이" title="구글플레이"></span>
+                    </div>
+                    <div class="btn_list">
+                        <button class="reset_btn"><img src="images/icon/icon_reset.svg" alt="리셋"></button>
+                        <!-- <button class="close_btn"><img src="images/icon/icon_close.svg" alt="닫기"></button> -->
+                    </div>
+                </div>
+                <!-- <span>기능이 추가되었어요!</span> -->
+            </div><!-- e:h_b_left -->
+            <div id="h_b_right">
+                <a href="#">영화</a><span> &gt; </span>
+                <a href="#">장르</a><span> &gt; </span>
+                <em>로맨스</em>
+            </div><!-- e:h_b_right -->
+        </div><!-- e:h_bottom -->
+    </header>
+    <main>
+        <div id="r1_bg">
+            <div id="r1_t10">
+                <h2>&#128149; 로맨스 Top10 영화</h2> <!-- 유니코드 아이콘 참고 : https://unicode-table.com/kr/ -->
+                <div id="r1_list">
+                    <div class="r1_list_container">
+                        <a href="#!" class="movie">
+                            <div class="poster">
+                                <p class="photo"><img src="images/poster/about_time.jpg" alt="어바웃타임"></p>
+                                <p class="badge">
+                                    <img src="images/badge/badge_watcha.png" alt="왓챠">
+                                    <img src="images/badge/badge_netflix.png" alt="넷플릭스">
+                                </p>
+                            </div><!-- e:poster -->
+                            <div class="info">
+                                <h3>어바웃 타임</h3>
+                                <p><span>2013</span>&dot;<span>영국</span></p>
+                                <p><span>평균</span>&starf;<span>4.3</span></p>
+                            </div><!-- e:info -->
+                        </a>
+                        <a href="#!" class="movie">
+                            <div class="poster">
+                                <p class="photo"><img src="images/poster/titanic.jpg" alt="타이타닉"></p>
+                                <p class="badge">
+                                    <img src="images/badge/badge_disney.png" alt="디즈니플러스">
+                                </p>
+                            </div><!-- e:poster -->
+                            <div class="info">
+                                <h3>타이타닉</h3>
+                                <p><span>1997</span>&dot;<span>미국</span></p>
+                                <p><span>평균</span>&starf;<span>4.3</span></p>
+                            </div><!-- e:info -->
+                        </a>
+                        <a href="#!" class="movie">
+                            <div class="poster">
+                                <p class="photo"><img src="images/poster/eternal_sunshine.jpg" alt="이터널 선샤인"></p>
+                                <p class="badge">
+                                    <img src="images/badge/badge_watcha.png" alt="왓챠">
+                                    <img src="images/badge/badge_netflix.png" alt="넷플릭스">
+                                </p>
+                            </div><!-- e:poster -->
+                            <div class="info">
+                                <h3>이터널 선샤인</h3>
+                                <p><span>2004</span>&dot;<span>미국</span></p>
+                                <p><span>평균</span>&starf;<span>4.2</span></p>
+                            </div><!-- e:info -->
+                        </a>
+                        <a href="#!" class="movie">
+                            <div class="poster">
+                                <p class="photo"><img src="images/poster/before_sunrise.jpg" alt="비포 선라이즈"></p>
+                                <p class="badge">
+                                    <img src="images/badge/badge_watcha.png" alt="왓챠">
+                                    <img src="images/badge/badge_netflix.png" alt="넷플릭스">
+                                </p>
+                            </div><!-- e:poster -->
+                            <div class="info">
+                                <h3>비포 선라이즈</h3>
+                                <p><span>1995</span>&dot;<span>미국/오스트리아/스위스</span></p>
+                                <p><span>평균</span>&starf;<span>4.1</span></p>
+                            </div><!-- e:info -->
+                        </a>
+                        <a href="#!"  class="movie">
+                            <div class="poster">
+                                <p class="photo"><img src="images/poster/flip.jpg" alt="플립"></p>
+                                <p class="badge">
+                                    <img src="images/badge/badge_watcha.png" alt="왓챠">
+                                    <img src="images/badge/badge_netflix.png" alt="넷플릭스">
+                                </p>
+                            </div><!-- e:poster -->
+                            <div class="info">
+                                <h3>플립</h3>
+                                <p><span>2010</span>&dot;<span>미국</span></p>
+                                <p><span>평균</span>&starf;<span>4.0</span></p>
+                            </div><!-- e:info -->
+                        </a>
+                        <a href="#!"  class="movie">
+                            <div class="poster">
+                                <p class="photo"><img src="images/poster/our_times.jpg" alt="나의 소녀시대"></p>
+                                <p class="badge">
+                                    <img src="images/badge/badge_watcha.png" alt="왓챠">
+                                    <img src="images/badge/badge_netflix.png" alt="넷플릭스">
+                                </p>
+                            </div><!-- e:poster -->
+                            <div class="info">
+                                <h3>나의 소녀시대</h3>
+                                <p><span>2015</span>&dot;<span>대만</span></p>
+                                <p><span>평균</span>&starf;<span>4.0</span></p>
+                            </div><!-- e:info -->
+                        </a>
+                        <a href="#!"  class="movie">
+                            <div class="poster">
+                                <p class="photo"><img src="images/poster/notebook.jpg" alt="노트북"></p>
+                                <p class="badge">
+                                    <img src="images/badge/badge_netflix.png" alt="넷플릭스">
+                                </p>
+                            </div><!-- e:poster -->
+                            <div class="info">
+                                <h3>노트북</h3>
+                                <p><span>2004</span>&dot;<span>미국</span></p>
+                                <p><span>평균</span>&starf;<span>4.0</span></p>
+                            </div><!-- e:info -->
+                        </a>
+                        <a href="#!"  class="movie">
+                            <div class="poster">
+                                <p class="photo"><img src="images/poster/my_tomorrow_your_yesterday.jpg" alt="나는 내일, 어제의 너와 만난다"></p>
+                                <p class="badge">
+                                    <img src="images/badge/badge_watcha.png" alt="왓챠">
+                                    <img src="images/badge/badge_netflix.png" alt="넷플릭스">
+                                </p>
+                            </div><!-- e:poster -->
+                            <div class="info">
+                                <h3>나는 내일, 어제의 너와 만난다</h3>
+                                <p><span>2016</span>&dot;<span>일본</span></p>
+                                <p><span>평균</span>&starf;<span>4.0</span></p>
+                            </div><!-- e:info -->
+                        </a>
+                        <a href="#!"  class="movie">
+                            <div class="poster">
+                                <p class="photo"><img src="images/poster/call_me_by_your_name.jpg" alt="콜 미 바이 유어 네임"></p>
+                                <p class="badge">
+                                    <img src="images/badge/badge_watcha.png" alt="왓챠">
+                                    <img src="images/badge/badge_netflix.png" alt="넷플릭스">
+                                </p>
+                            </div><!-- e:poster -->
+                            <div class="info">
+                                <h3>콜 미 바이 유어 네임</h3>
+                                <p><span>2017</span>&dot;<span>이탈리아/프랑스/미국</span></p>
+                                <p><span>평균</span>&starf;<span>4.0</span></p>
+                            </div><!-- e:info -->
+                        </a>
+                        <a href="#!" class="movie">
+                            <div class="poster">
+                                <p class="photo"><img src="images/poster/christmas_of_august.jpg" alt="8월의 크리스마스"></p>
+                                <p class="badge">
+                                    <img src="images/badge/badge_watcha.png" alt="왓챠">
+                                    <img src="images/badge/badge_netflix.png" alt="넷플릭스">
+                                </p>
+                            </div><!-- e:poster -->
+                            <div class="info">
+                                <h3>8월의 크리스마스</h3>
+                                <p><span>1998</span>&dot;<span>한국</span></p>
+                                <p><span>평균</span>&starf;<span>3.9</span></p>
+                            </div><!-- e:info -->
+                        </a>
+                    </div><!-- e:r1_list_container -->
+                </div><!-- e:r1_list -->
+                <a href="#!" class="btn prev_btn"><img src="images/icon/icon_prev.svg" alt="이전"></a>
+                <a href="#!" class="btn next_btn"><img src="images/icon/icon_next.svg" alt="다음"></a>
+            </div><!-- e:r1_t10 -->
+        </div><!-- e:r1_bg -->
+        <div id="r2_comment">
+            <h2>&#128077; 좋아요가 많은 코멘트</h2>
+            <div id="r2_list">
+                <div class="r2_movie">
+                    <a href="#!" class="movie">
+                        <div class="poster">
+                            <p class="photo"><img src="images/poster/500days_of_summer.jpg" alt="500일의 썸머"></p>
+                            <p class="badge">
+                                <img src="images/badge/badge_disney.png" alt="디즈니플러스">
+                            </p>
+                        </div><!-- e:poster -->
+                        <div class="info">
+                            <h3>500일의 썸머</h3>
+                            <p><span>2009</span>&dot;<span>미국</span></p>
+                            <p><span>평균</span>&starf;<span>3.9</span></p>
+                        </div><!-- e:info -->
+                    </a>
+                    <div class="comment">
+                        <p class="star">
+                            <span class="full"></span>
+                            <span class="full"></span>
+                            <span class="full"></span>
+                            <span class="full"></span>
+                            <span class="half"></span>
+                        </p>
+                        <p class="c_txt">사랑은 꼭 그 사람일 필요가 없는 우연을
+                            반드시 그 사람이어야 하는 운명으로
+                            바꾸는 것</p>
+                        <p class="name">이동진 평론가</p>
+                        <p class="likes">
+                            <span class="thumb_icon"></span>
+                            <span class="likes_num">4880</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="r2_movie">
+                    <a href="#!" class="movie">
+                        <div class="poster">
+                            <p class="photo"><img src="images/poster/her.jpg" alt="HER"></p>
+                            <p class="badge">
+                                <img src="images/badge/badge_watcha.png" alt="왓챠">
+                                <img src="images/badge/badge_netflix.png" alt="넷플릭스">
+                            </p>
+                        </div><!-- e:poster -->
+                        <div class="info">
+                            <h3>HER</h3>
+                            <p><span>2013</span>&dot;<span>미국</span></p>
+                            <p><span>평균</span>&starf;<span>3.9</span></p>
+                        </div><!-- e:info -->
+                    </a>
+                    <div class="comment">
+                        <p class="star">
+                            <span class="full"></span>
+                            <span class="full"></span>
+                            <span class="full"></span>
+                            <span class="full"></span>
+                            <span class="empty"></span>
+                        </p>
+                        <p class="c_txt">대상(Her)이 주체(her)가 되는 순간에
+                            찾아오는 어른의 사랑</p>
+                        <p class="name">이동진 평론가</p>
+                        <p class="likes">
+                            <span class="thumb_icon"></span>
+                            <span class="likes_num">4136</span>
+                        </p>
+                    </div>
+                </div>
+            </div><!-- e:r2_list -->
+        </div><!-- e_r2_comment -->
+        <div id="r3_bg">
+            <div id="r3_story">
+                <h2>&#128172; 호기심을 자극하는 스토리</h2>
+                <div class="r3_img_wrap">
+                    <div class="r3_img_container">
+                        <div class="img"><p></p></div>
+                        <div class="img"><p></p></div>
+                        <div class="img"><p></p></div>
+                    </div>
+                </div>
+                <div class="r3_txt_wrap">
+                    <div class="r3_txt_container">
+                        <div class="txt">
+                            <p class="q_icon"></p>
+                            <a class="s_txt">모태솔로 팀은 성인이 된 날,
+                                아버지로부터 놀랄만한 가문의 비밀을 듣게 된다.
+                                바로 시간을 되돌릴 수 있는 능력이 있다는 것!</a>
+                            <p class="q_icon"></p>
+                        </div>
+                        <div class="txt">
+                            <p class="q_icon"></p>
+                            <a class="s_txt">평생 한 사람만을 사랑해온 노년의 커플 군봉과 순이, 서로가 없는 삶은 생각도 할 수 없는 이 두 사람에게 큰 어려움이 다가오는데...</a>
+                            <p class="q_icon"></p>
+                        </div>
+                        <div class="txt">
+                            <p class="q_icon"></p>
+                            <a class="s_txt">하루 하루 달콤한 첫 데이트를 만들어가던 어느 날, 루시는 자신이 단기 기억상실증에 걸렸다는 사실을 깨닫고 충격을 받게 되는데... 과연, 두 사람의 사랑은 이뤄질 수 있을까?</a>
+                            <p class="q_icon"></p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#!" class="btn prev_btn"><img src="images/icon/icon_prev.svg" alt="이전"></a>
+                <a href="#!" class="btn next_btn"><img src="images/icon/icon_next.svg" alt="다음"></a>
+            </div><!-- e:r3_story -->
+        </div><!-- e:r3_bg -->
+        <div id="r4_actor">
+            <h2>&#128526; 로맨스 작품으로 유명한 배우들</h2>
+            <div id="r4_slide_wrap">
+                <div class="r4_slide_container">
+                    <a href="#!" class="actor small">
+                        <img src="images/actor/Son_Ye_jin.jpg" alt="">
+                        <span class="name">손예진</span>
+                    </a>
+                    <a href="#!" class="actor medium">
+                        <img src="images/actor/Josh_Hartnett.jpg" alt="">
+                        <span class="name">조쉬 하트넷</span>
+                    </a>
+                    <a href="#!" class="actor large">
+                        <img src="images/actor/Rachel_MacAdams.jpg" alt="">
+                        <span class="name">레이첼 맥아담스</span>
+                    </a>
+                    <a href="#!" class="actor medium">
+                        <img src="images/actor/Ryan_Gosling.jpg" alt="">
+                        <span class="name">라이언 고슬링</span>
+                    </a>
+                    <a href="#!" class="actor small">
+                        <img src="images/actor/Kate_Winslet.jpg" alt="">
+                        <span class="name">케이트 윈슬렛</span>
+                    </a>
+                    <a href="#!" class="actor">
+                        <img src="images/actor/Kim_Haneul.jpg" alt="">
+                        <span class="name">김하늘</span>
+                    </a>
+                    <a href="#!" class="actor">
+                        <img src="images/actor/Joseph_Gordon_Levitt.jpg" alt="">
+                        <span class="name">조셉 고든 레빗</span>
+                    </a>
+                    <a href="#!" class="actor">
+                        <img src="images/actor/Bae_Suzy.jpg" alt="">
+                        <span class="name">배수지</span>
+                    </a>
+                    <a href="#!" class="actor">
+                        <img src="images/actor/Gang_Dong_Won.jpg" alt="">
+                        <span class="name">강동원</span>
+                    </a>
+                    <a href="#!" class="actor">
+                        <img src="images/actor/Gomatsu_Nana.jpg" alt="">
+                        <span class="name">고마츠 나나</span>
+                    </a>
+                </div><!-- e:r4_slide_container -->
+            </div><!-- e:r4_slide_wrap -->
+            <a href="#!" class="btn prev_btn"><img src="images/icon/icon_prev.svg" alt="이전"></a>
+            <a href="#!" class="btn next_btn"><img src="images/icon/icon_next.svg" alt="다음"></a>
+        </div><!-- e:r4_actor -->
+        <div id="r5_bg">
+            <div id="r5_collection">
+                <h2>&#128218; 왓챠피디아 컬렉션 #로맨스</h2>
+                <div id="r5_list">
+                    <a href="#!" class="c_box">
+                        <p class="name"><span>흩날리는 꽃잎에 어울리는 로맨스</span></p> <!-- 배경 전체, absolute,  -->
+                        <p class="list">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </p>
+                    </a>
+                    <a href="#!" class="c_box">
+                        <p class="name"><span>사랑 ; 이런 사랑 해본적 있나??</span></p> 
+                        <p class="list">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </p>
+                    </a>
+                    <a href="#!" class="c_box">
+                        <p class="name"><span>울고싶을 때 볼 로맨스</span></p> 
+                        <p class="list">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </p>
+                    </a>
+                    <a href="#!" class="c_box">
+                        <p class="name"><span>사랑 영화를 묻는다면</span></p> 
+                        <p class="list">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </p>
+                    </a>
+                    <a href="#!" class="c_box">
+                        <p class="name"><span>1990년대-2000년대 초반 한국 로맨스 영화</span></p> 
+                        <p class="list">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </p>
+                    </a>
+                </div><!-- e:r5_list -->
+            </div><!-- e:r5_collection -->
+        </div><!-- e:r5_bg -->
+    </main>
+    <footer>
+        <p id="rating_num">
+            <span>지금까지</span>
+            <em>&starf; 663,098,857 개의 평가</em>
+            <span>가 쌓였어요.</span>
+        </p>
+        <div id="f_b_bg">
+            <div id="f_bottom">
+                <div id="f_b_left">
+                    <p>
+                        <a href="#">서비스 이용약관</a>
+                        <a href="#">개인정보 처리방침</a>
+                        <a href="#">회사 안내</a>
+                    </p>
+                    <p>
+                        <span>고객센터</span>
+                        <span>cs@watchapedia.co.kr,02-515-9985</span>
+                    </p>
+                    <p>
+                        <span>광고 문의</span>
+                        <span>ad@watcha.com</span>
+                    </p>
+                    <p>
+                        <span>제휴 및 대외 협력</span>
+                        <span>https://watcha.team/contact</span>
+                    </p>
+                    <p>
+                        <span>주식회사 왓챠</span>
+                        <span>대표 박태훈</span>
+                        <span>서울특별시 서초구 강남대로 343 신덕빌딩 3층</span>
+                    </p>
+                    <p>
+                        <span>사업자 등록 번호 211-88-66013</span>
+                    </p>
+                    <p>
+                        <span><img src="images/watchpedia_logo_gray.png" alt="왓챠피디아"></span>
+                        <span>&copy; 2022 by WATCHA, Inc. All rights reserved.</span>
+                    </p>
+                </div><!-- e:f_b_left -->
+                <div id="f_b_right">
+                    <select name="lang">
+                        <option value="korean">한국어</option>
+                        <option value="english">ENGLISH</option>
+                        <option value="japanese">日本語</option>
+                    </select>
+                    <p id="sns">
+                        <a href="#">페이스북</a>
+                        <a href="#">트위터</a>
+                        <a href="#">블로그</a>
+                    </p>
+                </div><!-- e:f_b_right -->
+            </div><!-- e:f_bottom -->
+        </div><!-- e:f_b_bg -->
+    </footer>
+    <!-- script -->
+    <script src="script/common.js"></script>
+    <script src="script/sub_romance.js"></script>
+</body>
+</html>

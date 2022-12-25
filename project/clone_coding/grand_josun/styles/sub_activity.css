@@ -1,0 +1,83 @@
+/* animation */
+@keyframes opacity { /* 페이지 실행 시 각 영역 등장용 */
+    0% {opacity:0; transform:translateY(50px);}
+    100% {opacity:1;}
+}
+main {margin-top:100px; overflow: hidden;}
+/* 공통레이아웃 */
+main .page_title,
+main #tab_t,
+main #tab_c {width:100%; max-width:1400px; padding:0 16px; margin:0 auto;}
+/* page_title */
+main .page_title {padding:100px 16px 80px; animation:opacity .6s both;}
+main .page_title h1 {font-family:'Noto Serif KR',serif; font-size:3.25rem; font-weight:500; letter-spacing:-0.02em;}
+main .page_title h1::first-letter {font-size:4rem;} /* first-letter */
+main .page_title p {margin-top:40px; font-size:1.25rem; line-height:1.5; letter-spacing:-0.02em;}
+/* tab_t */
+main #tab_t {margin-bottom:60px; display:flex; opacity:0; animation:opacity .6s .4s both;}
+main #tab_t a {
+    font-size:1.25rem; font-weight:700;
+    color:#ccc; letter-spacing: 0.1em;
+    margin-right:36px; transition:.3s;
+}
+main #tab_t a.active {color:#222;}
+main #tab_t a:hover {color:#222;}
+main #tab_t a::after {
+    content:''; display:inline-block;
+    background: #ccc;
+    width:1px; height:16px;
+    position:relative; right:-18px; top:0;
+}
+main #tab_t a:last-child::after {display:none;}
+/* tab_c */
+main #tab_c {opacity:0; animation:opacity .6s .8s both;}
+/* room 공통영역 */
+main #tab_c .room {width:100%; padding:80px 0; position:relative;}
+main #tab_c .room .sub_t {opacity:.5; letter-spacing: 0.05em; font-size:0.875rem; font-weight:700;}
+main #tab_c .room h2 {
+    font-family:'Noto Serif KR',serif; font-size:2.5rem; font-weight:500;
+    margin:24px 0; text-transform: uppercase; text-indent:-4px;
+}
+main #tab_c .room h2::first-letter {font-size:3rem;}
+main #tab_c .room .txt {line-height:1.5; letter-spacing: -0.02em; width:70%; min-width:350px; word-break: keep-all; font-weight:300;}
+main #tab_c .room .btm {margin:40px 0 60px; display:flex;}
+main #tab_c .room .btm a {padding:12px; border: 1px solid #222;}
+main #tab_c .room .btm a:first-child {margin-right:16px; padding:12px 40px; line-height:1.5;}
+main #tab_c .room .btm a:nth-child(2)::after {content:'\f004'; font-weight:500; /* font awesome heart */
+    font-size:1.5rem;
+}
+main #tab_c .room .btm a:hover {background: #ffffff22;}
+main #tab_c .room .img {
+    width:100%; padding-bottom:60%;
+    background-size:cover; background-position:center;
+}
+main #tab_c .room::before {
+    content:''; display:block;
+    position:absolute; top:0; z-index:-1;
+    width:100vw; height:60%;
+}
+/* no_product */
+main #tab_c .alert_wrap {text-align:center; padding:180px 0 300px;}
+main #tab_c .alert_wrap .icon_alert::after {
+    content:'\f27a'; font-size:1.5rem;
+}
+main #tab_c .alert_wrap .alert {margin-top:16px;}
+/* room 좌, 우 개별 디자인 */
+/* main #tab_c .room:nth-child(2n+1) * {color:#fff; border-color:#fff;}
+main #tab_c .room:nth-child(2n+1) a:first-child {border-color:#fff;}
+main #tab_c .room:nth-child(2n+1) a:last-child {border-color:#ffffff66;}
+
+main #tab_c .room:nth-child(2n) > * {margin-left:60px;}
+main #tab_c .room:nth-child(2n) a:last-child {border-color:#00000066;}
+main #tab_c .room:nth-child(2n) .img {margin-left:0;} */
+/* bg img */
+/* main #tab_c .room:nth-child(1) .img {background-image:url(../images/room/room1.jpg);}
+main #tab_c .room:nth-child(2) .img {background-image:url(../images/room/room2.jpg);}
+main #tab_c .room:nth-child(3) .img {background-image:url(../images/room/room3.jpg);}
+main #tab_c .room:nth-child(4) .img {background-image:url(../images/room/kids1.jpg);}
+main #tab_c .room:nth-child(5) .img {background-image:url(../images/room/kids2.jpg);}
+main #tab_c .room:nth-child(6) .img {background-image:url(../images/room/kids3.jpg);}
+main #tab_c .room:nth-child(7) .img {background-image:url(../images/room/suite1.jpg);}
+main #tab_c .room:nth-child(8) .img {background-image:url(../images/room/suite2.jpg);}
+main #tab_c .room:nth-child(9) .img {background-image:url(../images/room/suite3.jpg);}
+main #tab_c .room:nth-child(10) .img {background-image:url(../images/room/suite4.jpg);} */

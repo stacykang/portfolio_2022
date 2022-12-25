@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* font-family:'Noto Sans KR',sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* font-family:'Noto Serif KR',serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+*{
+    box-sizing:border-box;
+    font-family:'Noto Sans KR','Font Awesome 5 Free','Font Awesome 5 Brands',sans-serif;
+}
+html,body,header,main,footer,section,article,aside,
+h1,h2,h3,h4,h5,h6,p,div,span,a,img,video,
+strong,em,sub,sup,q,blockquote,code,del,address,
+ol,ul,li,dl,dd,dt,table,thead,tfoot,tbody,tr,th,td,
+form,fieldset,input,button,select,option,textarea {
+    margin:0; padding:0;
+    font-size:1rem; font-style:normal; font-weight:normal;
+    line-height:1.0; color:#222;
+}
+table,tr,th,td{border-collapse:collapse;}
+fieldset {border:0;}
+a {text-decoration:none;}
+ul,ol,li {list-style:none;}
+textarea{resize: none; border:0;}
+input,button{cursor:pointer; background:none; border:0;}
+.skip{display:none;}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="서울우유,서울우유 협동조합,공식 홈페이지,조합소개, 제품소개,고객센터, 흰우유, 두유, 커피, 치즈, 아이펫밀크">
+    <meta name="description" content="체세포수까지 1등급! 대한민국 1등 우유 서울우유">
+    <title>서울우유</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/common_responsive.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/main_responsive.css">
+    <link rel="stylesheet" href="style/animation.css">
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--swiper-->
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <?php include("header.php");?>
+    <main>
+        <div id="video_wrap">
+            <!-- 확장자 뒤로 #t=0.5 첫 시작을 0.5초로 설정해서 모바일에서 첫화면 보이게 설정  -->
+            <!-- autoplay,controls 속성은 스크립트를 이용해서 윈도우 사이즈에 따라 다르게 주기 -->
+            <video src="video/index_mov_v4_twitter1080p.mp4#t=0.5" poster="video/main_video_poster.jpg" muted loop></video> 
+        </div><!-- e:video_wrap -->
+        <div id="link_wrap">
+            <div class="wrap_title">
+                <p class="symbol"></p>
+                <p class="bg">link</p>
+                <h1>바로가기</h1>
+                <p class="c">서울우유의 신제품을 확인하세요! 공식 쇼핑몰을 둘러보고 가정 배달 서비스를 이용해보세요.</p>
+            </div>
+            <div class="wrap_contents">
+                <div class="new_shop">
+                    <a href="#!"><img src="images/link/link1.png" alt="신제품 소식"></a>
+                    <a href="#!"><img src="images/link/link2.png" alt="나 100샵 서울우유 공식쇼핑몰"></a>
+                </div>
+                <a href="#!" class="delivery"><img src="images/link/link3.png" alt="가정배달 주문"></a>
+            </div>
+        </div><!-- e:link_wrap -->
+        <div id="product_wrap">
+            <div class="wrap_title">
+                <p class="symbol"></p>
+                <p class="bg">product</p>
+                <h1>대표제품</h1>
+                <p class="c">서울우유의 자랑스러운 대표 제품들을 만나보세요!</p>
+                <div class="tab_title">  <!-- js -->
+                    <a href="#!" class="active">MILK</a> <!-- css brightness -->
+                    <a href="#!">CHEESE</a>
+                    <a href="#!">COFFEE</a>
+                </div>
+            </div>
+            <div class="wrap_contents"> <!-- js interval -->
+                <div class="product_container">
+                    <a href="sub_product_beverage.html#milk_wrap" target="_blank" class="product product1">
+                        <p><img src="images/product/milk1.png" alt="서울우유200ml"></p>
+                        <p><img src="images/product/milk2.png" alt="서울우유1000ml"></p>
+                        <p><img src="images/product_bg/milk_splash2.png" alt=""></p>
+                    </a>
+                    <a href="sub_product_food.html#cheese_wrap" target="_blank" class="product product2">
+                        <p><img src="images/product_bg/cheese.png" alt=""></p>
+                        <p><img src="images/product/cheese1.png" alt="체다치즈"></p>
+                    </a>
+                    <a href="sub_product_beverage.html#coffee_wrap" target="_blank" class="product product3">
+                        <p><img src="images/product/coffee3.png" alt="스페셜티 카페라떼 다크"></p>
+                        <p><img src="images/product/coffee2.png" alt="스페셜티 카페라떼 아포가토"></p>
+                        <p><img src="images/product_bg/coffee-beans-levitate-white-background.png" alt=""></p>
+                    </a>
+                </div>
+            </div>
+        </div><!-- e:product_wrap -->
+        <div id="social_wrap">
+            <div class="wrap_title">
+                <p class="symbol"></p>
+                <p class="bg">social<br>center</p>
+                <h1>소셜센터</h1>
+                <p class="c">소셜 미디어에서 서울우유의 소식을 확인해보세요!</p>
+                <div class="tab_title"> <!-- js -->
+                    <a href="#!">페이스북</a> <!-- css splash -->
+                    <a href="#!">인스타그램</a>
+                    <a href="#!">유튜브</a>
+                </div>
+            </div>
+            <div class="wrap_contents"> <!-- js interval -->
+                <div class="social_container">
+                    <a href="#!" class="social social1">
+                        <div class="title">
+                            <h2>facebook</h2>
+                            <p></p> <!-- css splash -->
+                        </div>
+                        <div class="img"></div>
+                    </a>
+                    <a href="#!" class="social social2">
+                        <div class="title">
+                            <h2>instagram</h2>
+                            <p></p>
+                        </div>
+                        <div class="img"></div>
+                    </a>
+                    <a href="#!" class="social social3">
+                        <div class="title">
+                            <h2>youtube</h2>
+                            <p></p>
+                        </div>
+                        <div class="img"></div>
+                    </a>
+                </div><!-- e:social_container -->
+            </div><!-- e:wrap_contentes -->
+        </div><!-- e:social_wrap -->
+        <div id="event_wrap"> <!-- js swiper plugin -->
+            <div class="wrap_title">
+                <p class="symbol"></p>
+                <p class="bg">event</p>
+                <h1>이벤트</h1>
+            </div>
+            <div class="event-swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                        <div class="txt">
+                            <p class="date">2022.08.01 ~ 08.31</p>
+                            <p class="title">나100샵 8월</p>
+                            <h2>스탬프 이벤트</h2>
+                            <p class="c">백화점 상품권, 선물세트 증정 이벤트</p>
+                            <a href="#!">자세히보기</a>
+                        </div>
+                        <div class="img"><img src="images/event/event1_02.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-slide slide2">
+                        <div class="txt">
+                            <p class="date">2022.08.01 ~ 08.31</p>
+                            <p class="title">나100샵 8월</p>
+                            <h2>구매후기 이벤트</h2>
+                            <p class="c">구매후기 남기고 비요뜨 아이스크림, 레트로 선물세트 받자!</p>
+                            <a href="#!">자세히보기</a>
+                        </div>
+                        <div class="img"><img src="images/event/event2_02.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-slide slide3">
+                        <div class="txt">
+                            <p class="date">2022.08.01 ~ 08.31</p>
+                            <p class="title">두8 가득</p>
+                            <h2>8월 특가 찬스!</h2>
+                            <p class="c">이달의 쇼핑 특가!</p>
+                            <a href="#!">자세히보기</a>
+                        </div>
+                        <div class="img"><img src="images/event/event3_02.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-slide slide4">
+                        <div class="txt">
+                            <p class="date">2022.07.19 ~ 08.05</p>
+                            <p class="title">Happy Birthday</p>
+                            <h2>창립 85주년 이벤트</h2>
+                            <p class="c">서울우유 창립 85주년 맞이 풍성한 경품 이벤트!</p>
+                            <a href="#!">자세히보기</a>
+                        </div>
+                        <div class="img"><img src="images/event/event4_02.jpg" alt=""></div>
+                    </div>
+                </div><!-- e:swiper-wrapper -->
+                <div class="button_wrap">
+                    <a href="#!" class="prev_btn"><img src="images/icon/arrow_prev.png" alt="이전"></a>
+                    <a href="#!" class="next_btn"><img src="images/icon/arrow_next.png" alt="다음"></a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div><!-- e:swiper-container -->
+        </div><!-- e:event_wrap -->
+        <div id="news_wrap">
+            <div class="wrap_title">
+                <p class="symbol"></p>
+                <p class="bg">news</p>
+                <h1>보도자료</h1>
+            </div>
+            <div class="news-swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1"> <!-- 이부분 a태그로 작성시 선택 안된다 -->
+                        <a href="#!"> <!-- 슬라이드 전체 선택 링크 -->
+                            <div class="img"></div>
+                            <div class="contents">
+                                <h2>‘비요뜨’ 광고 모델로 ‘우주소녀 보나’ 발탁</h2>
+                                <p class="date">2022-07-20</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide slide2">
+                        <a href="#!">
+                            <div class="img"></div>
+                            <div class="contents">
+                                <h2>‘럽우유 사연 공모전’ 이벤트 진행</h2>
+                                <p class="date">2022-07-20</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide slide3">
+                        <a href="#!">
+                            <div class="img"></div>
+                            <div class="contents">
+                                <h2>‘함께 걷는 등굣길’ 지원 사업에 1억원 후원</h2>
+                                <p class="date">2022-03-16</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide slide4">
+                        <a href="#!">
+                            <div class="img"></div>
+                            <div class="contents">
+                                <h2>경북, 강원 산불 피해 지원에 1억원 기탁</h2>
+                                <p class="date">2022-03-16</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide slide5">
+                        <a href="#!">
+                            <div class="img"></div>
+                            <div class="contents">
+                                <h2>박군과 함께 지역아동센터협의회 우유 기부행사 진행</h2>
+                                <p class="date">2021-10-27</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide slide6">
+                        <a href="#!">
+                            <div class="img"></div>
+                            <div class="contents">
+                                <h2>서울우유농협, 상호금융 여수신 3조원 달성</h2>
+                                <p class="date">2022-10-27</p>
+                            </div>
+                        </a>
+                    </div>
+                </div><!-- e:swiper-wrapper -->
+                <div class="button_wrap">
+                    <a href="#!" class="prev_btn"><img src="images/icon/arrow_prev.png" alt="이전"></a>
+                    <a href="#!" class="next_btn"><img src="images/icon/arrow_next.png" alt="다음"></a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div><!-- e:swiper-container -->
+        </div><!-- news_wrap -->
+    </main>
+    <!-- footer -->
+    <?php include("footer.php");?>
+    <!-- script -->
+    <script src="script/common.js"></script>
+    <script src="script/main.js"></script>
+</body>
+</html>

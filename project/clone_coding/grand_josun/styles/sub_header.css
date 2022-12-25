@@ -1,0 +1,6 @@
+header {
+    background:#B29D95; transition:0.3s linear;
+    width:100%; padding:0 16px; height:100px;
+    display:flex; flex-flow:row nowrap; align-items:center;
+    position:fixed; z-index:900; top:0;
+}

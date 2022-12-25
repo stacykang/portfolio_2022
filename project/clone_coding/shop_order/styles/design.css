@@ -1,0 +1,87 @@
+#order_wrap {
+    width:1024px; margin:50px auto 0;
+    display:flex; flex-flow:row nowrap;
+    justify-content: space-around; align-items: center;
+}
+#order_wrap .left {
+    width:450px; height:450px; 
+    overflow:hidden; display:flex;
+    justify-content: center; align-items: center;
+}
+#order_wrap .left img {width:100%; transition:all 0.5s;} /* 부모 너비 따라가게 */
+#order_wrap .left:hover img {width:105%;} /* 부모 너비 따라가게 */
+#order_wrap .right {
+    width:calc(100% - 550px);
+    display:flex; flex-flow:column nowrap;
+    justify-content: space-between;
+}
+#order_wrap .right .top {}
+#order_wrap .right .top h1 {
+    font-size:1.5rem; padding:20px 0; font-weight:600;
+    letter-spacing: -0.05rem;
+}
+#order_wrap .right .top > p {
+    color:#aaa; margin-bottom:10px; padding-bottom:15px;
+    border-bottom:1px solid #dadada;
+}
+#order_wrap .right .top dl {
+    display:flex; flex-flow:row wrap;
+}
+#order_wrap .right .top dl dt {
+    width:25%; font-weight:700; padding:10px 0;
+    letter-spacing: -0.05rem;
+}
+#order_wrap .right .top dl dd {width:75%;} /* 크기를 총 100% 차지하게 해서 줄바꿈 되게 한다. */
+#order_wrap .right .top dl dt,
+#order_wrap .right .top dl dd {padding:10px 0; color:#333;}
+#order_wrap .right .top .number {
+    display:flex; flex-flow:row nowrap;
+    justify-content: space-between;
+    align-items: center; padding:20px 0; margin:10px 0;
+    border-bottom:1px solid #ddd;
+    border-top:1px solid #ddd;
+}
+#order_wrap .right .top .number .order_name {word-break:keep-all; line-height:1.3;}
+#order_wrap .right .top .number .order_number {
+    display:flex;
+    border-radius:5px; overflow: hidden;
+}
+#order_wrap .right .top .number .order_number #minus {
+}
+#order_wrap .right .top .number .order_number input[name=num] {
+    background: #fff; width:50px; padding:5px;
+    border:1px solid #f0f0f0; text-align: center;
+    font-weight:600;
+}
+#order_wrap .right .top .number .order_number #plus {
+}
+#order_wrap .right .top .number .order_number #minus,
+#order_wrap .right .top .number .order_number #plus {
+    background: #f0f0f0;font-size:1.5rem; color:#555;
+    width:36px; height: 36px;
+    transition:all 0.3s;
+}
+#order_wrap .right .top .number .order_number #minus:hover,
+#order_wrap .right .top .number .order_number #plus:hover {background:#ddd;}
+#order_wrap .right .top .total_price {
+    display:flex; flex-flow:row nowrap;
+    justify-content:right; align-items:baseline;
+    padding:20px 0; 
+}
+#order_wrap .right .top .total_price p {}
+#order_wrap .right .top .total_price p:first-child {
+    font-weight:500; margin-right:15px;
+    letter-spacing: -0.05rem; color:#545454;
+}
+#order_wrap .right .top .total_price .result_price {font-weight:700; font-size:1.4rem; color:#cc0202;}
+#order_wrap .right .bottom {text-align:right; padding:15px 0;}
+#order_wrap .right .bottom button {padding:15px 0; margin-right:3px;}
+#order_wrap .right .bottom #order_btn {background:#cc0202; color:#fff; width:150px;}
+#order_wrap .right .bottom #cart_btn {background:#a9a9a9; width:120px; color:#fff;}
+#order_wrap .right .bottom #like_btn {background:#ddd; width:100px;}
+#order_wrap .right .bottom #order_btn,
+#order_wrap .right .bottom #cart_btn,
+#order_wrap .right .bottom #like_btn {transition:all 0.3s;}
+#order_wrap .right .bottom #order_btn:hover,
+#order_wrap .right .bottom #cart_btn:hover,
+#order_wrap .right .bottom #like_btn:hover {background: #333; color:#fff;}

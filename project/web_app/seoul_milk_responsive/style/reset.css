@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {font-family: "SEOULMILK_500ml"; src: url('../font/SEOULMILK_500ml.ttf') format('truetype');}
+@font-face {font-family: "SEOULMILK_1000ml"; src: url('../font/SEOULMILK_1000ml.ttf') format('truetype');}
+*{box-sizing:border-box;}
+html,body,h1,h2,h3,h4,h5,h6,p,div,a,
+header,main,nav,footer,aside,section,article,figure,
+table,thead,tbody,tfoot,tr,th,td,
+ul,ol,li,dl,dt,dd,address,
+video,img,em,span,sub,sup,code,del,s,q,blockquote,
+form,fieldset,input,button,select,option,textarea {
+    margin:0; padding:0;
+    font-size:1rem; font-style: normal; font-weight:normal;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height:1.0;  color:#313131;
+}
+ul,ol,li {list-style:none;}
+table,thead,tbody,tfoot,tr,th,td {border-collapse:collapse;}
+th {text-align:left;}
+a {text-decoration:none;}
+fieldset {border:0;}
+textarea {resize:none; border:0;}
+input, button {cursor:pointer; background:none; border:0;}
+.skip {display:none;}

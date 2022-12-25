@@ -1,0 +1,48 @@
+@media screen and (max-width:900px){
+    main .page_contents .right_wrap .product_wrap .product{width:50%;}
+}
+@media screen and (max-width:700px){
+    /* page_title */
+    main .page_title_bg .page_title {padding:40px 16px 32px;}
+    main .page_title_bg .page_title h1 {font-size:3.5rem;}
+    main .page_title_bg .page_title ul li a {font-size:0.875rem;}
+    /* page_contents */
+    main .page_contents {position:relative;}
+    main .page_contents .filter_arrange_btn {width:120px;}
+    /* aside */
+    main .page_contents aside {
+        position:absolute; top:0; right:0; z-index:10;
+        width:100%; align-items:center;
+    }
+    main .page_contents aside .filter_btn {
+        position:absolute; top:0px; left:0;
+        border-bottom-right-radius: 20px;
+    }
+    main .page_contents aside .filter_all {
+        flex-flow:row nowrap; width:100%; padding-left:0;
+        background: #fff; 
+        padding: 0 24px; transition:.3s;
+        height:0; overflow: hidden; /* js */
+    }
+    main .page_contents aside .filter_all.active {
+        height:250px; border-bottom:1px solid #F1F1F1;
+    }
+    main .page_contents aside .filter_all .filter {
+        flex:1; margin:0; margin:68px 0 24px;
+    }
+    /* right_wrap */
+    main .page_contents .right_wrap .r_top .filter_arrange_btn {border-bottom-left-radius: 20px;}
+    main .page_contents .right_wrap .r_top .arrange_list {width:120px;}
+    main .page_contents .right_wrap {width:100%;}
+    main .page_contents .right_wrap .product_wrap .product .name_eng {display:none;}
+    main .page_contents .right_wrap .product_wrap .product .card .name_kor {
+        margin:12px 0; height:30px;
+    }
+    main .page_contents .right_wrap .product_wrap .product .card:hover {background:#fff;}
+    main .page_contents .right_wrap .product_wrap .product .card .name_kor {font-size:0.875rem;}
+    main .page_contents .right_wrap .product_wrap .product .card .price .num{font-size:1.125rem;}
+    main .page_contents .right_wrap .product_wrap .product .btn_all {opacity:.5;}
+    main .page_contents .right_wrap .product_wrap .product .btn_all a {width:32px; height:32px;}
+    main .page_contents .right_wrap .product_wrap .product .btn_all a:hover {opacity:1;}
+    main .page_contents .right_wrap .product_wrap .product .btn_all a img {width:20px; height:20px;}
+}

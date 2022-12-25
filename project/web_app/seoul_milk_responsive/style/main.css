@@ -1,0 +1,315 @@
+main {margin-top:108px; overflow: hidden; /* 크기 지정 전 넘치는 부분 잠시 숨겨놓기 */}
+/*
+video_wrap
+*/
+main #video_wrap {
+    /* 최대 높이 제한 */
+    max-height:70vh; overflow: hidden;
+    display: flex; align-items: center; transition:.5s;
+}
+main #video_wrap video {width:100%;}
+/* 레이아웃 공통 영역 */
+main #link_wrap,
+main #product_wrap,
+main #social_wrap,
+main #event_wrap,
+main #news_wrap {
+    width:100%; max-width:1024px; margin:0 auto;
+}
+main #link_wrap,
+main #product_wrap,
+main #social_wrap {padding:80px 16px 60px;}
+main #event_wrap,
+main #news_wrap {padding:100px 16px;}
+/* 제목 공통 영역 */
+main .wrap_title {
+    position:relative;
+    display:flex; flex-flow:column nowrap;
+    align-items: center;
+}
+main .wrap_title p {}
+main .wrap_title .symbol {
+    width:47px; height:35px; margin-bottom:16px;
+}
+main .wrap_title .bg {
+    position:absolute; top:16px; text-transform: uppercase;
+    font-family: "SEOULMILK_1000ml"; font-size:5rem; opacity:10%;
+}
+main .wrap_title h1 {font-family: "SEOULMILK_1000ml",'Noto Sans KR',sans-serif; font-size:2.5rem;}
+main .wrap_title .c {margin-top:16px; letter-spacing:-0.04em; line-height:1.5; word-break:keep-all;}
+/*
+link_wrap
+*/
+main #link_wrap {}
+main #link_wrap .wrap_title {}
+main #link_wrap .wrap_title .symbol {background:url(../images/symbol/Seoulmilk_Symbolmark_edit_green.svg);}
+main #link_wrap .wrap_title .bg,
+main #link_wrap .wrap_title h1 {color:#009857;}
+main #link_wrap .wrap_contents {
+    width:100%; background: lavender;
+    display:flex; margin-top:60px;
+}
+main #link_wrap .wrap_contents .new_shop {width:336px;} /* flex 속성으로 인해 윈도우 너비 작아지면 일정한 비율로 크기 조정된다. */
+main #link_wrap .wrap_contents .new_shop a {}
+main #link_wrap .wrap_contents .new_shop a img {}
+main #link_wrap .wrap_contents .delivery {width:656px;}
+main #link_wrap .wrap_contents .delivery img {}
+main #link_wrap .wrap_contents a {display:flex;}
+main #link_wrap .wrap_contents a img {width:100%; transition:.3s;}
+main #link_wrap .wrap_contents a:hover img {filter:brightness(1.1);}
+/*
+product_wrap
+*/
+main #product_wrap {display:flex; flex-flow:row nowrap; align-items: center; position:relative;}
+main #product_wrap:before {
+    content:''; display:block;
+    /* background: #6BBC6E; opacity:.15; */
+    background:linear-gradient(90deg,transparent 0%,#6BBC6E50 30%);
+    position:absolute; z-index:-1;
+    width:100vw; height:30%; bottom:80px; left:35%;
+}
+main #product_wrap .wrap_title {
+    flex:2; align-items: flex-start; margin-right:60px;
+}
+main #product_wrap .wrap_title .symbol {background: url(../images/symbol/Seoulmilk_Symbolmark_edit_lightgreen.svg);}
+main #product_wrap .wrap_title .bg,
+main #product_wrap .wrap_title h1 {color:#6BBC6E;}
+main #product_wrap .wrap_title .bg {font-size:2.5rem; top:22px; left:19px;}
+main #product_wrap .wrap_title .tab_title {margin-top:32px;}
+main #product_wrap .wrap_title .tab_title a {
+    font-weight:900; letter-spacing:-0.02em; color:#ccc; margin-right:16px;
+    padding:8px 0; position:relative;
+}
+main #product_wrap .wrap_title .tab_title a:last-child {margin-right:0;}
+main #product_wrap .wrap_title .tab_title a.active {color:#009857;}
+main #product_wrap .wrap_title .tab_title a:hover {color:#313131; top:-1px; /* 1px만 움직이기 때문에 transition 적용되지 않게 top:0 초기값을 주지 않는다.  */}
+/* main #product_wrap .wrap_title .tab_title a.active {color:#313131;} */
+main #product_wrap .wrap_contents {
+    flex:3 auto; overflow: hidden; height:400px;
+}
+main #product_wrap .wrap_contents .product_container {
+    width:100%; height:100%;
+    display:flex; flex-flow:row nowrap;
+    position:relative;
+}
+main #product_wrap .wrap_contents .product_container .product {
+    width:100%; height:100%; /* 자식요소들 다 absolute 처리해서 크기 값 주어야 함. */
+    position:absolute; top:0; left:0; /* 좌우 슬라이드 말고 제자리 슬라이드업 효과 주기 위해 */
+}
+main #product_wrap .wrap_contents .product_container .product p {
+    position:absolute; bottom:0; right:50%; transform: translateX(50%); /* 좌우 중앙, 아래 정렬 초기값, 개별값은 따로 주기 */
+}
+main #product_wrap .wrap_contents .product_container .product p:nth-child(1) {z-index:3;}
+main #product_wrap .wrap_contents .product_container .product p:nth-child(2) {z-index:2;}
+main #product_wrap .wrap_contents .product_container .product p:nth-child(3) {z-index:1;}
+main #product_wrap .wrap_contents .product_container .product p img {width:100%;}
+/* 이미지 개별 크기 작업 */
+/* animation 동적기능은 img 선택자에 주기! p태그는 position, transform 값이 있기 때문 */
+main #product_wrap .wrap_contents .product_container .product1 p:nth-child(1) {width:133px; transform: translateX(30%); bottom:20px;}
+main #product_wrap .wrap_contents .product_container .product1 p:nth-child(2) {width:133px; transform: translateX(70%); bottom:30px;}
+main #product_wrap .wrap_contents .product_container .product1 p:nth-child(3) {width:400px;}
+main #product_wrap .wrap_contents .product_container .product2 p:nth-child(1) {width:175px; transform: translateX(114%); bottom: 25px;}
+main #product_wrap .wrap_contents .product_container .product2 p:nth-child(2) {width:380px; transform: translateX(50%); bottom:50px;}
+main #product_wrap .wrap_contents .product_container .product3 p:nth-child(1) {width:180px; transform:rotate(16deg) translate(81%,-23%); bottom:20px;}
+main #product_wrap .wrap_contents .product_container .product3 p:nth-child(2) {width:150px; transform: rotate(-17deg) translate(22%,-29%); bottom:30px;}
+main #product_wrap .wrap_contents .product_container .product3 p:nth-child(3) {width:400px; bottom:10px;}
+main #product_wrap .wrap_contents .product_container .product img {opacity:0;} /* js초기값 */
+/*
+social_wrap
+*/
+main #social_wrap {
+    /* background: salmon; */
+    max-width:100%; padding-left:0;
+    display:flex; flex-flow:row nowrap; align-items: center;
+    flex-direction: row-reverse; /* 타이틀을 왼쪽에 보내기 위해, 모바일에선 위쪽 */
+}
+main #social_wrap .wrap_title {
+    /* background: saddlebrown; */
+    flex:2; align-items: flex-start; margin-left:60px;
+}
+main #social_wrap .wrap_title .symbol {background: url(../images/symbol/Seoulmilk_Symbolmark_edit_red.svg);}
+main #social_wrap .wrap_title .bg,
+main #social_wrap .wrap_title h1 {color:#E60012;}
+main #social_wrap .wrap_title .bg {font-size:2.5rem; top:-14px; left:19px;}
+main #social_wrap .wrap_title .tab_title {margin-top:32px; display:flex;}
+main #social_wrap .wrap_title .tab_title a {text-indent:-9999px; margin-right:16px; position:relative; transition:.5s;}
+main #social_wrap .wrap_title .tab_title a:last-child {margin-right:0;}
+main #social_wrap .wrap_title .tab_title a.active {color:#313131;}
+main #social_wrap .wrap_title .tab_title a:hover {top:-2px;}
+main #social_wrap .wrap_contents {
+    position:relative;
+    flex:3; overflow: hidden; display:flex; justify-content: flex-end;
+}
+main #social_wrap .wrap_contents::after {
+    content:''; display:block;
+    width:40%; height:100%; background:linear-gradient(90deg,#fff,transparent);
+    position:absolute; top:0; left:0;
+}
+main #social_wrap .wrap_contents .social_container {
+    /* background: sandybrown; */
+    display:flex; flex-flow:row nowrap; padding:20px 0; /* 그림자 효과 잘리지 않게 내부여백 충분히 */
+    transform:translateX(0); transition:.5s; /* js 33.33%씩 오른쪽으로 슬라이드 */ 
+}
+main #social_wrap .wrap_contents .social_container .social {
+    width:320px; padding:16px; margin:0 12px;
+    border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,.1);
+    position:relative; bottom:0; transition:.5s;
+}
+main #social_wrap .wrap_contents .social_container .social:hover {bottom:10px;} /* 마우스 오버시 위로 움직이는 애니메이션 */
+main #social_wrap .wrap_contents .social_container .social .title {
+    display:flex; flex-flow:row nowrap; justify-content:space-between;
+    align-items: flex-end;
+    margin-bottom:16px;
+}
+main #social_wrap .wrap_contents .social_container .social .title h2 {
+    font-family: "SEOULMILK_1000ml"; font-size:1.125rem;
+}
+main #social_wrap .wrap_contents .social_container .social .title p {}
+main #social_wrap .wrap_contents .social_container .social .img {
+    display:block; width:100%; padding-bottom:100%; /* square ratio */
+    background-size:cover; background-position:center; border-radius:6px;
+}
+/* icon */
+main #social_wrap .wrap_title .tab_title a,
+main #social_wrap .wrap_contents .social_container .social .title p {
+    width:32px; height:32px;
+    background-size:cover; background-position: center;
+    opacity:0.3; transition:.3s;
+}
+main #social_wrap .wrap_title .tab_title a.active,
+main #social_wrap .wrap_title .tab_title a:hover,
+main #social_wrap .wrap_contents .social_container .social:hover .title p,
+main #social_wrap .wrap_contents .social_container .active .title p {opacity:1;}
+main #social_wrap .wrap_title .tab_title a:nth-child(1),
+main #social_wrap .wrap_contents .social_container .social:nth-child(1) .title p {background-image: url(../images/sns_icon/facebook.svg);}
+main #social_wrap .wrap_title .tab_title a:nth-child(1):hover,
+main #social_wrap .wrap_contents .social_container .social:nth-child(1):hover .title p {background-image: url(../images/sns_icon/facebook_color.svg);}
+main #social_wrap .wrap_title .tab_title a:nth-child(2),
+main #social_wrap .wrap_contents .social_container .social:nth-child(2) .title p {background-image: url(../images/sns_icon/instagram.svg);}
+main #social_wrap .wrap_title .tab_title a:nth-child(2):hover,
+main #social_wrap .wrap_contents .social_container .social:nth-child(2):hover .title p {background-image: url(../images/sns_icon/Instagram_color.svg);}
+main #social_wrap .wrap_title .tab_title a:nth-child(3),
+main #social_wrap .wrap_contents .social_container .social:nth-child(3) .title p {background-image: url(../images/sns_icon/youtube.svg);}
+main #social_wrap .wrap_title .tab_title a:nth-child(3):hover,
+main #social_wrap .wrap_contents .social_container .social:nth-child(3):hover .title p {background-image: url(../images/sns_icon/youtube_color.svg);}
+/* img */
+main #social_wrap .wrap_contents .social1 .img {background-image:url(../images/social_center/facebook.jpg);}
+main #social_wrap .wrap_contents .social2 .img {background-image:url(../images/social_center/instagram.jpg);}
+main #social_wrap .wrap_contents .social3 .img {background-image:url(../images/social_center/youtube.jpg);}
+/*
+event_wrap
+*/
+main #event_wrap {position:relative;}
+main #event_wrap::before {  /* bg */
+    content:''; display:block;
+    width:100vw; height:75%; background: #F4F4F4;
+    position:absolute; bottom:0; left:50%; transform: translateX(-50%);
+}
+main #event_wrap .wrap_title {}
+main #event_wrap .wrap_title .symbol {background:url(../images/symbol/Seoulmilk_Symbolmark_edit_green.svg);}
+main #event_wrap .wrap_title .bg,
+main #event_wrap .wrap_title h1 {color:#009857;}
+main #event_wrap .event-swiper-container {
+    max-width:900px; margin:54px auto 0; overflow: hidden;
+}
+main #event_wrap .event-swiper-container .swiper-wrapper {}
+main #event_wrap .event-swiper-container .swiper-wrapper .swiper-slide {
+    display:flex; flex-direction:row-reverse; justify-content: center;
+    align-items:center;
+}
+main #event_wrap .event-swiper-container .swiper-wrapper .swiper-slide .txt {padding:0 40px; width:50%;}
+main #event_wrap .event-swiper-container .swiper-wrapper .swiper-slide .txt * {word-break: keep-all;}
+main #event_wrap .event-swiper-container .swiper-wrapper .swiper-slide .txt p {}
+main #event_wrap .event-swiper-container .swiper-wrapper .swiper-slide .txt .date {letter-spacing:-0.02em; margin-bottom:24px; color:#aaa;}
+main #event_wrap .event-swiper-container .swiper-wrapper .swiper-slide .txt .title {
+    font-family: "SEOULMILK_500ml";
+    font-size:1.5rem; letter-spacing: -0.04em; margin-bottom:12px;
+}
+main #event_wrap .event-swiper-container .swiper-wrapper .swiper-slide .txt h2 {
+    font-family: "SEOULMILK_1000ml";
+    font-size:2.25rem; font-weight:700; letter-spacing: -0.04em;
+}
+main #event_wrap .event-swiper-container .swiper-wrapper .swiper-slide .txt .c {
+    font-weight:500; letter-spacing: -0.04em; margin:20px 0 32px; color:#555;
+    line-height:1.5;
+}
+main #event_wrap .event-swiper-container .swiper-wrapper .swiper-slide .txt a {
+    font-weight:500; letter-spacing: -0.02em; color:#313131; border:1px solid #313131;
+    display:inline-block; padding:8px 16px; border-radius:5px; transition:.3s;
+}
+main #event_wrap .event-swiper-container .swiper-wrapper .swiper-slide .txt a:hover {
+    background:#6BBC6E; box-shadow:1px 1px 4px #009857 inset; color:#fff;
+    border-color:#6BBC6E;
+}
+main #event_wrap .event-swiper-container .swiper-wrapper .swiper-slide .img {}
+main #event_wrap .event-swiper-container .swiper-wrapper .swiper-slide .img img {}
+main #event_wrap .event-swiper-container .swiper-pagination { /* 선택자를 .swiper-pagination 으로 생략해버리면, 플러그인보다 우선순위가 낮아져 적용되지 않는다. */
+    position:absolute; width:100%; left:0; bottom:50px; transform:translateX(3%);
+    display:flex; justify-content: center;
+}
+main #event_wrap .event-swiper-container .swiper-pagination .swiper-pagination-bullet {
+    width:64px; height:3px; border-radius:0;
+}
+main #event_wrap .event-swiper-container .swiper-pagination .swiper-pagination-bullet-active {background-color:#009857;}
+/*
+news_wrap
+*/
+main #news_wrap {position:relative; margin-bottom:80px;}
+main #news_wrap .wrap_title {}
+main #news_wrap .wrap_title .symbol {background:url(../images/symbol/Seoulmilk_Symbolmark_edit_green.svg);}
+main #news_wrap .wrap_title .bg,
+main #news_wrap .wrap_title h1 {color:#009857;}
+main #news_wrap .news-swiper-container {
+    max-width:80%; margin:54px auto 0; overflow:hidden; padding:2px; /* border 잘림 방지 */
+}
+main #news_wrap .news-swiper-container .swiper-wrapper {}
+main #news_wrap .news-swiper-container .swiper-wrapper .swiper-slide {border:1px solid #ccc; background: #fff;}
+main #news_wrap .news-swiper-container .swiper-wrapper .swiper-slide a {overflow: hidden;}
+main #news_wrap .news-swiper-container .swiper-wrapper .swiper-slide a::after {
+    content:'자세히보기'; display:block; 
+    width:100%; padding:300px 0; position:absolute; top:50%; left:0; transform:translateY(-50%);
+    font-family: "SEOULMILK_500ml"; font-size:1.25rem; text-align:center; color:#fff;
+    background:#00573D; opacity:0; transition:.5s;
+    text-decoration: underline; text-underline-offset: 5px;
+}
+main #news_wrap .news-swiper-container .swiper-wrapper .swiper-slide a:hover::after {opacity:0.8;}
+main #news_wrap .news-swiper-container .swiper-wrapper .swiper-slide a .img {padding-bottom:100%; background-position:center; background-size:cover;}
+main #news_wrap .news-swiper-container .swiper-wrapper .slide1 a .img {background-image:url(../images/news/news1.jpg);}
+main #news_wrap .news-swiper-container .swiper-wrapper .slide2 a .img {background-image:url(../images/news/news2.jpg);}
+main #news_wrap .news-swiper-container .swiper-wrapper .slide3 a .img {background-image:url(../images/news/news3.jpg);}
+main #news_wrap .news-swiper-container .swiper-wrapper .slide4 a .img {background-image:url(../images/news/news4.jpg);}
+main #news_wrap .news-swiper-container .swiper-wrapper .slide5 a .img {background-image:url(../images/news/news5.jpg);}
+main #news_wrap .news-swiper-container .swiper-wrapper .slide6 a .img {background-image:url(../images/news/news6.jpg);}
+main #news_wrap .news-swiper-container .swiper-wrapper .swiper-slide a .contents {
+    height:112px; padding:16px; border-top:1px solid #ccc;
+    display:flex; flex-flow:column nowrap; justify-content: space-between;
+}
+main #news_wrap .news-swiper-container .swiper-wrapper .swiper-slide a .contents h2 {
+    font-size:1.125rem; font-weight:600; letter-spacing: -0.04em; line-height:1.5;
+}
+main #news_wrap .news-swiper-container .swiper-wrapper .swiper-slide a .contents .date {
+    font-size:0.813rem; color:#aaa; letter-spacing: -0.04em;
+    text-align:right;
+}
+main #news_wrap .news-swiper-container .swiper-pagination { /* 선택자를 .swiper-pagination 으로 생략해버리면, 플러그인보다 우선순위가 낮아져 적용되지 않는다. */
+    position:absolute; width:100%; left:0; bottom:70px;
+    display:flex; justify-content: center;
+}
+main #news_wrap .news-swiper-container  .swiper-pagination .swiper-pagination-bullet {
+    width:36px; height:3px; border-radius:0;
+}
+main #news_wrap .news-swiper-container  .swiper-pagination .swiper-pagination-bullet-active {background-color:#009857;}
+/* button_wrap 공통영역 */
+.button_wrap {
+    display:flex; justify-content: space-between;  padding:0 16px;
+    position:absolute; width:100%; top:60%; left:0; z-index:1;
+}
+.button_wrap a {
+    background: #ddd; transition:.4s;
+    width:40px; height:40px; border-radius:50%;
+    display:flex; justify-content: center; align-items: center;
+}
+.button_wrap a:hover {background:#00573D;}
+.button_wrap a img {width:25%;}
+.button_wrap .prev_btn img {transform:translateX(-2px);}
+.button_wrap .next_btn img {transform:translateX(2px);}

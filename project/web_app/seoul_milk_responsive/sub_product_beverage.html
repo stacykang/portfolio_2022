@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="서울우유,서울우유 협동조합,공식 홈페이지, 제품소개, 음료, 식품, 흰우유, 발효우유, 주스, 커피, 딸기우유, 초코우유, 저지방우유, 두유, 아이펫밀크">
+    <meta name="description" content="언제나 신선함이 살아있는 서울우유의 음료 제품들을 살펴보세요!">
+    <title>음료류 | 제품소개 | 서울우유</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/common_responsive.css">
+    <link rel="stylesheet" href="style/sub_product.css">
+    <link rel="stylesheet" href="style/sub_product_responsive.css">
+    <link rel="stylesheet" href="style/animation.css">
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <?php include("header.php");?>
+    <main>
+        <div class="title_bg title_bg_beverage">
+            <div class="title_wrap">
+                <h1>제품소개</h1>
+                <p>언제나 신선함이 살아있는 서울우유의 제품을 만나보세요!</p>
+            </div>
+        </div>
+        <div class="dep2_tab">
+            <a href="sub_product_beverage.html" class="active">음료류</a>
+            <a href="sub_product_food.html">식품류</a>
+        </div>
+        <div class="dep3_tab dep3_tab_beverage">
+            <a href="#!" class="tab active">
+                <p class="img"></p>
+                <p class="tab_t">전체</p>
+            </a>
+            <a href="#!" class="tab">
+                <p class="img"></p>
+                <p class="tab_t">우유류</p>
+            </a>
+            <a href="#!" class="tab">
+                <p class="img"></p>
+                <p class="tab_t">발효유류</p>
+            </a>
+            <a href="#!" class="tab">
+                <p class="img"></p>
+                <p class="tab_t">유음료류</p>
+            </a>
+            <a href="#!" class="tab">
+                <p class="img"></p>
+                <p class="tab_t">커피음료</p>
+            </a>
+            <a href="#!" class="tab">
+                <p class="img"></p>
+                <p class="tab_t">반려동물음료</p>
+            </a>
+        </div><!-- e:dep3_tab -->
+        <div class="product_wrap milk_wrap" id="milk_wrap">
+            <div class="title">
+                <p class="symbol"></p>
+                <h2>우유류</h2>
+                <p class="num">총 <span class="category_num"></span>개의 제품이 있습니다.</p> <!-- js num -->
+            </div><!-- e:title -->
+            <div class="container">
+            <!-- javascript 태그 생성 -->
+            <!--<a href="#!" class="card">
+                    <p class="img"></p>
+                    <dl class="txt">
+                        <dt class="t">서울우유 나100</dt>
+                        <dd class="c">두개의 1등급으로 채우다 나100% ( 체세포수 1등급, 세균수 1A )두개의 1등급으로 채우다 나100% ( 체세포수 1등급, 세균수 1A )</dd>
+                    </dl>
+                </a> -->
+            </div><!-- e:container -->
+            <a href="#!" class="more_btn">더보기</a>
+        </div><!-- e:product_wrap milk_wrap -->
+        <div class="product_wrap ferment_wrap" id="ferment_wrap">
+            <div class="title">
+                <p class="symbol"></p>
+                <h2>발효유류</h2>
+                <p class="num">총 <span class="category_num"></span>개의 제품이 있습니다.</p>
+            </div><!-- e:title -->
+            <div class="container">
+                <!-- javascript 태그 생성 -->
+            </div><!-- e:container -->
+            <a href="#!" class="more_btn">더보기</a>
+        </div><!-- e:product_wrap ferment_wrap -->
+        <div class="product_wrap juice_wrap" id="juice_wrap">
+            <div class="title">
+                <p class="symbol"></p>
+                <h2>유음료류</h2>
+                <p class="num">총 <span class="category_num"></span>개의 제품이 있습니다.</p>
+            </div><!-- e:title -->
+            <div class="container">
+                <!-- javascript 태그 생성 -->
+            </div><!-- e:container -->
+            <a href="#!" class="more_btn">더보기</a>
+        </div><!-- e:product_wrap juice_wrap -->
+        <div class="product_wrap coffee_wrap" id="coffee_wrap">
+            <div class="title">
+                <p class="symbol"></p>
+                <h2>커피음료</h2>
+                <p class="num">총 <span class="category_num"></span>개의 제품이 있습니다.</p>
+            </div><!-- e:title -->
+            <div class="container">
+                <!-- javascript 태그 생성 -->
+            </div><!-- e:container -->
+            <a href="#!" class="more_btn">더보기</a>
+        </div><!-- e:product_wrap coffee_wrap -->
+        <div class="product_wrap pet_wrap" id="pet_wrap">
+            <div class="title">
+                <p class="symbol"></p>
+                <h2>반려동물우유</h2>
+                <p class="num">총 <span class="category_num"></span>개의 제품이 있습니다.</p>
+            </div><!-- e:title -->
+            <div class="container">
+                <!-- javascript 태그 생성 -->
+            </div><!-- e:container -->
+            <a href="#!" class="more_btn">더보기</a>
+        </div><!-- e:product_wrap pet_wrap -->
+    </main>
+    <!-- footer -->
+    <?php include("footer.php");?>
+    <!-- script -->
+    <script src="script/common.js"></script>
+    <script src="script/sub_product_beverage_array.js"></script>
+    <script src="script/sub.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+main {margin-top:108px;}
+/* title_wrap */
+main .title_bg { 
+    width:100%;
+    background-size:cover;
+    background-position:center;
+}
+main .title_bg_1coop {background-image:url(../images/sub_page_bg/company_1coop.jpg);}
+main .title_bg_2lab {background-image:url(../images/sub_page_bg/company_2lab.jpg);}
+main .title_bg_3employ {background-image:url(../images/sub_page_bg/company_3employ.jpg);}
+main .title_bg_4bidding {background-image:url(../images/sub_page_bg/company_4bidding.jpg);}
+main .title_bg_5certification {background-image:url(../images/sub_page_bg/company_5certification.jpg);}
+main .title_bg_6contact {background-image:url(../images/sub_page_bg/company_6contact.jpg);}
+main .title_bg .title_wrap {
+    width:100%; max-width:1024px; margin:0 auto; height:400px; padding:0 16px;
+    display:flex; flex-flow:column nowrap;
+    justify-content: center; align-items:center;
+    text-align:center;
+}
+main .title_bg .title_wrap h1,
+main .title_bg .title_wrap p {
+    color:#fff;
+    text-shadow:0 2px 15px rgba(0,0,0,.2);
+}
+main .title_bg .title_wrap h1 {font-family: "SEOULMILK_1000ml"; font-size:3rem; margin-bottom:28px;}
+main .title_bg .title_wrap p {font-family: "SEOULMILK_500ml";  font-size:1.5rem; word-break:keep-all; line-height:1.3;}
+/* dep2_tab */
+main .dep2_tab {
+    display:flex; flex-flow:row nowrap; justify-content: center;
+    width:100%; max-width:1024px; margin:0 auto; padding:0 16px;
+    position:relative; top:-30px;
+}
+main .dep2_tab a {
+    width:100%; max-width:230px; padding:20px 0; text-align:center;
+    border:1px solid #aaa; color:#616161;  background: #fff;
+    font-size:1.25rem; font-weight:700; letter-spacing:-0.04em; transition:.3s;
+    border-right:0;
+}
+main .dep2_tab a:first-child {
+    border-radius:30px; border-top-right-radius:0; border-bottom-right-radius: 0;
+}
+main .dep2_tab a:last-child {
+    border-radius:30px; border-top-left-radius:0; border-bottom-left-radius: 0;
+    border-right:1px solid #aaa;
+}
+main .dep2_tab a:hover,
+main .dep2_tab a.active {color:#fff; background:#00573D; border-color:#00573D;}
+/* contents_wrap */
+main .contents_wrap {
+    width:100%; max-width:1024px; margin:0 auto; padding:60px 14px;
+}
+main .contents_wrap .title {
+    display:flex; flex-flow:row nowrap; align-items:flex-end;
+    position:relative; margin-bottom:28px; padding-left:10px;
+}
+main .contents_wrap .title .symbol {
+    width:36px; height:27px; margin-bottom:16px;
+    background:url(../images/symbol/Seoulmilk_Symbolmark_edit_green.svg);
+    position:absolute; top:-28px; left:-6px;
+}
+main .contents_wrap .title h2 {font-family: "SEOULMILK_1000ml"; font-size:2rem; color:#009857;}
+main .contents_wrap .contents {padding-left:12px;}
+main .contents_wrap .contents .txt {
+    color:#616161; line-height:1.5;
+    font-size:1.125rem; letter-spacing: -0.04em;
+    word-break: keep-all; text-align:justify;
+}
+main .contents_wrap .contents .img {margin-top:30px;}
+main .contents_wrap .contents .img img {max-width:calc(100vw - 32px);}
+main .contents_wrap .contents .board {
+    width:100%; height:400px; border:1px solid #ddd;
+    padding:20px;
+}
+/* sub_company_2lab */
+main .contents_wrap .contents li {display:flex; flex-flow:row nowrap; margin-bottom:8px;}
+main .contents_wrap .contents li:last-child {margin:0;}
+main .contents_wrap .contents li .txt {text-align:left;}
+main .contents_wrap .contents li .num {margin-right:10px; color:#313131; font-weight:500;}
+/* sub_company_3employment */
+main .ability_wrap .contents {position:relative; height:570px;}
+main .ability_wrap .contents::before {
+    content:''; display:block;
+    position:absolute; top:50%; left:50%; transform: translate(-50%,-50%);
+    width:400px; height:400px; border-radius: 50%; border:20px solid #00573D22;
+}
+main .ability_wrap .contents .ability {
+    background:#6bbc6ede; text-align: center; 
+    position:absolute; left:50%; top:50%; transform: translate(-50%,-50%);
+    width:300px; height:300px; border-radius:50%;
+    display:flex; flex-flow:column nowrap; justify-content: center; align-items: center;
+}
+main .ability_wrap .contents .ability:nth-child(1) { transform: translate(-50%,-90%);}
+main .ability_wrap .contents .ability:nth-child(2) { transform: translate(-93%,-16%);}
+main .ability_wrap .contents .ability:nth-child(3) {padding-top:20px; transform: translate(-7%,-16%);}
+main .ability_wrap .contents .ability dt {
+    margin-bottom:20px; color:#fff;
+    font-size:2rem; font-weight:800; text-transform: uppercase;
+}
+main .ability_wrap .contents .ability dd {color:#f4f4f4; width:80%; word-break: keep-all; line-height:1.3;}
+/* sub_company_5contact */
+main .contents_wrap .contents .map_container {
+    width:100%; height:500px; margin-top:24px; border-radius: 12px; border: 1px solid #ccc;
+    position:relative; overflow: hidden;
+}
+main .contents_wrap .contents .map_container #map {
+    width:1000px; height:100%;
+    position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+}
